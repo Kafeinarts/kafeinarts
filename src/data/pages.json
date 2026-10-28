@@ -392,14 +392,6 @@
         "delay": 250
       },
       {
-        "name": "Naufal Daffa Bayu Putra.T",
-        "role": "Digital Marketer",
-        "img": "assets/img/teams/5.png",
-        "alt": "Naufal Daffa Bayu Putra.T - Digital Marketer",
-        "bio": "Mengelola kampanye & analitik untuk meningkatkan engagement dan konversi pelanggan.",
-        "delay": 300
-      },
-      {
         "name": "Alfarobby",
         "role": "Front end Developer",
         "img": "assets/img/teams/6.png",
@@ -414,6 +406,22 @@
         "alt": "Muhammad Nur Maulana - UI/UX Designer",
         "bio": "Pembuatan desain UI/UX yang menarik dan user-friendly.",
         "delay": 400
+      },
+      {
+        "name": "Muhammad Bagus Harianto",
+        "role": "Fullstack Dev",
+        "img": "assets/img/teams/8.png",
+        "alt": "Muhammad Bagus Harianto - Fullstack Dev",
+        "bio": "Mengembangkan solusi end-to-end dari frontend hingga backend yang andal.",
+        "delay": 450
+      },
+      {
+        "name": "Fahrul Rozi, S. Kom",
+        "role": "UI/UX Designer",
+        "img": "assets/img/teams/9.png",
+        "alt": "Fahrul Rozi, S. Kom - UI/UX Designer",
+        "bio": "Merancang antarmuka yang intuitif dan pengalaman pengguna yang menyenangkan.",
+        "delay": 500
       }
     ]
   }
