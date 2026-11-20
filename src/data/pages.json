@@ -288,30 +288,40 @@
       {
         "q": "Layanan digital apa saja yang disediakan oleh Kafeinarts?",
         "a": "Kami berfokus pada pengembangan produk SaaS (Software as a Service), pembuatan website atau aplikasi web khusus (custom), perancangan antarmuka pengguna (UI/UX), hingga pengelolaan <em>cloud</em> dan keamanan sistem untuk mendukung operasional bisnis Anda dari hulu ke hilir.",
+        "icon": "bi-grid-1x2",
+        "categoryKey": "services",
         "active": true,
         "delay": 200
       },
       {
         "q": "Berapa lama estimasi waktu pengerjaan untuk satu proyek aplikasi SaaS?",
         "a": "Waktu pengerjaan sangat bergantung pada skala, fitur, dan kompleksitas proyek. Untuk sistem manajemen skala kecil hingga menengah biasanya memakan waktu 4-8 minggu. Kami akan memberikan jadwal (<em>timeline</em>) yang transparan dan terukur setelah tahap diskusi dan analisis kebutuhan awal selesai.",
+        "icon": "bi-hourglass-split",
+        "categoryKey": "process",
         "active": false,
         "delay": 300
       },
       {
         "q": "Teknologi apa saja yang digunakan dalam proses pengembangan?",
         "a": "Kami menyusun arsitektur sistem menggunakan ekosistem teknologi yang tangguh dan modern. Secara umum, kami memanfaatkan PHP, Laravel, atau Node.js untuk <em>backend</em>; HTML, CSS, Tailwind, dan JavaScript untuk <em>frontend</em> yang responsif; serta arsitektur <em>database</em> relasional seperti MySQL untuk menjamin integritas data Anda.",
+        "icon": "bi-cpu",
+        "categoryKey": "tech",
         "active": false,
         "delay": 400
       },
       {
         "q": "Apakah ada layanan pemeliharaan (maintenance) setelah aplikasi dirilis?",
         "a": "Tentu saja. Kami memahami bahwa produk digital membutuhkan pengawasan agar tetap aman dan berjalan optimal. Kami menawarkan paket dukungan teknis dan pemeliharaan jangka panjang untuk menangani perbaikan <em>bug</em>, pembaruan keamanan, hingga penambahan fitur baru di masa mendatang.",
+        "icon": "bi-life-preserver",
+        "categoryKey": "support",
         "active": false,
         "delay": 500
       },
       {
         "q": "Bagaimana langkah pertama untuk memulai kerja sama?",
         "a": "Sangat mudah! Anda cukup menghubungi kami melalui form kontak atau tombol konsultasi. Kita akan menjadwalkan diskusi santai untuk memahami kendala, target, dan kebutuhan bisnis Anda. Setelah itu, kami akan menyusun draf proposal yang mencakup solusi teknis serta estimasi investasi yang dibutuhkan.",
+        "icon": "bi-people",
+        "categoryKey": "start",
         "active": false,
         "delay": 600
       }

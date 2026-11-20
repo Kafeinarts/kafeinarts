@@ -1077,6 +1077,35 @@ h6 {
   transform: translateY(-2px);
 }
 
+/* Tombol sekunder di CtaBanner — varian outline dengan latar biru gelap */
+.cta-banner .btn-hero-outline {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  font-family: var(--heading-font);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 26px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  border: 1.5px solid rgba(255, 255, 255, 0.92);
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.cta-banner .btn-hero-outline:hover {
+  color: #00205D;
+  background: #fff;
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+
 @media (max-width: 767px) {
   .page-hero {
     padding: 104px 0 48px;
