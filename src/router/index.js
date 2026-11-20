@@ -9,11 +9,22 @@ import FaqView from '../views/FaqView.vue'
 import TeamView from '../views/TeamView.vue'
 import ContactView from '../views/ContactView.vue'
 import OrderView from '../views/OrderView.vue'
+import WebsiteServiceView from '../views/WebsiteServiceView.vue'
 import { siteData } from '@/data/siteData'
 import { productsState } from '@/data/products/index.js'
 import { syncSeoForRoute } from '@/utils/seo'
 
 const seo = siteData.seo
+
+/** Meta untuk landing page SEO "jasa pembuatan website depok". */
+const websiteSeo = {
+  title: 'Jasa Pembuatan Website Depok — Kafeinarts',
+  description:
+    'Butuh jasa pembuatan website di Depok? Kafeinarts membuat website company profile, landing page, toko online, dan sistem web custom dengan Laravel, Vue.js, React & Next.js. Konsultasi gratis.',
+  keywords:
+    'jasa pembuatan website depok, jasa pembuatan website, jasa bikin web, jasa web depok, pembuatan website depok, web developer depok, jasa website depok, company profile depok, landing page depok',
+  path: '/jasa-pembuatan-website-depok',
+}
 
 const routes = [
   { path: '/', name: 'home', component: HomeView, meta: { title: seo.title, path: '/' } },
@@ -26,6 +37,11 @@ const routes = [
   { path: '/team', name: 'team', component: TeamView, meta: { title: `Tim Kami — ${seo.name}`, path: '/team' } },
   { path: '/contact', name: 'contact', component: ContactView, meta: { title: `Kontak — ${seo.name}`, path: '/contact' } },
   { path: '/order', name: 'order', component: OrderView, meta: { title: `Order Sistem — ${seo.name}`, description: siteData.orderWizard.page.subtitle, path: '/order' } },
+  // Landing page SEO untuk pencarian "jasa pembuatan website depok" & variasi.
+  { path: '/jasa-pembuatan-website-depok', name: 'website-service-depok', component: WebsiteServiceView, meta: websiteSeo },
+  { path: '/jasa-pembuatan-website', redirect: { name: 'website-service-depok' } },
+  { path: '/jasa-bikin-web', redirect: { name: 'website-service-depok' } },
+  { path: '/pembuatan-website-depok', redirect: { name: 'website-service-depok' } },
   // Rute lama tetap aktif — sekarang memakai wizard order yang baru.
   { path: '/consultation', name: 'consultation', component: OrderView, meta: { title: `Order Sistem — ${seo.name}`, description: siteData.orderWizard.page.subtitle, path: '/order' } },
   { path: '/about-company', redirect: { name: 'about' } },
@@ -71,6 +87,7 @@ router.afterEach((to) => {
   syncSeoForRoute({
     title: to.meta.title,
     description: to.meta.description,
+    keywords: to.meta.keywords,
     path: to.meta.path,
   })
 })

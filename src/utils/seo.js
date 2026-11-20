@@ -154,7 +154,26 @@ export function buildJsonLd() {
     })),
   }
 
-  return [organization, website, localBusiness, faqPage, serviceList]
+  // Landing page SEO: "jasa pembuatan website depok" & variasi related search.
+  const websiteService = {
+    "@type": "Service",
+    "@id": `${SITE_URL}/#jasa-pembuatan-website-depok`,
+    name: "Jasa Pembuatan Website di Depok",
+    serviceType: "Jasa pembuatan website, jasa bikin web, pengembangan web custom",
+    description:
+      "Jasa pembuatan website company profile, landing page, toko online, dan sistem web custom di Depok, Bogor, Bekasi, Jakarta, dan seluruh Indonesia. Laravel, Vue.js, React, Next.js, MySQL, REST API, payment gateway.",
+    url: `${SITE_URL}/jasa-pembuatan-website-depok`,
+    areaServed: ["Depok", "Bogor", "Bekasi", "Jakarta", "Jawa Barat", "Indonesia"],
+    provider: { "@id": organizationId },
+    offers: {
+      "@type": "Offer",
+      priceCurrency: "IDR",
+      availability: "https://schema.org/InStock",
+      url: `${SITE_URL}/jasa-pembuatan-website-depok`,
+    },
+  }
+
+  return [organization, website, localBusiness, faqPage, serviceList, websiteService]
 }
 
 /** Sisipkan (atau timpa) tag JSON-LD di <head>. */
@@ -172,8 +191,9 @@ export function injectJsonLd() {
 }
 
 /**
- * Set <title> & <link rel="canonical"> sesuai route yang dibuka.
- * @param {Object} [overrides] opsional: { title, description, path }
+ * Set <title>, meta description/keywords & <link rel="canonical">
+ * sesuai route yang dibuka.
+ * @param {Object} [overrides] opsional: { title, description, keywords, path }
  *        dipakai halaman produk/katalog untuk SEO per-halaman.
  */
 export function syncSeoForRoute(overrides = {}) {
@@ -181,6 +201,34 @@ export function syncSeoForRoute(overrides = {}) {
   const canonicalUrl = `${SITE_URL}${overrides.path || "/"}`
 
   document.title = overrides.title || SITE_TITLE
+
+  const setMeta = (name, value) => {
+    if (!value) return
+    let el = document.querySelector(`meta[name="${name}"]`)
+    if (!el) {
+      el = document.createElement("meta")
+      el.setAttribute("name", name)
+      document.head.appendChild(el)
+    }
+    el.setAttribute("content", value)
+  }
+  setMeta("description", overrides.description)
+  setMeta("keywords", overrides.keywords)
+
+  // Open Graph / Twitter mengikuti judul & deskripsi halaman aktif.
+  const setMetaProperty = (property, value) => {
+    if (!value) return
+    let el = document.querySelector(`meta[property="${property}"]`)
+    if (!el) {
+      el = document.createElement("meta")
+      el.setAttribute("property", property)
+      document.head.appendChild(el)
+    }
+    el.setAttribute("content", value)
+  }
+  setMetaProperty("og:title", overrides.title || SITE_TITLE)
+  setMetaProperty("og:description", overrides.description)
+  setMetaProperty("og:url", canonicalUrl)
 
   let link = document.querySelector('link[rel="canonical"]')
   if (!link) {

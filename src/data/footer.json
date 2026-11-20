@@ -38,6 +38,13 @@
         }
       },
       {
+        "label": "Jasa Pembuatan Website",
+        "i18nKey": "footer.link.websiteService",
+        "to": {
+          "name": "website-service-depok"
+        }
+      },
+      {
         "label": "Produk",
         "i18nKey": "footer.link.products",
         "to": {
