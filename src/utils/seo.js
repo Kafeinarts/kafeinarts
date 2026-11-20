@@ -193,7 +193,7 @@ export function injectJsonLd() {
 /**
  * Set <title>, meta description/keywords & <link rel="canonical">
  * sesuai route yang dibuka.
- * @param {Object} [overrides] opsional: { title, description, keywords, path }
+ * @param {Object} [overrides] opsional: { title, description, keywords, path, image, imageAlt }
  *        dipakai halaman produk/katalog untuk SEO per-halaman.
  */
 export function syncSeoForRoute(overrides = {}) {
@@ -229,6 +229,18 @@ export function syncSeoForRoute(overrides = {}) {
   setMetaProperty("og:title", overrides.title || SITE_TITLE)
   setMetaProperty("og:description", overrides.description)
   setMetaProperty("og:url", canonicalUrl)
+  if (overrides.image) {
+    const image = absoluteUrl(overrides.image)
+    setMetaProperty("og:image", image)
+    let tw = document.querySelector('meta[name="twitter:image"]')
+    if (!tw) {
+      tw = document.createElement("meta")
+      tw.setAttribute("name", "twitter:image")
+      document.head.appendChild(tw)
+    }
+    tw.setAttribute("content", image)
+    setMetaProperty("og:image:alt", overrides.imageAlt || overrides.title || SITE_TITLE)
+  }
 
   let link = document.querySelector('link[rel="canonical"]')
   if (!link) {

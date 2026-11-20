@@ -24,6 +24,8 @@ const websiteSeo = {
   keywords:
     'jasa pembuatan website depok, jasa pembuatan website, jasa bikin web, jasa web depok, pembuatan website depok, web developer depok, jasa website depok, company profile depok, landing page depok',
   path: '/jasa-pembuatan-website-depok',
+  image: 'assets/img/og-image.png',
+  imageAlt: 'Jasa Pembuatan Website di Depok — Kafeinarts',
 }
 
 const routes = [
@@ -89,6 +91,8 @@ router.afterEach((to) => {
     description: to.meta.description,
     keywords: to.meta.keywords,
     path: to.meta.path,
+    image: to.meta.image,
+    imageAlt: to.meta.imageAlt,
   })
 })
 
