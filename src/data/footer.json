@@ -43,6 +43,13 @@
         "to": {
           "name": "products"
         }
+      },
+      {
+        "label": "Order Sistem",
+        "i18nKey": "footer.link.order",
+        "to": {
+          "name": "order"
+        }
       }
     ],
     "services": [
@@ -72,6 +79,13 @@
         "i18nKey": "footer.link.simrs",
         "to": {
           "name": "product-simrs"
+        }
+      },
+      {
+        "label": "Jasa Pengembang App",
+        "i18nKey": "footer.link.appDeveloper",
+        "to": {
+          "name": "products"
         }
       }
     ],

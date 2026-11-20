@@ -19,6 +19,7 @@
  * Untuk produk: edit public/data/products/<slug>.json (satu file per produk).
  */
 import brandJson from "./brand.json";
+import seoJson from "./seo.json";
 import navJson from "./nav.json";
 import pagesJson from "./pages.json";
 import catalogJson from "./catalog.json";
@@ -31,6 +32,8 @@ import footerJson from "./footer.json";
 /** Objek gabungan dengan shape mirip siteData lama (kompatibilitas). */
 export const siteData = {
   ...brandJson,
+  // Keyword target, area layanan, internal link & penawaran untuk schema.org.
+  seoConfig: seoJson,
   nav: navJson.items,
   navCta: navJson.cta,
   ...pagesJson,
@@ -50,6 +53,7 @@ export const siteData = {
 export const {
   brand,
   seo,
+  seoConfig,
   nav,
   navCta,
   hero,

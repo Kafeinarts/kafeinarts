@@ -5,7 +5,7 @@ import "sweetalert2/dist/sweetalert2.min.css"
  * notify — pembungkus SweetAlert2 bertema Kafeinarts.
  *
  * Menggantikan alert()/confirm() bawaan browser agar pesan & konfirmasi
- * tampil konsisten dengan brand (navy #00205d) dan lebih nyaman di HP.
+ * tampil konsisten dengan brand neon green/#c8ff2e di atas dark mode dan lebih nyaman di HP.
  *
  * Pakai:
  *   import { notifyWarning, notifySuccess, notifyConfirm } from "@/utils/notify"
@@ -17,8 +17,8 @@ import "sweetalert2/dist/sweetalert2.min.css"
 
 /** Tema dasar — satu sumber gaya untuk semua dialog. */
 const baseTheme = {
-  confirmButtonColor: "#00205d", // navy brand (lihat gradasi modal produk)
-  cancelButtonColor: "#6c757d",
+  confirmButtonColor: "#c8ff2e", // neon green — teks tombol di gelap (lihat neon-theme.css)
+  cancelButtonColor: "#1b2740",
   buttonsStyling: true,
   reverseButtons: true,
   // Biarkan animasi halus bawaan; cukup cepat untuk validasi form.

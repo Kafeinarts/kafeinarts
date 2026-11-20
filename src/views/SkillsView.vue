@@ -99,7 +99,7 @@ export default {
 
 <style scoped>
 .skills-progress-bar {
-  background: linear-gradient(90deg, #00205d, #2563eb);
+  background: linear-gradient(90deg, #c8ff2e, #3d7bff);
   transition: width 1s ease;
 }
 

@@ -22,7 +22,9 @@ export default {
 <style scoped>
 .cta-banner {
   text-align: center;
-  background: linear-gradient(135deg, #00205d, #04307f);
+  background:
+    radial-gradient(circle at 85% 15%, rgba(200, 255, 46, 0.28), transparent 42%),
+    linear-gradient(135deg, #123a8f, #3d7bff);
   border-radius: 16px;
   padding: clamp(28px, 5vw, 48px);
   color: #fff;

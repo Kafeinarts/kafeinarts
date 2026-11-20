@@ -119,7 +119,7 @@ export default {
       this.mobileProductsOpen = false
       if (this.mobileOpen) this.toggleMobileNav()
     },
-    /** Navbar solid #00205D saat scrollY > 100 (lihat main.css: .index-page.scrolled .header) */
+    /** Navbar solid saat scrollY > 100 (lihat neon-theme.css: .index-page.scrolled .header) */
     toggleScrolled() {
       document.body.classList.toggle("scrolled", window.scrollY > 100)
     },

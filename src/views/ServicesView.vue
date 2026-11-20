@@ -15,7 +15,7 @@
         <SectionHeading :title="services.title" :subtitle="services.subtitle" />
         <div class="row gy-4">
           <div v-for="service in services.items" :key="service.title" class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" :data-aos-delay="service.delay">
-            <FeatureCard v-bind="service" color="#00205D" />
+            <FeatureCard v-bind="service" color="#3d7bff" />
           </div>
         </div>
       </div>

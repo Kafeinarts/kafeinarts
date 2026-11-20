@@ -333,12 +333,15 @@
     <section id="harga" class="section product-pricing-section pb-0">
       <div class="container" data-aos="fade-up">
         <div class="price-discussion-card">
-          <div class="price-discussion-icon">
-            <i class="bi bi-chat-dots"></i>
+          <span class="info-card-glow" aria-hidden="true"></span>
+          <div class="info-card-icon price-discussion-icon">
+            <i class="bi bi-chat-square-text"></i>
           </div>
           <div class="price-discussion-copy">
+            <span class="info-card-eyebrow">{{ $t('order.priceCardEyebrow') }}</span>
             <h2>{{ $t('order.priceCardTitle') }}</h2>
             <p>{{ $t('order.priceCardDesc') }}</p>
+            <span class="info-card-meta"><i class="bi bi-shield-check"></i>{{ $t('order.priceCardMeta') }}</span>
           </div>
           <div class="price-discussion-actions">
             <router-link :to="orderRoute" class="btn-hero-primary text-decoration-none">
@@ -355,16 +358,22 @@
     <section id="order" class="section product-order-section">
       <div class="container" data-aos="fade-up">
         <div class="product-order-card">
-          <div class="product-order-card-icon">
-            <i class="bi bi-box-arrow-up-right"></i>
+          <span class="info-card-glow" aria-hidden="true"></span>
+          <div class="info-card-icon product-order-card-icon">
+            <i class="bi bi-bag-check"></i>
           </div>
           <div class="product-order-card-copy">
+            <span class="info-card-eyebrow">{{ $t('order.productCtaEyebrow') }}</span>
             <h2>{{ $t('order.productCtaTitle', { product: product.name }) }}</h2>
             <p>{{ $t('order.productCtaDesc') }}</p>
+            <span class="info-card-meta"><i class="bi bi-clock-history"></i>{{ $t('order.productCtaNote') }}</span>
           </div>
-          <router-link :to="orderRoute" class="btn-hero-primary text-decoration-none">
-            <i class="bi bi-ui-checks-grid me-2"></i>{{ $t('order.productCtaButton') }}
-          </router-link>
+          <div class="product-order-action">
+            <router-link :to="orderRoute" class="btn-hero-primary text-decoration-none">
+              <i class="bi bi-ui-checks-grid me-2"></i>{{ $t('order.productCtaButton') }}
+              <i class="bi bi-arrow-right ms-2"></i>
+            </router-link>
+          </div>
         </div>
       </div>
     </section>
@@ -421,7 +430,7 @@ export default {
     },
     heroStyle() {
       return {
-        background: `linear-gradient(135deg, ${this.product.color}, color-mix(in srgb, ${this.product.color}, #00205D 55%))`,
+        background: `linear-gradient(135deg, ${this.product.color}, color-mix(in srgb, ${this.product.color}, #081225 62%))`,
       }
     },
     /** URL WhatsApp untuk tombol Diskusi & Negosiasi. */
@@ -441,7 +450,26 @@ export default {
   mounted() {
     this.syncPage()
   },
+  beforeUnmount() {
+    this.disposeDemoModal()
+  },
   methods: {
+    /**
+     * Pastikan modal demo tidak meninggalkan backdrop / body-lock saat
+     * komponen dibongkar oleh router (misal user langsung back setelah
+     * membuka demo). Tanpa ini halaman bisa "stuck" dan tidak bisa scroll.
+     */
+    disposeDemoModal() {
+      // Tidak memanggil hide()/dispose() Bootstrap di sini: keduanya masih
+      // menyentuh elemen lewat callback transisi setelah komponen dibongkar
+      // dan bisa melempar error. Cukup buang artifact scroll-nya.
+      window.setTimeout(() => {
+        document.querySelectorAll(".modal-backdrop").forEach((node) => node.remove())
+        document.body.classList.remove("modal-open")
+        document.body.style.removeProperty("overflow")
+        document.body.style.removeProperty("padding-right")
+      }, 450)
+    },
     waUrl(intent) {
       const primary = getPrimaryWhatsApp()
       const message = buildProductCtaMessage({ productName: this.product.name, intent })
@@ -482,8 +510,9 @@ export default {
 .product-page-hero {
   padding: 130px 0 64px;
   background:
-    radial-gradient(ellipse at top left, color-mix(in srgb, var(--accent-color), transparent 82%), transparent 55%),
-    linear-gradient(180deg, #00205d 0%, #04307f 100%);
+    radial-gradient(ellipse at top left, color-mix(in srgb, var(--accent-color), transparent 86%), transparent 55%),
+    radial-gradient(ellipse at bottom right, rgba(61, 123, 255, 0.22), transparent 58%),
+    linear-gradient(180deg, #081225 0%, #05070c 100%);
   color: #fff;
 }
 
@@ -604,51 +633,152 @@ export default {
    Catatan harga — sengaja tanpa angka/paket. Penawaran dibuat
    setelah scope project didiskusikan dengan klien.
    ============================================================ */
-.price-discussion-card {
-  display: flex;
+/* ============================================================
+   Info cards — harga & CTA order. Sengaja dibuat sebagai panel
+   yang lapang dan hierarkis, bukan sekadar kotak teks.
+   ============================================================ */
+.price-discussion-card,
+.product-order-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
-  gap: 24px;
-  flex-wrap: wrap;
-  background: var(--surface-color);
-  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
-  border-radius: 18px;
-  padding: clamp(24px, 4vw, 40px);
-  box-shadow: 0 18px 44px rgba(0, 32, 93, 0.08);
+  gap: clamp(18px, 2.5vw, 28px);
+  overflow: hidden;
+  border-radius: 24px;
+  padding: clamp(24px, 4vw, 42px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.32);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
 }
 
-.price-discussion-icon {
+.price-discussion-card:hover,
+.product-order-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 72px rgba(0, 0, 0, 0.42);
+}
+
+.info-card-glow {
+  position: absolute;
+  top: -120px;
+  right: -80px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200, 255, 46, 0.18), transparent 68%);
+  pointer-events: none;
+}
+
+.product-order-card .info-card-glow {
+  top: auto;
+  bottom: -150px;
+  right: auto;
+  left: -60px;
+  background: radial-gradient(circle, rgba(61, 123, 255, 0.24), transparent 68%);
+}
+
+.info-card-icon {
+  position: relative;
+  z-index: 1;
   width: 64px;
   height: 64px;
-  border-radius: 16px;
+  border-radius: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+  border: 1px solid rgba(200, 255, 46, 0.32);
+  background: rgba(200, 255, 46, 0.1);
   color: var(--accent-color);
-  font-size: 28px;
+  font-size: 27px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
-.price-discussion-copy {
-  flex: 1 1 320px;
+.product-order-card-icon {
+  border-color: rgba(126, 166, 255, 0.38);
+  background: rgba(61, 123, 255, 0.16);
+  color: #9dbcff;
 }
 
-.price-discussion-copy h2 {
-  font-size: clamp(1.25rem, 2.6vw, 1.75rem);
+.info-card-eyebrow {
+  position: relative;
+  z-index: 1;
+  display: block;
   margin-bottom: 10px;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-color);
 }
 
-.price-discussion-copy p {
-  font-size: 0.95rem;
-  line-height: 1.7;
+.product-order-card .info-card-eyebrow {
+  color: #9dbcff;
+}
+
+.price-discussion-copy,
+.product-order-card-copy {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+
+.price-discussion-copy h2,
+.product-order-card-copy h2 {
+  margin: 0 0 10px;
+  font-size: clamp(1.25rem, 2.6vw, 1.8rem);
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+}
+
+.price-discussion-copy p,
+.product-order-card-copy p {
+  max-width: 46rem;
   margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.75;
   color: var(--default-color);
 }
 
+.info-card-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 14px;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+.info-card-meta i {
+  color: var(--accent-color);
+}
+
 .price-discussion-actions {
+  position: relative;
+  z-index: 1;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: stretch;
   gap: 10px;
+  min-width: 190px;
+}
+
+.price-discussion-actions .btn-hero-primary,
+.price-discussion-actions .btn-hero-outline,
+.product-order-action .btn-hero-primary {
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.product-order-action {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
 }
 
 /* ============================================================
@@ -659,44 +789,33 @@ export default {
   padding-top: 1.5rem;
 }
 
-.product-order-card {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  flex-wrap: wrap;
-  background: color-mix(in srgb, var(--accent-color), #fff 94%);
-  border: 1.5px solid color-mix(in srgb, var(--accent-color), transparent 70%);
-  border-radius: 18px;
-  padding: clamp(24px, 4vw, 40px);
-}
-
-.product-order-card-icon {
-  width: 64px;
-  height: 64px;
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  background: var(--accent-color);
-  color: #fff;
-  font-size: 28px;
-}
-
-.product-order-card-copy {
-  flex: 1 1 320px;
-}
-
-.product-order-card-copy h2 {
-  font-size: clamp(1.25rem, 2.6vw, 1.75rem);
-  margin-bottom: 8px;
-}
-
-.product-order-card-copy p {
-  font-size: 0.95rem;
-  line-height: 1.7;
-  margin: 0;
-  color: var(--default-color);
+@media (max-width: 767.98px) {
+  .price-discussion-card,
+  .product-order-card {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 18px;
+  }
+  .info-card-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 15px;
+    font-size: 22px;
+  }
+  .price-discussion-actions,
+  .product-order-action {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+  .price-discussion-actions {
+    flex-direction: row;
+  }
+  .price-discussion-actions .btn-hero-primary,
+  .price-discussion-actions .btn-hero-outline {
+    flex: 1 1 0;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    font-size: 0.7rem;
+  }
 }
 
 /* ============================================================
@@ -916,9 +1035,9 @@ export default {
 }
 
 .cta-btn-ghost:hover {
-  color: #00205d;
-  background: #fff;
-  border-color: #fff;
+  color: #05070c;
+  background: #c8ff2e;
+  border-color: #c8ff2e;
   transform: translateY(-2px);
 }
 
@@ -1139,7 +1258,9 @@ export default {
    ============================================================ */
 .product-bottom-cta {
   text-align: center;
-  background: linear-gradient(135deg, #00205d, #04307f);
+  background:
+    radial-gradient(circle at 85% 15%, rgba(200, 255, 46, 0.26), transparent 42%),
+    linear-gradient(135deg, #123a8f, #3d7bff);
   border-radius: 16px;
   padding: clamp(28px, 5vw, 48px);
   color: #fff;
@@ -1235,7 +1356,9 @@ export default {
 }
 
 .demo-modal-content .modal-header {
-  background: linear-gradient(135deg, #00205d, #04307f);
+  background:
+    radial-gradient(circle at 88% 12%, rgba(200, 255, 46, 0.22), transparent 45%),
+    linear-gradient(135deg, #123a8f, #3d7bff);
   border-bottom: none;
 }
 
@@ -1261,16 +1384,16 @@ export default {
 }
 
 .demo-modal-go {
-  color: #fff;
+  color: #05070c;
   background: var(--accent-color);
   border-color: var(--accent-color);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .demo-modal-go:hover {
   color: #fff;
-  background: #04307f;
-  border-color: #04307f;
+  background: #3d7bff;
+  border-color: #3d7bff;
 }
 
 /* ============================================================

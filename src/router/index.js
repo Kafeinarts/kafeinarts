@@ -35,11 +35,14 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
-  // Kembali ke posisi atas saat pindah halaman (anchor hash tetap dihormati)
+  // Kembali ke posisi atas saat pindah halaman (anchor hash tetap dihormati).
+  // `behavior: 'instant'` penting: CSS global memakai scroll-behavior: smooth,
+  // sehingga scroll "auto" bisa masih beranimasi saat transisi halaman
+  // mengganti tinggi dokumen dan membuat posisi akhir nyangkut di footer.
   scrollBehavior(to, from, savedPosition) {
-    if (savedPosition) return savedPosition
+    if (savedPosition) return { ...savedPosition, behavior: 'instant' }
     if (to.hash) return { el: to.hash, behavior: 'smooth' }
-    return { top: 0 }
+    return { top: 0, left: 0, behavior: 'instant' }
   }
 })
 

@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-# Tidak ada path yang diblokir — seluruh section landing page terbuka untuk crawler.
-# Perbarui baris Sitemap bila domain produksi berubah (lihat public/index.html).
+# Seluruh halaman (Tentang, Layanan, Produk, Kontak, Order, dan detail
+# produk) terbuka untuk crawler. Sitemap memuat daftar lengkapnya.
 
 Sitemap: https://kafeinarts.vercel.app/sitemap.xml

@@ -334,8 +334,8 @@ export default {
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.85);
-  color: #00205d;
+  background: #c8ff2e;
+  color: #05070c;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -411,7 +411,9 @@ export default {
    ============================================================ */
 .team-lightbox-content {
   position: relative;
-  background: linear-gradient(160deg, #00205d, #04307f);
+  background:
+    radial-gradient(circle at 88% 12%, rgba(200, 255, 46, 0.2), transparent 45%),
+    linear-gradient(160deg, #102a5e, #3d7bff);
   border: none;
   border-radius: 18px;
   overflow: hidden;

@@ -54,7 +54,7 @@
                 :checked="form.productSlug === product.slug"
                 @change="selectProduct(product.slug)"
               />
-              <span class="order-option-icon" :style="{ background: product.color }">
+              <span class="order-option-icon">
                 <i class="bi" :class="product.icon"></i>
               </span>
               <span class="order-option-text">
@@ -580,20 +580,17 @@ export default {
 .order-option-icon {
   width: 44px;
   height: 44px;
-  border-radius: 11px;
+  border-radius: 12px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease,
+    box-shadow 0.25s ease, transform 0.18s ease;
 }
 
 .order-option-icon i {
-  color: #fff;
   font-size: 20px;
-}
-
-.order-option-icon-custom {
-  background: #b45309;
 }
 
 .order-option-text {
@@ -635,16 +632,16 @@ export default {
 }
 
 .order-feature-icon {
-  width: 30px;
-  height: 30px;
-  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
   flex-shrink: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: color-mix(in srgb, var(--accent-color), transparent 90%);
-  color: var(--accent-color);
-  font-size: 0.9rem;
+  font-size: 0.92rem;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease,
+    box-shadow 0.25s ease, transform 0.18s ease;
 }
 
 .order-feature-option strong {

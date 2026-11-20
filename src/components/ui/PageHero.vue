@@ -83,7 +83,7 @@ export default {
     },
     iconStyle() {
       return {
-        background: `linear-gradient(135deg, ${this.iconColor}, color-mix(in srgb, ${this.iconColor}, #00205D 55%))`,
+        background: `linear-gradient(135deg, ${this.iconColor}, color-mix(in srgb, ${this.iconColor}, #081225 62%))`,
       }
     },
   },
@@ -93,8 +93,10 @@ export default {
 <style scoped>
 .page-hero-gradient {
   background:
-    radial-gradient(ellipse at top left, color-mix(in srgb, var(--accent-color), transparent 82%), transparent 55%),
-    linear-gradient(180deg, #00205d 0%, #04307f 100%);
+    radial-gradient(ellipse at top left, color-mix(in srgb, var(--accent-color), transparent 86%), transparent 55%),
+    radial-gradient(ellipse at bottom right, rgba(61, 123, 255, 0.22), transparent 58%),
+    linear-gradient(180deg, #081225 0%, #05070c 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .page-hero h1 {
@@ -108,7 +110,7 @@ export default {
   font-size: clamp(1rem, 2.2vw, 1.2rem);
   font-weight: 500;
   margin-bottom: 14px;
-  color: #e8dcc6;
+  color: var(--accent-color);
 }
 
 .page-hero-desc {
