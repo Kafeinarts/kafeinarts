@@ -6,6 +6,7 @@
       desc="Orang-orang yang bekerja setiap hari untuk mengubah ide kompleks menjadi produk digital yang berkinerja tinggi."
       icon="bi-people-fill"
       icon-color="#be185d"
+      cover="people"
     />
 
     <section class="section">

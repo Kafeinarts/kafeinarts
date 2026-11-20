@@ -10,6 +10,7 @@
  *   - public/data/products/<slug>.json : KONTEN LENGKAP tiap produk (detail,
  *     harga, FAQ) — di-fetch runtime, terlihat di DevTools → tab Network.
  *   - consultation.json  : wizard konsultasi/penawaran
+ *   - order.json         : wizard order sistem (produk → fitur → biodata → WA)
  *   - contact.json       : kontak & tujuan WhatsApp
  *   - footer.json        : newsletter, link, sosial media
  *
@@ -23,6 +24,7 @@ import pagesJson from "./pages.json";
 import catalogJson from "./catalog.json";
 import { productsState as productStore } from "./products/index.js";
 import consultationJson from "./consultation.json";
+import orderJson from "./order.json";
 import contactJson from "./contact.json";
 import footerJson from "./footer.json";
 
@@ -38,6 +40,8 @@ export const siteData = {
   // semua komponen yang membaca siteData.products otomatis ter-update.
   products: productStore.items,
   ...consultationJson,
+  // orderWizard = konfigurasi wizard order sistem (src/data/order.json).
+  orderWizard: orderJson,
   // contact dibungkus agar aksesnya siteData.contact.info / .whatsapp
   contact: contactJson,
   footer: footerJson,
@@ -64,6 +68,7 @@ export const {
   budgetRanges,
   timelineOptions,
   wizard,
+  orderWizard,
   contact,
 } = siteData;
 

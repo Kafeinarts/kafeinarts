@@ -2,10 +2,11 @@
   <main id="main-content" class="main" tabindex="-1">
     <PageHero
       title="Konsultasi & Penawaran"
-      tagline="Order sekarang atau konsultasikan harga"
+      tagline="Order sekarang atau diskusikan kebutuhan"
       desc="Lengkapi wizard singkat ini — kami jadwalkan meeting persiapan (online/offline) dan konfirmasi via WhatsApp."
       icon="bi-calendar2-check"
       icon-color="#15803d"
+      cover="order"
     />
 
     <section class="section">

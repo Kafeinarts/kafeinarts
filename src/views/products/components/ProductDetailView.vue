@@ -29,9 +29,9 @@
             </ul>
 
             <div class="d-flex flex-wrap gap-3 mt-4">
-              <a :href="orderUrl" target="_blank" rel="noopener" class="btn-hero-primary text-decoration-none">
-                <i class="bi bi-lightning-charge me-2"></i>Order Sekarang
-              </a>
+              <router-link :to="orderRoute" class="btn-hero-primary text-decoration-none">
+                <i class="bi bi-lightning-charge me-2"></i>{{ $t('order.heroCta') }}
+              </router-link>
               <button
                 v-if="hasDemo"
                 type="button"
@@ -41,17 +41,22 @@
               >
                 <i class="bi bi-box-arrow-up-right me-2"></i>Lihat Demo
               </button>
-              <router-link
-                :to="{ name: 'consultation', query: { intent: 'price', product: product.slug } }"
-                class="btn-hero-outline text-decoration-none"
-              >
-                <i class="bi bi-calculator me-2"></i>Konsultasikan Harga
-              </router-link>
+              <a :href="discussionUrl" target="_blank" rel="noopener" class="btn-hero-outline text-decoration-none">
+                <i class="bi bi-whatsapp me-2"></i>Diskusi &amp; Negosiasi
+              </a>
             </div>
           </div>
           <div class="col-lg-5 text-center">
-            <div class="product-hero-icon" :style="heroStyle">
-              <i class="bi" :class="product.icon"></i>
+            <div class="product-hero-cover">
+              <!-- Cover vektor self-authored, aman untuk penggunaan komersial -->
+              <CoverArt
+                :variant="coverVariant"
+                :color="product.color"
+                :aria-label="`Ilustrasi ${product.name}`"
+              />
+              <span class="product-hero-cover-badge" :style="heroStyle">
+                <i class="bi" :class="product.icon"></i>
+              </span>
             </div>
           </div>
         </div>
@@ -105,61 +110,6 @@
         </div>
       </div>
     </div>
-
-    <!-- ============================================================
-         PAKET HARGA
-         ============================================================ -->
-    <section id="harga" class="section product-pricing-section">
-      <div class="container">
-        <div class="section-title" data-aos="fade-up">
-          <h2>{{ pricing.heading }}</h2>
-          <p>{{ pricing.subheading }}</p>
-        </div>
-
-        <div class="row gy-4 justify-content-center">
-          <div
-            v-for="(plan, i) in pricing.plans"
-            :key="plan.name"
-            class="col-lg-4 col-md-6 d-flex"
-            data-aos="fade-up"
-            :data-aos-delay="(i + 1) * 100"
-          >
-            <div class="pricing-card" :class="{ featured: plan.featured }" :style="{ '--plan-color': product.color }">
-              <span v-if="plan.featured" class="pricing-badge">Paling Populer</span>
-              <h4 class="pricing-name">{{ plan.name }}</h4>
-              <p class="pricing-tagline">{{ plan.tagline }}</p>
-
-              <div class="pricing-amount">
-                <span class="price">{{ priceOf(plan) }}</span>
-                <span v-if="plan.price != null && plan.period" class="period">/ {{ plan.period }}</span>
-              </div>
-              <p class="pricing-desc">{{ plan.description }}</p>
-
-              <ul class="pricing-features">
-                <li v-for="item in plan.features" :key="item">
-                  <i class="bi bi-check-lg" :style="{ color: product.color }"></i>{{ item }}
-                </li>
-              </ul>
-
-              <a
-                :href="planOrderUrl(plan)"
-                target="_blank"
-                rel="noopener"
-                class="pricing-btn text-decoration-none"
-                :class="plan.featured ? 'pricing-btn-solid' : 'pricing-btn-outline'"
-              >
-                <i class="bi" :class="plan.cta && plan.cta.intent === 'price' ? 'bi-calculator' : 'bi-whatsapp'"></i>
-                {{ plan.cta ? plan.cta.label : 'Hubungi Kami' }}
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <p v-if="pricing.note" class="pricing-note" data-aos="fade-up">
-          <i class="bi bi-info-circle me-1"></i>{{ pricing.note }}
-        </p>
-      </div>
-    </section>
 
     <!-- ============================================================
          FITUR UTAMA
@@ -224,8 +174,8 @@
                   </div>
                 </div>
               </div>
-              <router-link :to="{ name: 'consultation', query: { intent: 'order', product: product.slug } }" class="product-overview-cta">
-                Diskusikan kebutuhan Anda <i class="bi bi-arrow-right"></i>
+              <router-link :to="orderRoute" class="product-overview-cta">
+                {{ $t('order.productCtaButton') }} <i class="bi bi-arrow-right"></i>
               </router-link>
             </div>
           </div>
@@ -341,7 +291,10 @@
           <h3>{{ product.cta.heading }}</h3>
           <p>{{ product.cta.description }}</p>
           <div class="d-flex flex-wrap justify-content-center gap-3">
-            <a :href="orderUrl" target="_blank" rel="noopener" class="cta-btn cta-btn-wa text-decoration-none">
+            <router-link :to="orderRoute" class="cta-btn cta-btn-wa text-decoration-none">
+              <i class="bi bi-ui-checks-grid"></i>{{ $t('order.productCtaButton') }}
+            </router-link>
+            <a :href="discussionUrl" target="_blank" rel="noopener" class="cta-btn cta-btn-ghost text-decoration-none">
               <i class="bi bi-whatsapp"></i>Hubungi via WhatsApp
             </a>
             <router-link :to="{ name: 'products' }" class="cta-btn cta-btn-ghost text-decoration-none">
@@ -370,15 +323,60 @@
         </div>
       </div>
     </section>
+
+    <!-- ============================================================
+         HARGA & ORDER — sengaja dipindah ke paling bawah sebelum footer.
+         Harga tidak ditampilkan; biaya menyesuaikan scope project.
+         Wizard juga tidak dirender di sini: tombol menuju halaman
+         /order?product=<slug> dengan produk sudah terpilih.
+         ============================================================ -->
+    <section id="harga" class="section product-pricing-section pb-0">
+      <div class="container" data-aos="fade-up">
+        <div class="price-discussion-card">
+          <div class="price-discussion-icon">
+            <i class="bi bi-chat-dots"></i>
+          </div>
+          <div class="price-discussion-copy">
+            <h2>{{ $t('order.priceCardTitle') }}</h2>
+            <p>{{ $t('order.priceCardDesc') }}</p>
+          </div>
+          <div class="price-discussion-actions">
+            <router-link :to="orderRoute" class="btn-hero-primary text-decoration-none">
+              <i class="bi bi-ui-checks-grid me-2"></i>{{ $t('order.heroCta') }}
+            </router-link>
+            <a :href="discussionUrl" target="_blank" rel="noopener" class="btn-hero-outline text-decoration-none">
+              <i class="bi bi-whatsapp me-2"></i>{{ $t('order.discussionCta') }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="order" class="section product-order-section">
+      <div class="container" data-aos="fade-up">
+        <div class="product-order-card">
+          <div class="product-order-card-icon">
+            <i class="bi bi-box-arrow-up-right"></i>
+          </div>
+          <div class="product-order-card-copy">
+            <h2>{{ $t('order.productCtaTitle', { product: product.name }) }}</h2>
+            <p>{{ $t('order.productCtaDesc') }}</p>
+          </div>
+          <router-link :to="orderRoute" class="btn-hero-primary text-decoration-none">
+            <i class="bi bi-ui-checks-grid me-2"></i>{{ $t('order.productCtaButton') }}
+          </router-link>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
 <script>
+import CoverArt from "@/components/ui/CoverArt.vue"
 import { siteData } from "@/data/siteData"
 import { syncSeoForRoute } from "@/utils/seo"
 import { refreshAosSafely } from "@/utils/aos"
 import { buildProductCtaMessage, buildWaUrl, getPrimaryWhatsApp } from "@/utils/whatsapp"
-import { priceLabel } from "@/data/products/index.js"
 
 /**
  * ProductDetailView — halaman detail satu produk.
@@ -388,10 +386,12 @@ import { priceLabel } from "@/data/products/index.js"
  * Komponen ini tidak tahu isi spesifik produk apa pun (presentational).
  *
  * Struktur section: Hero (dengan tombol Lihat Demo + modal konfirmasi) →
- * Harga → Fitur → Overview → Alur Kerja → Use Case → FAQ → CTA + Produk Terkait.
+ * Catatan harga (tanpa angka) → Order (wizard, produk sudah terkunci) →
+ * Fitur → Overview → Alur Kerja → Use Case → FAQ → CTA + Produk Terkait.
  */
 export default {
   name: "ProductDetailView",
+  components: { CoverArt },
   props: {
     /** Objek produk hasil mapProduct() dari src/data/products/index.js */
     product: {
@@ -400,15 +400,20 @@ export default {
     },
   },
   computed: {
-    pricing() {
-      return this.product.pricing || { heading: "Harga", subheading: "", plans: [] }
-    },
     /**
      * Tombol "Lihat Demo" hanya tampil bila produk punya demo nyata:
      * is_demo = true DAN url_demo terisi (kosong = belum ada demonya).
      */
     hasDemo() {
       return Boolean(this.product.is_demo && this.product.url_demo)
+    },
+    /** Semua CTA order menuju halaman order (bukan wizard inline). */
+    orderRoute() {
+      return { name: "order", query: { product: this.product.slug } }
+    },
+    /** Cover SVG mengikuti kategori produk. */
+    coverVariant() {
+      return this.product.category === "website" ? "website" : "system"
     },
     relatedProducts() {
       const slug = this.product.slug
@@ -419,9 +424,9 @@ export default {
         background: `linear-gradient(135deg, ${this.product.color}, color-mix(in srgb, ${this.product.color}, #00205D 55%))`,
       }
     },
-    /** URL WhatsApp untuk tombol Order Sekarang. */
-    orderUrl() {
-      return this.waUrl("order")
+    /** URL WhatsApp untuk tombol Diskusi & Negosiasi. */
+    discussionUrl() {
+      return this.waUrl("discussion")
     },
   },
   watch: {
@@ -437,23 +442,9 @@ export default {
     this.syncPage()
   },
   methods: {
-    priceLabel,
-    priceOf(plan) {
-      return priceLabel(plan)
-    },
     waUrl(intent) {
       const primary = getPrimaryWhatsApp()
       const message = buildProductCtaMessage({ productName: this.product.name, intent })
-      return buildWaUrl(primary.wa, message)
-    },
-    planOrderUrl(plan) {
-      // CTA paket harga → WhatsApp dengan menyebut nama paketnya.
-      const primary = getPrimaryWhatsApp()
-      const intent = plan.cta && plan.cta.intent === "price" ? "price" : "order"
-      const message = buildProductCtaMessage({
-        productName: `${this.product.name} — Paket ${plan.name}`,
-        intent,
-      })
       return buildWaUrl(primary.wa, message)
     },
     /**
@@ -580,8 +571,136 @@ export default {
   color: #fff;
 }
 
+/* Cover SVG produk + badge ikon kecil */
+.product-hero-cover {
+  position: relative;
+  max-width: 460px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: visible;
+  filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.3));
+}
+
+.product-hero-cover-badge {
+  position: absolute;
+  right: -6px;
+  bottom: -10px;
+  width: 62px;
+  height: 62px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #fff;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+}
+
+.product-hero-cover-badge i {
+  color: #fff;
+  font-size: 28px;
+}
+
 /* ============================================================
-   Pricing
+   Catatan harga — sengaja tanpa angka/paket. Penawaran dibuat
+   setelah scope project didiskusikan dengan klien.
+   ============================================================ */
+.price-discussion-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  background: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
+  border-radius: 18px;
+  padding: clamp(24px, 4vw, 40px);
+  box-shadow: 0 18px 44px rgba(0, 32, 93, 0.08);
+}
+
+.price-discussion-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+  color: var(--accent-color);
+  font-size: 28px;
+}
+
+.price-discussion-copy {
+  flex: 1 1 320px;
+}
+
+.price-discussion-copy h2 {
+  font-size: clamp(1.25rem, 2.6vw, 1.75rem);
+  margin-bottom: 10px;
+}
+
+.price-discussion-copy p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0;
+  color: var(--default-color);
+}
+
+.price-discussion-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* ============================================================
+   CTA order — mengarah ke halaman /order?product=<slug>.
+   Wizard tidak dirender di sini supaya halaman produk tetap ringkas.
+   ============================================================ */
+.product-order-section {
+  padding-top: 1.5rem;
+}
+
+.product-order-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  background: color-mix(in srgb, var(--accent-color), #fff 94%);
+  border: 1.5px solid color-mix(in srgb, var(--accent-color), transparent 70%);
+  border-radius: 18px;
+  padding: clamp(24px, 4vw, 40px);
+}
+
+.product-order-card-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: var(--accent-color);
+  color: #fff;
+  font-size: 28px;
+}
+
+.product-order-card-copy {
+  flex: 1 1 320px;
+}
+
+.product-order-card-copy h2 {
+  font-size: clamp(1.25rem, 2.6vw, 1.75rem);
+  margin-bottom: 8px;
+}
+
+.product-order-card-copy p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0;
+  color: var(--default-color);
+}
+
+/* ============================================================
+   Pricing (style lama — tidak dirender, disimpan untuk referensi)
    ============================================================ */
 .pricing-card {
   position: relative;
@@ -1162,7 +1281,7 @@ export default {
     padding: 110px 0 50px;
   }
 
-  .product-hero-icon {
+  .product-hero-cover {
     margin-top: 6px;
   }
 }

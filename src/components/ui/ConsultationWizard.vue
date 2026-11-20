@@ -225,7 +225,7 @@ export default {
   },
   computed: {
     intentLabel() {
-      return this.form.intent === "order" ? "Order Sekarang" : "Konsultasi Harga"
+      return this.form.intent === "order" ? "Order Sekarang" : "Diskusi Kebutuhan"
     },
     meetingSummary() {
       const parts = [this.form.meetingMode]

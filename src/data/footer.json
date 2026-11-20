@@ -18,24 +18,28 @@
     "useful": [
       {
         "label": "Beranda",
+        "i18nKey": "footer.link.home",
         "to": {
           "name": "home"
         }
       },
       {
         "label": "Tentang Kami",
+        "i18nKey": "footer.link.about",
         "to": {
           "name": "about"
         }
       },
       {
         "label": "Layanan",
+        "i18nKey": "footer.link.services",
         "to": {
           "name": "services"
         }
       },
       {
         "label": "Produk",
+        "i18nKey": "footer.link.products",
         "to": {
           "name": "products"
         }
@@ -44,24 +48,28 @@
     "services": [
       {
         "label": "Website Company Profile",
+        "i18nKey": "footer.link.companyProfile",
         "to": {
           "name": "product-company-profile"
         }
       },
       {
         "label": "Landing Page",
+        "i18nKey": "footer.link.landingPage",
         "to": {
           "name": "product-landing-page"
         }
       },
       {
         "label": "Sistem ERP",
+        "i18nKey": "footer.link.erp",
         "to": {
           "name": "product-erp"
         }
       },
       {
         "label": "Sistem SIMRS",
+        "i18nKey": "footer.link.simrs",
         "to": {
           "name": "product-simrs"
         }
@@ -70,18 +78,21 @@
     "support": [
       {
         "label": "FAQ",
+        "i18nKey": "footer.link.faq",
         "to": {
           "name": "faq"
         }
       },
       {
         "label": "Konsultasi & Penawaran",
+        "i18nKey": "footer.link.consultation",
         "to": {
           "name": "consultation"
         }
       },
       {
         "label": "Kontak",
+        "i18nKey": "footer.link.contact",
         "to": {
           "name": "contact"
         }

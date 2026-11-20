@@ -3,11 +3,11 @@
     "title": "Produk Digital Siap Pakai untuk Bisnis Anda",
     "subtitle": "Serangkaian sistem manajemen dan aplikasi yang dirancang, dibangun, dan dirawat oleh tim Kafeinarts — siap disesuaikan dengan kebutuhan operasional Anda.",
     "ctaPrimary": {
-      "label": "Konsultasi Harga",
+      "label": "Order Sistem",
       "to": {
-        "name": "consultation"
+        "name": "order"
       },
-      "icon": "bi-calculator"
+      "icon": "bi-lightning-charge"
     },
     "ctaSecondary": {
       "label": "Layanan Kami",

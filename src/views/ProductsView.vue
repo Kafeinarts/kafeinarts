@@ -3,15 +3,16 @@
     <PageHero
       title="Produk Kami"
       tagline="Sistem, aplikasi, dan website siap pakai"
-      desc="Semua produk dapat dikustomisasi penuh — order sekarang atau konsultasikan harga dengan tim Kafeinarts."
+      desc="Semua produk dapat dikustomisasi penuh — pilih fitur yang Anda butuhkan lalu kirim order langsung ke WhatsApp kami. Harga disepakati setelah scope project jelas."
       icon="bi-box-seam"
       icon-color="#1d4ed8"
+      cover="system"
     >
-      <router-link :to="{ name: 'consultation', query: { intent: 'price' } }" class="btn-hero-primary text-decoration-none">
-        <i class="bi bi-calculator me-2"></i>Konsultasikan Harga
+      <router-link :to="{ name: 'order' }" class="btn-hero-primary text-decoration-none">
+        <i class="bi bi-lightning-charge me-2"></i>Order Sistem
       </router-link>
-      <router-link :to="{ name: 'consultation', query: { intent: 'order' } }" class="btn-hero-outline text-decoration-none">
-        <i class="bi bi-lightning-charge me-2"></i>Order Sekarang
+      <router-link :to="{ name: 'contact' }" class="btn-hero-outline text-decoration-none">
+        <i class="bi bi-whatsapp me-2"></i>Hubungi Kami
       </router-link>
     </PageHero>
 
@@ -50,8 +51,8 @@
               title="Butuh sistem yang benar-benar custom?"
               desc="Semua produk di atas dapat dikustomisasi — modul tambahan, integrasi pihak ketiga, hingga migrasi data dari sistem lama Anda."
             >
-              <router-link :to="{ name: 'consultation' }" class="btn-hero-primary text-decoration-none">
-                <i class="bi bi-chat-dots me-2"></i>Diskusikan Kebutuhan Anda
+              <router-link :to="{ name: 'order' }" class="btn-hero-primary text-decoration-none">
+                <i class="bi bi-ui-checks-grid me-2"></i>Pilih Fitur &amp; Order
               </router-link>
             </CtaBanner>
           </div>

@@ -30,7 +30,7 @@ export function buildWaUrl(waNumber, text) {
  *   phone, budget, timeline, meetingMode, meetingTime, notes }
  */
 export function buildConsultationMessage(p) {
-  const intentLabel = p.intent === "order" ? "ORDER SEKARANG" : "KONSULTASI HARGA"
+  const intentLabel = p.intent === "order" ? "ORDER SEKARANG" : "DISKUSI KEBUTUHAN"
   const lines = [
     `Halo Kafeinarts !`,
     ``,
@@ -65,7 +65,7 @@ export function buildConsultationMessage(p) {
 
 /** Pesan CTA ringkas dari tombol di halaman produk. */
 export function buildProductCtaMessage({ productName, intent, note }) {
-  const intentLabel = intent === "order" ? "ORDER SEKARANG" : "KONSULTASI HARGA"
+  const intentLabel = intent === "order" ? "ORDER SEKARANG" : "DISKUSI KEBUTUHAN"
   const lines = [
     `Halo Kafeinarts 👋`,
     ``,

@@ -6,6 +6,7 @@
       desc="Kami memadukan arsitektur sistem yang tangguh, framework mutakhir, dan desain visual untuk hasil terbaik."
       icon="bi-cpu"
       icon-color="#6d28d9"
+      cover="code"
     />
 
     <!-- Skill bars -->

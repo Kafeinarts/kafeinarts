@@ -8,10 +8,9 @@
       <h3>{{ product.name }}</h3>
       <p class="product-card-tagline">{{ product.tagline }}</p>
       <p class="product-card-desc">{{ product.desc }}</p>
-      <!-- Ringkasan harga (dari paket termurah di data/products/<slug>.json) -->
-      <p v-if="product.priceFrom" class="product-card-price">
-        <i class="bi bi-tag"></i>Mulai <strong>{{ product.priceFrom.label }}</strong>
-        <span v-if="product.priceFrom.period" class="price-period">/ {{ product.priceFrom.period }}</span>
+      <!-- Harga sengaja tidak ditampilkan — disepakati setelah diskusi scope. -->
+      <p class="product-card-price-note">
+        <i class="bi bi-chat-dots"></i>Harga menyesuaikan scope project
       </p>
       <span class="product-card-cta">
         Lihat Detail <i class="bi bi-arrow-right"></i>
@@ -95,27 +94,17 @@ export default {
   flex-grow: 1;
 }
 
-.product-card-price {
+.product-card-price-note {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 6px;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--default-color);
   margin-bottom: 16px;
 }
 
-.product-card-price i {
+.product-card-price-note i {
   color: var(--accent-color);
-  align-self: center;
-}
-
-.product-card-price strong {
-  color: var(--heading-color);
-  font-size: 0.95rem;
-}
-
-.price-period {
-  font-size: 0.78rem;
 }
 
 .product-card-cta {

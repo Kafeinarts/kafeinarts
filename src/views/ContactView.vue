@@ -6,6 +6,7 @@
       desc="Pilih saluran yang paling nyaman — WhatsApp, email, atau form. Respon cepat di jam kerja."
       icon="bi-headset"
       icon-color="#0369a1"
+      cover="support"
     />
 
     <section class="contact section">

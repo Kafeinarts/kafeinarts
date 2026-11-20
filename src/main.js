@@ -3,6 +3,7 @@ import App from './App.vue'
 import './registerServiceWorker'
 import router, { registerProductRoutes } from './router'
 import store from './store'
+import i18n from './i18n'
 import { loadProducts } from './data/products/index.js'
 
 /**
@@ -13,9 +14,9 @@ import { loadProducts } from './data/products/index.js'
 loadProducts()
   .then(() => {
     registerProductRoutes()
-    createApp(App).use(store).use(router).mount('#app')
+    createApp(App).use(store).use(router).use(i18n).mount('#app')
   })
   .catch(() => {
     // Tetap mount agar halaman tidak kosong; store mencatat error-nya.
-    createApp(App).use(store).use(router).mount('#app')
+    createApp(App).use(store).use(router).use(i18n).mount('#app')
   })

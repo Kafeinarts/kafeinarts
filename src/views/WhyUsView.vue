@@ -6,6 +6,7 @@
       desc="Bukan sekadar kode dan desain — kami merancang solusi yang berdampak langsung pada efisiensi bisnis Anda."
       icon="bi-award"
       icon-color="#b45309"
+      cover="award"
     />
 
     <!-- Penjelasan utama (accordion interaktif dari data JSON) -->

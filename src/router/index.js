@@ -8,7 +8,7 @@ import ServicesView from '../views/ServicesView.vue'
 import FaqView from '../views/FaqView.vue'
 import TeamView from '../views/TeamView.vue'
 import ContactView from '../views/ContactView.vue'
-import ConsultationView from '../views/ConsultationView.vue'
+import OrderView from '../views/OrderView.vue'
 import { siteData } from '@/data/siteData'
 import { productsState } from '@/data/products/index.js'
 import { syncSeoForRoute } from '@/utils/seo'
@@ -25,7 +25,9 @@ const routes = [
   { path: '/faq', name: 'faq', component: FaqView, meta: { title: `FAQ — ${seo.name}`, path: '/faq' } },
   { path: '/team', name: 'team', component: TeamView, meta: { title: `Tim Kami — ${seo.name}`, path: '/team' } },
   { path: '/contact', name: 'contact', component: ContactView, meta: { title: `Kontak — ${seo.name}`, path: '/contact' } },
-  { path: '/consultation', name: 'consultation', component: ConsultationView, meta: { title: `Konsultasi & Penawaran — ${seo.name}`, path: '/consultation' } },
+  { path: '/order', name: 'order', component: OrderView, meta: { title: `Order Sistem — ${seo.name}`, description: siteData.orderWizard.page.subtitle, path: '/order' } },
+  // Rute lama tetap aktif — sekarang memakai wizard order yang baru.
+  { path: '/consultation', name: 'consultation', component: OrderView, meta: { title: `Order Sistem — ${seo.name}`, description: siteData.orderWizard.page.subtitle, path: '/order' } },
   { path: '/about-company', redirect: { name: 'about' } },
   { path: '/:pathMatch(.*)*', redirect: { name: 'home' } }
 ]

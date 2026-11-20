@@ -1,11 +1,12 @@
 <template>
   <main id="main-content" class="main" tabindex="-1">
     <PageHero
-      title="Tanya Jawab (FAQ)"
-      tagline="Temukan jawaban dengan cepat"
-      desc="Pertanyaan paling sering diajukan seputar layanan, proses kerja, dan kerja sama dengan Kafeinarts."
+      :title="$t('faq.title')"
+      :tagline="$t('faq.tagline')"
+      :desc="$t('faq.desc')"
       icon="bi-patch-question"
       icon-color="#0d9488"
+      cover="faq"
     />
 
     <section class="section">
@@ -13,7 +14,7 @@
         <div class="row justify-content-center">
           <div class="col-lg-9" data-aos="fade-up">
             <div class="accordion" id="faqAccordion">
-              <div v-for="(item, i) in faq.items" :key="i" class="accordion-item">
+              <div v-for="(item, i) in faqItems" :key="i" class="accordion-item">
                 <h3 class="accordion-header">
                   <button
                     class="accordion-button"
@@ -39,9 +40,9 @@
             </div>
 
             <div class="text-center mt-5">
-              <p class="text-muted mb-3">Tidak menemukan jawaban yang Anda cari?</p>
-              <router-link :to="{ name: 'consultation' }" class="btn-hero-primary text-decoration-none">
-                <i class="bi bi-chat-dots me-2"></i>Tanyakan Langsung ke Kami
+              <p class="text-muted mb-3">{{ $t('faq.noAnswer') }}</p>
+              <router-link :to="{ name: 'contact' }" class="btn-hero-primary text-decoration-none">
+                <i class="bi bi-chat-dots me-2"></i>{{ $t('faq.askUs') }}
               </router-link>
             </div>
           </div>
@@ -62,12 +63,22 @@ export default {
   setup() {
     usePageSeo({
       title: `FAQ — ${siteData.seo.name}`,
-      description: "Pertanyaan yang sering diajukan seputar layanan pengembangan SaaS, website, dan sistem manajemen Kafeinarts.",
+      description: siteData.faq.subtitle,
       path: "/faq",
     })
   },
   data() {
     return { faq: siteData.faq, activeIndex: 0 }
+  },
+  computed: {
+    /** Konten FAQ diambil dari kamus i18n; fallback ke data JSON bila belum diterjemahkan. */
+    faqItems() {
+      return (this.faq.items || []).map((item, i) => ({
+        ...item,
+        q: this.$t(`faq.items.${i}.q`, {}, item.q),
+        a: this.$t(`faq.items.${i}.a`, {}, item.a),
+      }))
+    },
   },
   methods: {
     isActive(i) {

@@ -37,7 +37,11 @@
         </div>
 
         <div v-if="hasAside" class="col-lg-4 text-center">
-          <div class="page-hero-icon" :style="iconStyle">
+          <!-- Cover SVG (self-authored) menggantikan ikon bila prop `cover` diisi -->
+          <div v-if="cover" class="page-hero-cover">
+            <CoverArt :variant="cover" :color="coverColor || iconColor" :aria-label="`${title} illustration`" />
+          </div>
+          <div v-else class="page-hero-icon" :style="iconStyle">
             <i class="bi" :class="icon"></i>
           </div>
         </div>
@@ -55,8 +59,11 @@
  *   </PageHero>
  * atau via props: :cta-primary="{ label, to, icon }"
  */
+import CoverArt from "@/components/ui/CoverArt.vue"
+
 export default {
   name: "PageHero",
+  components: { CoverArt },
   props: {
     title: { type: String, required: true },
     tagline: { type: String, default: "" },
@@ -64,12 +71,15 @@ export default {
     breadcrumbs: { type: Array, default: () => [] },
     icon: { type: String, default: "" },
     iconColor: { type: String, default: "#2563eb" },
+    /** Varian cover SVG: system | website | order | code | people | support | award | grid | faq */
+    cover: { type: String, default: "" },
+    coverColor: { type: String, default: "" },
     ctaPrimary: { type: Object, default: null },
     ctaSecondary: { type: Object, default: null },
   },
   computed: {
     hasAside() {
-      return Boolean(this.icon)
+      return Boolean(this.cover || this.icon)
     },
     iconStyle() {
       return {
@@ -121,5 +131,13 @@ export default {
 .page-hero-icon i {
   font-size: clamp(64px, 10vw, 92px);
   color: #fff;
+}
+
+.page-hero-cover {
+  max-width: 420px;
+  margin: 0 auto;
+  filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.28));
+  border-radius: 22px;
+  overflow: hidden;
 }
 </style>

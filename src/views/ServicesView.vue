@@ -6,6 +6,7 @@
       desc="Dari website profesional hingga sistem manajemen kompleks — semua dikerjakan in-house oleh tim berpengalaman."
       icon="bi-grid-1x2"
       icon-color="#0e7490"
+      cover="grid"
     />
 
     <!-- Daftar layanan -->
@@ -41,12 +42,12 @@
 
     <section class="section pt-0">
       <div class="container">
-        <CtaBanner title="Layanan yang cocok untuk bisnis Anda?" desc="Konsultasikan kebutuhan Anda — kami bantu memilih solusi yang paling tepat dan efisien.">
-          <router-link :to="{ name: 'consultation' }" class="btn-hero-primary text-decoration-none">
-            <i class="bi bi-calculator me-2"></i>Konsultasikan Harga
+        <CtaBanner title="Siap mulai proyek Anda?" desc="Pilih produk yang sesuai, centang fitur yang dibutuhkan, lalu kirim order langsung ke WhatsApp kami.">
+          <router-link :to="{ name: 'products' }" class="btn-hero-primary text-decoration-none">
+            <i class="bi bi-box-seam me-2"></i>Lihat Produk &amp; Order
           </router-link>
-          <router-link :to="{ name: 'products' }" class="btn-hero-outline text-decoration-none">
-            <i class="bi bi-box-seam me-2"></i>Lihat Produk
+          <router-link :to="{ name: 'contact' }" class="btn-hero-outline text-decoration-none">
+            <i class="bi bi-whatsapp me-2"></i>Hubungi Kami
           </router-link>
         </CtaBanner>
       </div>

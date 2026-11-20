@@ -6,6 +6,7 @@
       desc="Kami membangun produk digital yang fungsional sekaligus estetis — dari arsitektur backend yang tangguh hingga antarmuka yang memanjakan mata."
       icon="bi-people"
       icon-color="#00205D"
+      cover="people"
     />
 
     <!-- Intro + Fitur -->

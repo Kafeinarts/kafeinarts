@@ -1,6 +1,6 @@
 <template>
   <!-- Skip link: aksesibilitas & SEO (lewati navigasi header) -->
-  <a href="#main-content" class="skip-link">Lewati ke konten utama</a>
+  <a href="#main-content" class="skip-link">{{ $t('common.skipToContent') }}</a>
 
   <SiteHeader />
 

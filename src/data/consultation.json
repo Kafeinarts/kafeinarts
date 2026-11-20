@@ -106,9 +106,9 @@
       },
       {
         "key": "price",
-        "label": "Konsultasi Harga",
-        "icon": "bi-calculator",
-        "desc": "Saya ingin diskusi dulu mengenai estimasi biaya."
+        "label": "Diskusi Kebutuhan",
+        "icon": "bi-chat-dots",
+        "desc": "Saya ingin diskusi dulu mengenai scope dan kebutuhan project."
       }
     ]
   }

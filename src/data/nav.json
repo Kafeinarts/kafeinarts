@@ -2,61 +2,71 @@
   "items": [
     {
       "label": "Beranda",
+      "i18nKey": "nav.home",
       "to": {
         "name": "home"
       }
     },
     {
       "label": "Tentang",
+      "i18nKey": "nav.about",
       "to": {
         "name": "about"
       }
     },
     {
       "label": "Kelebihan",
+      "i18nKey": "nav.whyUs",
       "to": {
         "name": "why-us"
       }
     },
     {
       "label": "Keahlian",
+      "i18nKey": "nav.skills",
       "to": {
         "name": "skills"
       }
     },
     {
       "label": "Layanan",
+      "i18nKey": "nav.services",
       "to": {
         "name": "services"
       }
     },
     {
       "label": "Produk",
+      "i18nKey": "nav.products",
       "dropdown": "products"
     },
     {
       "label": "FAQ",
+      "i18nKey": "nav.faq",
       "to": {
         "name": "faq"
       }
     },
     {
       "label": "Tim",
+      "i18nKey": "nav.team",
       "to": {
         "name": "team"
       }
     },
     {
       "label": "Kontak",
+      "i18nKey": "nav.contact",
       "to": {
         "name": "contact"
       }
     }
   ],
   "cta": {
-    "label": "Konsultasi",
+    "label": "Order Sistem",
+    "i18nKey": "nav.order",
     "to": {
-      "name": "consultation"
+      "name": "order"
     }
   }
 }

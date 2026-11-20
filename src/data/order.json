@@ -1,0 +1,64 @@
+{
+  "page": {
+    "title": "Order Sistem",
+    "subtitle": "Pilih produk, centang fitur yang relevan, tambahkan kebutuhan lain, lalu kirim ke WhatsApp kami."
+  },
+  "steps": [
+    {
+      "key": "product",
+      "label": "Pilih Produk"
+    },
+    {
+      "key": "features",
+      "label": "Pilih Fitur"
+    },
+    {
+      "key": "profile",
+      "label": "Biodata"
+    },
+    {
+      "key": "review",
+      "label": "Ringkasan & Kirim"
+    }
+  ],
+  "section": {
+    "title": "Cara Order",
+    "subtitle": "Request → Pilih Fitur → Isi Biodata → Kirim ke WhatsApp. Tanpa harga kaku — biaya disepakati setelah scope project jelas.",
+    "steps": [
+      {
+        "icon": "bi-grid-3x3-gap",
+        "title": "Pilih Produk",
+        "desc": "Pilih sistem atau website yang ingin Anda konsultasikan, atau request custom."
+      },
+      {
+        "icon": "bi-ui-checks-grid",
+        "title": "Centang Fitur",
+        "desc": "Centang fitur yang Anda butuhkan, atau tulis kebutuhan tambahan di kolom bawah."
+      },
+      {
+        "icon": "bi-person-vcard",
+        "title": "Isi Biodata",
+        "desc": "Nama, nomor WhatsApp, instansi, email, dan kota — kurang dari satu menit."
+      },
+      {
+        "icon": "bi-send-check",
+        "title": "Ringkasan & Kirim",
+        "desc": "Periksa kembali ringkasan order, lalu kirim langsung ke WhatsApp Kafeinarts."
+      }
+    ]
+  },
+  "customProduct": {
+    "slug": "custom",
+    "name": "Request Custom / Lainnya",
+    "shortName": "Custom",
+    "category": "custom",
+    "icon": "bi-lightbulb",
+    "color": "#b45309",
+    "tagline": "Belum ada di katalog? Ceritakan kebutuhan Anda.",
+    "features": {
+      "items": []
+    }
+  },
+  "priceNote": "Kami sengaja tidak menampilkan harga tetap karena biaya sangat bergantung pada scope, jumlah fitur, integrasi, dan timeline project. Tim Kafeinarts akan mengirim penawaran setelah diskusi kebutuhan Anda.",
+  "submitNote": "Pesan yang sudah tersusun otomatis akan terbuka di WhatsApp. Silakan kirim untuk melanjutkan ke tahap diskusi & penawaran."
+}
