@@ -37,3 +37,19 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+/* Tombol WA mengambang ada di kanan-bawah (22px + tinggi ±50px).
+   ScrollTop diposisikan di atasnya agar keduanya tidak bertumpuk. */
+.scroll-top.active {
+  right: 22px;
+  bottom: 84px;
+}
+
+@media (max-width: 640px) {
+  .scroll-top.active {
+    right: 18px;
+    bottom: 78px;
+  }
+}
+</style>

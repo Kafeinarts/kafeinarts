@@ -67,6 +67,8 @@ export default {
 
 @media (max-width: 640px) {
   .floating-wa {
+    right: 18px;
+    bottom: 18px;
     padding: 12px;
   }
   .floating-wa-label {
