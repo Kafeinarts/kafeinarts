@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Sitemap landing page Kafeinarts (one-page: seluruh konten berada di URL utama).
-  Perbarui <lastmod> setiap kali konten halaman berubah,
-  dan sesuaikan <loc> bila domain produksi berganti.
+  Sitemap Kafeinarts.
+  Landing page SEO per kota untuk kata kunci "jasa pembuatan website <kota>".
+  Perbarui <lastmod> bila konten berubah; sesuaikan <loc> bila domain berganti.
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
@@ -16,5 +16,59 @@
     <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://kafeinarts.vercel.app/jasa-pembuatan-website-bekasi</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kafeinarts.vercel.app/jasa-pembuatan-website-bogor</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kafeinarts.vercel.app/jasa-pembuatan-website-jakarta</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kafeinarts.vercel.app/jasa-pembuatan-website-karawang</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kafeinarts.vercel.app/jasa-pembuatan-website-surabaya</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kafeinarts.vercel.app/jasa-pembuatan-website-malang</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kafeinarts.vercel.app/jasa-pembuatan-website-bandung</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kafeinarts.vercel.app/jasa-pembuatan-website-semarang</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kafeinarts.vercel.app/jasa-pembuatan-website-tangerang</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

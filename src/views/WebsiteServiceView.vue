@@ -1,9 +1,9 @@
 <template>
   <main id="main-content" class="main" tabindex="-1">
     <PageHero
-      title="Jasa Pembuatan Website di Depok"
+      :title="`Jasa Pembuatan Website di ${landing.city}`"
       tagline="Website profesional, cepat, dan siap dipakai bisnis Anda"
-      desc="Kafeinarts melayani jasa bikin web untuk UMKM, perusahaan, klinik, sekolah, dan instansi di Depok, Bogor, Bekasi, Jakarta, serta seluruh Indonesia. Dari company profile, landing page, toko online, hingga sistem web custom."
+      :desc="`Kafeinarts melayani jasa bikin web untuk UMKM, perusahaan, klinik, sekolah, dan instansi di ${landing.city} serta seluruh Indonesia — onsite maupun remote. Dari company profile, landing page, toko online, hingga sistem web custom.`"
       icon="bi-code-slash"
       icon-color="#0e7490"
       cover="grid"
@@ -71,7 +71,7 @@
       <div class="container">
         <SectionHeading
           title="Pertanyaan yang sering ditanyakan"
-          subtitle="Seputar jasa pembuatan website di Depok dan sekitarnya"
+          :subtitle="`Seputar jasa pembuatan website di ${landing.city} dan sekitarnya`"
         />
         <div class="faq-list">
           <details v-for="item in faqs" :key="item.q" class="faq-item">
@@ -85,7 +85,7 @@
     <section class="section pt-0">
       <div class="container">
         <CtaBanner
-          title="Butuh jasa bikin web di Depok?"
+          :title="`Butuh jasa bikin web di ${landing.city}?`"
           desc="Ceritakan kebutuhan Anda. Kami berikan saran teknis, estimasi biaya, dan timeline yang jelas — tanpa biaya konsultasi."
         >
           <router-link :to="{ name: 'contact' }" class="btn-hero-primary text-decoration-none">
@@ -105,9 +105,11 @@ import PageHero from "@/components/ui/PageHero.vue"
 import SectionHeading from "@/components/ui/SectionHeading.vue"
 import FeatureCard from "@/components/ui/FeatureCard.vue"
 import CtaBanner from "@/components/ui/CtaBanner.vue"
+import { useRoute } from "vue-router"
 import { usePageSeo } from "@/composables/usePageSeo"
 
 const SEO = {
+  city: "Depok",
   title: "Jasa Pembuatan Website Depok — Kafeinarts",
   description:
     "Butuh jasa pembuatan website di Depok? Kafeinarts membuat website company profile, landing page, toko online, dan sistem web custom dengan Laravel, Vue.js, React & Next.js. Konsultasi gratis.",
@@ -122,9 +124,13 @@ export default {
   name: "WebsiteServiceView",
   components: { PageHero, SectionHeading, FeatureCard, CtaBanner },
   setup() {
-    usePageSeo(SEO)
+    const route = useRoute()
+    const landing = route.meta.city ? route.meta : SEO
+    usePageSeo(landing)
+    return { landing }
   },
   data() {
+    const city = this.landing.city
     return {
       breadcrumbs: [
         { label: "Beranda", to: { name: "home" } },
@@ -208,7 +214,7 @@ export default {
       ],
       faqs: [
         {
-          q: "Berapa biaya jasa pembuatan website di Depok?",
+          q: `Berapa biaya jasa pembuatan website di ${city}?`,
           a: "Biaya tergantung jenis dan kompleksitas website. Landing page dan company profile mulai dari paket terjangkau, sedangkan sistem seperti ERP, LMS, atau SIMRS dihitung per modul. Konsultasi dan penawaran resmi selalu gratis.",
         },
         {
@@ -216,8 +222,8 @@ export default {
           a: "Website company profile dan landing page umumnya selesai dalam 1–3 minggu. Sistem yang lebih kompleks seperti ERP atau SIMRS membutuhkan 3–8 minggu tergantung fitur dan integrasi.",
         },
         {
-          q: "Apakah bisa dibuatkan website untuk area luar Depok?",
-          a: "Ya. Kami melayani onsite di Depok, Bogor, Bekasi, Jakarta, dan sekitarnya, serta melayani klien dari seluruh Indonesia secara remote.",
+          q: `Apakah bisa dibuatkan website untuk area luar ${city}?`,
+          a: `Ya. Kami melayani onsite di ${city}, Depok, Bogor, Bekasi, Jakarta, dan sekitarnya, serta melayani klien dari seluruh Indonesia secara remote.`,
         },
         {
           q: "Teknologi apa yang digunakan?",
