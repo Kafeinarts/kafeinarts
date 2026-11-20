@@ -1,7 +1,7 @@
 # Postingan Promosi Kafeinarts — Threads, X, LinkedIn
 
-**Link utama:** https://kafeinarts.vercel.app
-**Landing SEO:** https://kafeinarts.vercel.app/jasa-pembuatan-website-depok
+**Link utama:** https://kafeinarts.web.id
+**Landing SEO:** https://kafeinarts.web.id/jasa-pembuatan-website-depok
 **WhatsApp:** https://wa.me/6285817048266?text=Halo%20Kafeinarts%2C%20saya%20ingin%20konsultasi%20jasa%20pembuatan%20website%2Faplikasi.%20Bisa%20bantu%20singgung%20kebutuhan%20saya%3F
 **Gambar lampiran:** `public/assets/img/og-image-v2.png` (1200×630) atau `public/assets/img/og-image-square.png` (1080×1080 untuk Threads/IG)
 
@@ -21,7 +21,7 @@ Di Kafeinarts kami bantu dari nol sampai tayang:
 Stack-nya: Laravel, Vue.js, React, Next.js, MySQL. Bisa onsite di Depok/Jabodetabek, bisa juga remote untuk seluruh Indonesia.
 
 Konsultasi & penawaran gratis, kok. Mau diskusi dulu boleh banget 👇
-https://kafeinarts.vercel.app/jasa-pembuatan-website-depok
+https://kafeinarts.web.id/jasa-pembuatan-website-depok
 
 #jasabikinweb #webdeveloper #laravel #vuejs #depok #umkm #kafeinarts
 ```
@@ -30,7 +30,7 @@ https://kafeinarts.vercel.app/jasa-pembuatan-website-depok
 
 ### Versi singkat
 ```text
-Butuh website atau aplikasi yang benar-benar dipakai? Kami bangun end-to-end: Laravel, Vue.js, React, Next.js, MySQL. Konsultasi gratis → https://kafeinarts.vercel.app/jasa-pembuatan-website-depok
+Butuh website atau aplikasi yang benar-benar dipakai? Kami bangun end-to-end: Laravel, Vue.js, React, Next.js, MySQL. Konsultasi gratis → https://kafeinarts.web.id/jasa-pembuatan-website-depok
 ```
 
 ### Versi thread (3 post)
@@ -41,7 +41,7 @@ Butuh website atau aplikasi yang benar-benar dipakai? Kami bangun end-to-end: La
 2/3 Layanan kami: company profile, landing page, toko online + payment gateway, ERP/SIMRS/LMS/CMS, dan aplikasi web custom. Stack: Laravel, Vue.js, React, Next.js, MySQL.
 ```
 ```text
-3/3 Onsite di Depok/Jabodetabek atau remote untuk seluruh Indonesia. Konsultasi & penawaran gratis: https://kafeinarts.vercel.app/jasa-pembuatan-website-depok
+3/3 Onsite di Depok/Jabodetabek atau remote untuk seluruh Indonesia. Konsultasi & penawaran gratis: https://kafeinarts.web.id/jasa-pembuatan-website-depok
 ```
 
 ## 3. LinkedIn
@@ -64,7 +64,7 @@ Dengan pengalaman 4+ tahun dan 15+ proyek, kami terbiasa menangani kebutuhan UMK
 Konsultasi & penawaran resmi GRATIS. Yuk diskusikan kebutuhan Anda:
 👉 https://wa.me/6285817048266?text=Halo%20Kafeinarts%2C%20saya%20ingin%20konsultasi%20jasa%20pembuatan%20website%2Faplikasi.%20Bisa%20bantu%20singgung%20kebutuhan%20saya%3F
 
-Portofolio & layanan: https://kafeinarts.vercel.app/jasa-pembuatan-website-depok
+Portofolio & layanan: https://kafeinarts.web.id/jasa-pembuatan-website-depok
 
 #JasaPembuatanWebsite #WebDevelopment #Laravel #VueJS #React #SoftwareHouse #Depok #UMKM #Digitalisasi
 ```
@@ -72,7 +72,7 @@ Portofolio & layanan: https://kafeinarts.vercel.app/jasa-pembuatan-website-depok
 ---
 
 ## Link share cepat (composer langsung terisi)
-- **Threads:** https://www.threads.net/intent/post?text=Bikin%20website%20itu%20bukan%20cuma%20soal%20tampilan%20cantik.%20Yang%20paling%20penting%3A%20cepat%2C%20gampang%20dipakai%2C%20dan%20benar-benar%20membantu%20bisnis%20jalan.%0A%0AKami%20bantu%20dari%20nol%20sampai%20tayang%3A%0A%E2%80%A2%20Company%20profile%20%26%20landing%20page%0A%E2%80%A2%20Toko%20online%20%2B%20payment%20gateway%0A%E2%80%A2%20ERP%2FSIMRS%2FLMS%2FCMS%0A%E2%80%A2%20Aplikasi%20web%20custom%20%26%20integrasi%20API%0A%0AKonsultasi%20%26%20penawaran%20gratis%20%F0%9F%91%87%20https%3A%2F%2Fkafeinarts.vercel.app%2Fjasa-pembuatan-website-depok%0A%0A%23jasabikinweb%20%23webdeveloper%20%23laravel%20%23depok%20%23umkm
-- **X:** https://twitter.com/intent/tweet?text=Butuh%20website%20atau%20aplikasi%20yang%20benar-benar%20dipakai%3F%20Kami%20bangun%20end-to-end%3A%20Laravel%2C%20Vue.js%2C%20React%2C%20Next.js%2C%20MySQL.%20Konsultasi%20gratis%20%E2%86%92%20https%3A%2F%2Fkafeinarts.vercel.app%2Fjasa-pembuatan-website-depok
-- **LinkedIn:** https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fkafeinarts.vercel.app%2Fjasa-pembuatan-website-depok
+- **Threads:** https://www.threads.net/intent/post?text=Bikin%20website%20itu%20bukan%20cuma%20soal%20tampilan%20cantik.%20Yang%20paling%20penting%3A%20cepat%2C%20gampang%20dipakai%2C%20dan%20benar-benar%20membantu%20bisnis%20jalan.%0A%0AKami%20bantu%20dari%20nol%20sampai%20tayang%3A%0A%E2%80%A2%20Company%20profile%20%26%20landing%20page%0A%E2%80%A2%20Toko%20online%20%2B%20payment%20gateway%0A%E2%80%A2%20ERP%2FSIMRS%2FLMS%2FCMS%0A%E2%80%A2%20Aplikasi%20web%20custom%20%26%20integrasi%20API%0A%0AKonsultasi%20%26%20penawaran%20gratis%20%F0%9F%91%87%20https%3A%2F%2Fkafeinarts.web.id%2Fjasa-pembuatan-website-depok%0A%0A%23jasabikinweb%20%23webdeveloper%20%23laravel%20%23depok%20%23umkm
+- **X:** https://twitter.com/intent/tweet?text=Butuh%20website%20atau%20aplikasi%20yang%20benar-benar%20dipakai%3F%20Kami%20bangun%20end-to-end%3A%20Laravel%2C%20Vue.js%2C%20React%2C%20Next.js%2C%20MySQL.%20Konsultasi%20gratis%20%E2%86%92%20https%3A%2F%2Fkafeinarts.web.id%2Fjasa-pembuatan-website-depok
+- **LinkedIn:** https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fkafeinarts.web.id%2Fjasa-pembuatan-website-depok
 - **WhatsApp:** https://wa.me/6285817048266?text=Halo%20Kafeinarts%2C%20saya%20ingin%20konsultasi%20jasa%20pembuatan%20website%2Faplikasi.%20Bisa%20bantu%20singgung%20kebutuhan%20saya%3F

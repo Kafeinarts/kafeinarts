@@ -17,7 +17,7 @@ import { siteData } from "@/data/siteData"
 import { getWhatsAppTargets } from "@/utils/whatsapp"
 
 /** URL produksi. Ganti di sini + public/index.html + sitemap.xml + robots.txt */
-export const SITE_URL = "https://kafeinarts.vercel.app"
+export const SITE_URL = "https://kafeinarts.web.id"
 export const SITE_TITLE = siteData.seo.title
 
 /** Buang semua tag HTML agar aman dipakai sebagai teks schema.org */
@@ -27,7 +27,7 @@ export const stripHtml = (value = "") =>
     .replace(/\s+/g, " ")
     .trim()
 
-/** "assets/img/x.png" -> "https://kafeinarts.vercel.app/assets/img/x.png" */
+/** "assets/img/x.png" -> "https://kafeinarts.web.id/assets/img/x.png" */
 export const absoluteUrl = (path = "") =>
   `${SITE_URL}/${String(path).replace(/^\/+/, "")}`
 

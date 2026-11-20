@@ -359,7 +359,7 @@ SEO on-page sudah diterapkan. Aturan utamanya:
 
 > **Meta statis** (title, description, Open Graph, canonical) → `public/index.html`
 > **Structured data / JSON-LD** → dibangun dari `src/data/siteData.js` lewat `src/utils/seo.js`
-> **URL produksi** → `https://kafeinarts.vercel.app`
+> **URL produksi** → `https://kafeinarts.web.id`
 
 ### 1. Meta halaman (`public/index.html`)
 
@@ -435,7 +435,7 @@ convert -size 1200x630 xc:'#00205D' \
   -font DejaVu-Sans-Bold -pointsize 64 -fill '#FFFFFF' -annotate +60+382 'Kafeinarts Interactive' \
   -font DejaVu-Sans -pointsize 32 -fill '#C9D6EA' -annotate +60+440 'Mitra SaaS, Website & Sistem Manajemen' \
   -fill '#F4C430' -draw "rectangle 60,478 200,486" \
-  -font DejaVu-Sans -pointsize 28 -fill '#8FA6C7' -annotate +60+545 'kafeinarts.vercel.app  |  Depok, Jawa Barat' \
+  -font DejaVu-Sans -pointsize 28 -fill '#8FA6C7' -annotate +60+545 'kafeinarts.web.id  |  Depok, Jawa Barat' \
   public/assets/img/og-image.png
 ```
 

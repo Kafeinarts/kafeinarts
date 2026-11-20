@@ -4,4 +4,4 @@ Allow: /
 # Tidak ada path yang diblokir — seluruh section landing page terbuka untuk crawler.
 # Perbarui baris Sitemap bila domain produksi berubah (lihat public/index.html).
 
-Sitemap: https://kafeinarts.vercel.app/sitemap.xml
+Sitemap: https://kafeinarts.web.id/sitemap.xml

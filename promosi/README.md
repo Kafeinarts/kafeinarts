@@ -3,12 +3,12 @@
 Tujuan: membuat orang yang ingin **membuat website atau aplikasi** mudah menemukan dan menghubungi kita.
 
 ## Link utama
-- **Website:** https://kafeinarts.vercel.app
-- **Landing SEO Depok:** https://kafeinarts.vercel.app/jasa-pembuatan-website-depok
+- **Website:** https://kafeinarts.web.id
+- **Landing SEO Depok:** https://kafeinarts.web.id/jasa-pembuatan-website-depok
 - **WhatsApp konsultasi (pesan otomatis):**
   https://wa.me/6285817048266?text=Halo%20Kafeinarts%2C%20saya%20ingin%20konsultasi%20jasa%20pembuatan%20website%2Faplikasi.%20Bisa%20bantu%20singgung%20kebutuhan%20saya%3F
-- **Thumbnail share (1200×630, URL baru agar cache sosial terhapus):** https://kafeinarts.vercel.app/assets/img/og-image-v2.png
-- **Thumbnail persegi (1080×1080, Threads/IG):** https://kafeinarts.vercel.app/assets/img/og-image-square.png
+- **Thumbnail share (1200×630, URL baru agar cache sosial terhapus):** https://kafeinarts.web.id/assets/img/og-image-v2.png
+- **Thumbnail persegi (1080×1080, Threads/IG):** https://kafeinarts.web.id/assets/img/og-image-square.png
 
 Kenapa link WhatsApp memakai pesan otomatis? Calon klien tinggal kirim — tidak perlu mikir kalimat pembuka.
 
@@ -57,13 +57,13 @@ https://wa.me/6285817048266
 ## 3. Caption X / Twitter
 
 ```text
-Sedang cari jasa bikin web? Kami bangun website & aplikasi end-to-end — Laravel, Vue.js, React, Next.js, MySQL. Konsultasi gratis 👉 https://kafeinarts.vercel.app/jasa-pembuatan-website-depok
+Sedang cari jasa bikin web? Kami bangun website & aplikasi end-to-end — Laravel, Vue.js, React, Next.js, MySQL. Konsultasi gratis 👉 https://kafeinarts.web.id/jasa-pembuatan-website-depok
 ```
 
 ## 4. Broadcast WhatsApp (kirim ke kontak yang relevan)
 
 ```text
-Halo! Saya Arif dari Kafeinarts. Kami sedang open konsultasi jasa pembuatan website & aplikasi (company profile, toko online, ERP/SIMRS, dll). Kalau Anda/bisnis Anda butuh, boleh cek dulu karyanya di https://kafeinarts.vercel.app — konsultasi & penawaran gratis ya. Terima kasih 🙏
+Halo! Saya Arif dari Kafeinarts. Kami sedang open konsultasi jasa pembuatan website & aplikasi (company profile, toko online, ERP/SIMRS, dll). Kalau Anda/bisnis Anda butuh, boleh cek dulu karyanya di https://kafeinarts.web.id — konsultasi & penawaran gratis ya. Terima kasih 🙏
 ```
 
 ## 5. Signature email
@@ -71,7 +71,7 @@ Halo! Saya Arif dari Kafeinarts. Kami sedang open konsultasi jasa pembuatan webs
 ```text
 Arif Permana Putrasuryana — Web Developer & Software Engineer
 Kafeinarts Interactive | Depok, Jawa Barat
-Web: https://kafeinarts.vercel.app | WA: 0858-1704-8266
+Web: https://kafeinarts.web.id | WA: 0858-1704-8266
 ```
 
 ---

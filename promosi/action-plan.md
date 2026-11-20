@@ -30,14 +30,14 @@ Laravel · Vue.js · React · Next.js · MySQL
 ```text
 Chat sekarang, cerita kebutuhan Anda:
 https://wa.me/6285817048266
-atau kunjungi kafeinarts.vercel.app
+atau kunjungi kafeinarts.web.id
 ```
 
 ## Prioritas 2 — Broadcast ke 30–50 kontak hangat
 Kirim personal, jangan massal ke orang asing.
 
 ```text
-Halo Kak, saya Arif dari Kafeinarts. Kami lagi open konsultasi jasa pembuatan website & aplikasi — mulai dari company profile, toko online, sampai sistem ERP/SIMRS. Kalau Kakak/bisnis Kakak butuh, bisa cek dulu hasil karyanya di https://kafeinarts.vercel.app. Konsultasi & penawaran gratis ya 🙏
+Halo Kak, saya Arif dari Kafeinarts. Kami lagi open konsultasi jasa pembuatan website & aplikasi — mulai dari company profile, toko online, sampai sistem ERP/SIMRS. Kalau Kakak/bisnis Kakak butuh, bisa cek dulu hasil karyanya di https://kafeinarts.web.id. Konsultasi & penawaran gratis ya 🙏
 ```
 
 **Susulan 2 hari kemudian (follow-up sopan):**
@@ -74,7 +74,7 @@ Halo [Nama], saya Arif — Web Developer di Depok. Saya lihat Anda bergerak di [
 
 Setelah accept, **jangan langsung jualan**. Kirim lagi 2 hari kemudian:
 ```text
-Terima kasih sudah connect, [Nama]. Kalau someday Anda butuh website/aplikasi, saya siap bantu diskusi gratis kok. Portofolio singkatnya di sini: https://kafeinarts.vercel.app
+Terima kasih sudah connect, [Nama]. Kalau someday Anda butuh website/aplikasi, saya siap bantu diskusi gratis kok. Portofolio singkatnya di sini: https://kafeinarts.web.id
 ```
 
 ## Prioritas 5 — Komentar bernilai di postingan orang lain
