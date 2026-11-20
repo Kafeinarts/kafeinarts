@@ -16,7 +16,7 @@ export default {
     icon: { type: String, required: true },
     title: { type: String, required: true },
     desc: { type: String, default: "" },
-    color: { type: String, default: "#00205D" },
+    color: { type: String, default: "#3d7bff" },
   },
   computed: {
     iconBg() {
@@ -39,7 +39,7 @@ export default {
 
 .feature-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 16px 36px rgba(0, 32, 93, 0.12);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
 }
 
 .feature-card-icon {

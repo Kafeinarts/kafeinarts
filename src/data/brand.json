@@ -4,7 +4,7 @@
     "logo": "assets/img/logo-header.png",
     "favicon": "assets/img/favicon.png",
     "appleTouchIcon": "assets/img/apple-touch-icon.png",
-    "accent": "#00205D",
+    "accent": "#c8ff2e",
     "headingColor": "#37517e"
   },
   "seo": {
@@ -20,9 +20,16 @@
       "https://github.com/Kafeinarts/Kafeinarts"
     ],
     "areaServed": [
+      "Jakarta",
       "Depok",
+      "Bogor",
+      "Tangerang",
+      "Tangerang Selatan",
+      "Bekasi",
+      "Jabodetabek",
       "Jawa Barat",
-      "Indonesia"
+      "Indonesia",
+      "Remote / Worldwide"
     ],
     "geo": {
       "latitude": -6.4025,

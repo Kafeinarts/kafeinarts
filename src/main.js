@@ -5,6 +5,7 @@ import router, { registerProductRoutes } from './router'
 import store from './store'
 import i18n from './i18n'
 import { loadProducts } from './data/products/index.js'
+import './assets/css/neon-theme.css'
 
 /**
  * Data produk di-fetch dulu (dari /data/products/*.json) sebelum app

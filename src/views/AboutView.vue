@@ -5,7 +5,7 @@
       tagline="Perpaduan energi kreatif dan keahlian teknis"
       desc="Kami membangun produk digital yang fungsional sekaligus estetis — dari arsitektur backend yang tangguh hingga antarmuka yang memanjakan mata."
       icon="bi-people"
-      icon-color="#00205D"
+      icon-color="#c8ff2e"
       cover="people"
     />
 
@@ -113,7 +113,9 @@ export default {
 
 <style scoped>
 .about-story {
-  background: linear-gradient(160deg, #00205d, #04307f);
+  background:
+    radial-gradient(circle at 88% 12%, rgba(200, 255, 46, 0.22), transparent 45%),
+    linear-gradient(160deg, #102a5e, #3d7bff);
   color: #fff;
   border-radius: 16px;
 }
@@ -123,16 +125,16 @@ export default {
 }
 
 .about-story .btn-primary {
-  background: #fff;
-  border-color: #fff;
-  color: #00205d;
-  font-weight: 600;
+  background: #c8ff2e;
+  border-color: #c8ff2e;
+  color: #05070c;
+  font-weight: 700;
 }
 
 .about-story .btn-primary:hover {
-  background: #e8dcc6;
-  border-color: #e8dcc6;
-  color: #00205d;
+  background: #ddff75;
+  border-color: #ddff75;
+  color: #05070c;
 }
 
 .timeline-card {

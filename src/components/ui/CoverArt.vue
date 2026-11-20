@@ -14,7 +14,7 @@
     <defs>
       <linearGradient :id="gradId" x1="0" y1="0" x2="1" y2="1">
         <stop offset="0%" :stop-color="color" stop-opacity="0.95" />
-        <stop offset="100%" stop-color="#00205d" stop-opacity="0.9" />
+        <stop offset="100%" stop-color="#081225" stop-opacity="0.95" />
       </linearGradient>
     </defs>
 
@@ -37,8 +37,8 @@
       <rect x="66" y="76" width="14" height="40" rx="3" :fill="color" opacity="0.75" />
       <rect x="86" y="66" width="14" height="50" rx="3" :fill="color" opacity="0.75" />
       <path d="M26 104 L48 92 L68 82 L88 72" stroke="#0d9488" stroke-width="3" fill="none" stroke-linecap="round" />
-      <rect x="134" y="60" width="60" height="8" rx="4" fill="#00205d" opacity="0.25" />
-      <rect x="134" y="96" width="80" height="8" rx="4" fill="#00205d" opacity="0.25" />
+      <rect x="134" y="60" width="60" height="8" rx="4" fill="#0a1020" opacity="0.25" />
+      <rect x="134" y="96" width="80" height="8" rx="4" fill="#0a1020" opacity="0.25" />
       <circle cx="330" cy="86" r="26" fill="#fff" opacity="0.18" />
       <path d="M320 86 l8 8 l16 -18" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
     </g>
@@ -52,15 +52,15 @@
       <circle cx="56" cy="24" r="4" fill="#f87171" />
       <rect x="14" y="48" width="130" height="68" rx="8" fill="#fff" opacity="0.9" />
       <rect x="26" y="60" width="72" height="9" rx="4.5" :fill="color" opacity="0.7" />
-      <rect x="26" y="78" width="100" height="7" rx="3.5" fill="#00205d" opacity="0.2" />
-      <rect x="26" y="92" width="80" height="7" rx="3.5" fill="#00205d" opacity="0.2" />
+      <rect x="26" y="78" width="100" height="7" rx="3.5" fill="#0a1020" opacity="0.2" />
+      <rect x="26" y="92" width="80" height="7" rx="3.5" fill="#0a1020" opacity="0.2" />
       <rect x="26" y="106" width="56" height="7" rx="3.5" fill="#0d9488" opacity="0.6" />
       <rect x="156" y="48" width="130" height="30" rx="8" fill="#fff" opacity="0.75" />
       <rect x="156" y="86" width="130" height="30" rx="8" fill="#fff" opacity="0.75" />
       <circle cx="176" cy="63" r="8" :fill="color" opacity="0.6" />
       <circle cx="176" cy="101" r="8" fill="#0d9488" opacity="0.6" />
-      <rect x="194" y="59" width="64" height="8" rx="4" fill="#00205d" opacity="0.2" />
-      <rect x="194" y="97" width="76" height="8" rx="4" fill="#00205d" opacity="0.2" />
+      <rect x="194" y="59" width="64" height="8" rx="4" fill="#0a1020" opacity="0.2" />
+      <rect x="194" y="97" width="76" height="8" rx="4" fill="#0a1020" opacity="0.2" />
     </g>
 
     <!-- Order: checklist + chat -->
@@ -70,14 +70,14 @@
       <g v-for="i in 3" :key="i">
         <rect x="20" :y="48 + i * 28" width="22" height="22" rx="6" :fill="color" opacity="0.18" />
         <path :d="`M26 ${59 + i * 28} l4 4 l8 -9`" stroke="#0d9488" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
-        <rect x="52" :y="54 + i * 28" width="112" height="10" rx="5" fill="#00205d" opacity="0.2" />
+        <rect x="52" :y="54 + i * 28" width="112" height="10" rx="5" fill="#0a1020" opacity="0.2" />
       </g>
       <g transform="translate(210 62)">
         <path d="M0 0 h108 a18 18 0 0 1 18 18 v52 a18 18 0 0 1 -18 18 h-58 l-22 18 v-18 h-28 a18 18 0 0 1 -18 -18 v-52 a18 18 0 0 1 18 -18 z" fill="#fff" opacity="0.9" />
         <circle cx="28" cy="44" r="6" fill="#25d366" />
         <circle cx="52" cy="44" r="6" fill="#25d366" />
         <circle cx="76" cy="44" r="6" fill="#25d366" />
-        <rect x="24" y="64" width="80" height="8" rx="4" fill="#00205d" opacity="0.2" />
+        <rect x="24" y="64" width="80" height="8" rx="4" fill="#0a1020" opacity="0.2" />
       </g>
     </g>
 
@@ -88,10 +88,10 @@
       <circle cx="44" cy="26" r="5" fill="#fbbf24" />
       <circle cx="62" cy="26" r="5" fill="#0d9488" />
       <rect x="22" y="54" width="118" height="10" rx="5" :fill="color" opacity="0.75" />
-      <rect x="36" y="76" width="86" height="8" rx="4" fill="#00205d" opacity="0.22" />
+      <rect x="36" y="76" width="86" height="8" rx="4" fill="#0a1020" opacity="0.22" />
       <rect x="50" y="94" width="70" height="8" rx="4" fill="#0d9488" opacity="0.5" />
-      <path d="M206 60 l-26 30 26 30" stroke="#00205d" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.4" />
-      <path d="M246 60 l26 30 -26 30" stroke="#00205d" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.4" />
+      <path d="M206 60 l-26 30 26 30" stroke="#0a1020" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.4" />
+      <path d="M246 60 l26 30 -26 30" stroke="#0a1020" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.4" />
       <path d="M232 54 l-18 74" stroke="#0d9488" stroke-width="7" fill="none" stroke-linecap="round" />
     </g>
 
@@ -128,13 +128,13 @@
       <rect x="0" y="80" width="144" height="64" rx="12" fill="#fff" opacity="0.75" />
       <rect x="168" y="80" width="144" height="64" rx="12" fill="#fff" opacity="0.95" />
       <rect x="20" y="20" width="52" height="8" rx="4" :fill="color" opacity="0.75" />
-      <rect x="20" y="38" width="86" height="7" rx="3.5" fill="#00205d" opacity="0.2" />
+      <rect x="20" y="38" width="86" height="7" rx="3.5" fill="#0a1020" opacity="0.2" />
       <rect x="188" y="20" width="52" height="8" rx="4" :fill="color" opacity="0.6" />
-      <rect x="188" y="38" width="86" height="7" rx="3.5" fill="#00205d" opacity="0.16" />
+      <rect x="188" y="38" width="86" height="7" rx="3.5" fill="#0a1020" opacity="0.16" />
       <rect x="20" y="100" width="52" height="8" rx="4" :fill="color" opacity="0.6" />
-      <rect x="20" y="118" width="86" height="7" rx="3.5" fill="#00205d" opacity="0.16" />
+      <rect x="20" y="118" width="86" height="7" rx="3.5" fill="#0a1020" opacity="0.16" />
       <rect x="188" y="100" width="52" height="8" rx="4" :fill="color" opacity="0.75" />
-      <rect x="188" y="118" width="86" height="7" rx="3.5" fill="#00205d" opacity="0.2" />
+      <rect x="188" y="118" width="86" height="7" rx="3.5" fill="#0a1020" opacity="0.2" />
     </g>
 
     <!-- FAQ (default): gelembung tanya -->

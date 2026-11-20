@@ -1,0 +1,98 @@
+{
+  "_catatan": "Konfigurasi SEO khusus: keyword target, area layanan, halaman internal untuk structured data, dan layanan/penawaran yang dipakai schema.org. Diimpor lewat src/data/siteData.js agar bisa dibaca src/utils/seo.js.",
+  "keywords": [
+    "Kafeinarts",
+    "IT solution",
+    "jasa IT solution",
+    "jasa IT Depok",
+    "jasa IT Jakarta",
+    "jasa web",
+    "jasa pembuatan website",
+    "jasa website company profile",
+    "jasa landing page",
+    "jasa pengembang app",
+    "jasa pengembang aplikasi",
+    "jasa aplikasi mobile",
+    "jasa developer web",
+    "custom software development",
+    "pengembangan SaaS",
+    "SaaS full stack",
+    "sistem manajemen bisnis",
+    "sistem ERP",
+    "sistem SIMRS",
+    "e-commerce",
+    "cloud dan keamanan sistem",
+    "pengembang web Jabodetabek"
+  ],
+  "internalPages": [
+    {
+      "path": "/about",
+      "name": "Tentang Kafeinarts",
+      "description": "Kenali tim Kafeinarts Interactive, mitra teknis untuk perancangan sistem manajemen dan produk SaaS full-stack."
+    },
+    {
+      "path": "/services",
+      "name": "Layanan IT Solution Kafeinarts",
+      "description": "Layanan jasa web, pengembangan aplikasi, infrastruktur digital, dan keamanan sistem untuk bisnis."
+    },
+    {
+      "path": "/products",
+      "name": "Katalog Produk Digital Kafeinarts",
+      "description": "Sistem manajemen, application, dan website siap pakai yang dapat dikustomisasi sesuai kebutuhan bisnis."
+    },
+    {
+      "path": "/order",
+      "name": "Order Sistem & Aplikasi",
+      "description": "Pesan sistem atau aplikasi Kafeinarts: pilih produk, tentukan fitur, lalu kirim kebutuhan Anda melalui WhatsApp."
+    },
+    {
+      "path": "/contact",
+      "name": "Kontak & WhatsApp Kafeinarts",
+      "description": "Hubungi Kafeinarts Interactive untuk konsultasi, penawaran, dan kerja sama pengembangan sistem atau aplikasi."
+    }
+  ],
+  "offerings": [
+    {
+      "name": "Jasa IT Solution & Konsultasi Teknologi",
+      "serviceType": "IT consulting and solution architecture",
+      "description": "Konsultasi strategi teknologi, perencanaan arsitektur sistem, dan pendampingan digitalisasi bisnis mulai dari ide hingga implementasi.",
+      "url": "/services",
+      "keywords": ["IT solution", "konsultasi IT", "jasa IT", "digitalisasi bisnis"]
+    },
+    {
+      "name": "Jasa Pembuatan Website & Company Profile",
+      "serviceType": "Website development service",
+      "description": "Pembuatan website company profile, landing page, web profile, dan toko online yang profesional, responsif, dan siap dikembangkan.",
+      "url": "/products/company-profile",
+      "keywords": ["jasa web", "jasa pembuatan website", "jasa landing page", "website company profile"]
+    },
+    {
+      "name": "Jasa Pengembang Aplikasi & Mobile App",
+      "serviceType": "Custom application development service",
+      "description": "Pengembangan aplikasi web dan mobile custom sesuai kebutuhan operasional bisnis, mulai dari desain UI/UX hingga rilis dan pemeliharaan.",
+      "url": "/products",
+      "keywords": ["jasa pengembang app", "jasa pengembang aplikasi", "jasa aplikasi mobile", "custom app developer"]
+    },
+    {
+      "name": "Jasa Sistem Manajemen Bisnis (ERP, SIMRS, LMS)",
+      "serviceType": "Business management system development",
+      "description": "Implementasi dan kustomisasi sistem manajemen seperti ERP, SIMRS, LMS, CMS, dan point of sales untuk menyatukan proses bisnis Anda.",
+      "url": "/products/erp",
+      "keywords": ["sistem ERP", "SIMRS", "sistem manajemen", "jasa sistem informasi"]
+    },
+    {
+      "name": "Jasa Pengembangan SaaS Full-Stack",
+      "serviceType": "SaaS product development service",
+      "description": "Merancang dan membangun produk SaaS full-stack yang skalabel, aman, dan siap melayani banyak pengguna sejak hari pertama.",
+      "url": "/products",
+      "keywords": ["pengembangan SaaS", "SaaS full stack", "jasa software development"]
+    },
+    {
+      "name": "Jasa Cloud, DevOps & Keamanan Sistem",
+      "serviceType": "Cloud infrastructure and security service",
+      "description": "Penyiapan infrastruktur cloud, deployment, monitoring, dan perlindungan data agar sistem bisnis tetap berjalan andal dan aman.",
+      "url": "/services",
+      "keywords": ["cloud", "DevOps", "keamanan sistem", "jasa hosting aplikasi"]
+    }
+  ]
+}

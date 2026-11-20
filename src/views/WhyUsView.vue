@@ -55,7 +55,7 @@
         <SectionHeading :title="'Keunggulan yang Kami Berikan'" :subtitle="'Empat alasan yang paling sering disebutkan oleh klien kami.'" />
         <div class="row gy-4">
           <div v-for="(h, i) in whyUs.highlights" :key="h.title" class="col-md-6 col-xl-3 d-flex" data-aos="fade-up" :data-aos-delay="(i + 1) * 100">
-            <FeatureCard v-bind="h" color="#00205D" />
+            <FeatureCard v-bind="h" color="#3d7bff" />
           </div>
         </div>
       </div>

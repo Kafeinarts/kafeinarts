@@ -1,0 +1,611 @@
+/**
+ * Neon dark theme — GLOBAL.
+ * Berlaku di semua halaman (home, produk, order, artikel, dll).
+ * Palet: neon green #c8ff2e · black #05070c · blue #3d7bff · white #ffffff.
+ */
+
+body.theme-neon {
+  color-scheme: dark;
+
+  /* Variabel tema Arsha/main.css — ditimpa di sini untuk seluruh situs. */
+  --background-color: #05070c;
+  --default-color: #cbd5e1;
+  --heading-color: #ffffff;
+  --accent-color: #c8ff2e;
+  --surface-color: #0e1524;
+  --contrast-color: #05070c;
+
+  --nav-color: #eef2fb;
+  --nav-hover-color: #c8ff2e;
+  --nav-mobile-background-color: #080d18;
+  --nav-dropdown-background-color: #0a1020;
+  --nav-dropdown-color: #eef2fb;
+  --nav-dropdown-hover-color: #c8ff2e;
+
+  /* Warna turunan yang dipakai override di bawah. */
+  --neon-green: #c8ff2e;
+  --neon-blue: #3d7bff;
+  --neon-blue-soft: #7ea6ff;
+  --neon-line: rgba(255, 255, 255, 0.1);
+  --neon-panel: #0e1524;
+  --neon-panel-2: #080d18;
+
+  background-color: #05070c;
+  background-image:
+    radial-gradient(circle at 10% 0%, rgba(61, 123, 255, 0.13), transparent 40%),
+    radial-gradient(circle at 90% 12%, rgba(200, 255, 46, 0.07), transparent 38%);
+  background-attachment: fixed;
+  color: #cbd5e1;
+}
+
+/* Section preset bawaan tetap ikut palet gelap. */
+body.theme-neon .light-background,
+body.theme-neon .dark-background {
+  --background-color: #080d18;
+  --default-color: #cbd5e1;
+  --heading-color: #ffffff;
+  --surface-color: #101827;
+  --contrast-color: #05070c;
+}
+
+body.theme-neon .dark-background {
+  --background-color: #0a1222;
+}
+
+body.theme-neon a {
+  color: var(--neon-green);
+}
+
+body.theme-neon a:hover {
+  color: #e4ff91;
+}
+
+body.theme-neon .text-muted {
+  color: #94a3b8 !important;
+}
+
+body.theme-neon h1,
+body.theme-neon h2,
+body.theme-neon h3,
+body.theme-neon h4,
+body.theme-neon h5,
+body.theme-neon h6 {
+  color: var(--heading-color);
+}
+
+/* ---------------------------------------------------------------
+   HEADER / NAVIGATION
+   --------------------------------------------------------------- */
+body.theme-neon .header,
+body.theme-neon.index-page .header,
+body.theme-neon.index-page.scrolled .header {
+  --background-color: rgba(5, 7, 12, 0.9);
+  --heading-color: #ffffff;
+  --nav-color: #eef2fb;
+  background: rgba(5, 7, 12, 0.9) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: none;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+
+body.theme-neon .header .sitename,
+body.theme-neon .header .navmenu a,
+body.theme-neon .header .dropdown-toggle {
+  color: #eef2fb;
+}
+
+body.theme-neon .header .sitename span,
+body.theme-neon .header .navmenu li:hover > a,
+body.theme-neon .header .dropdown-toggle:hover {
+  color: var(--neon-green);
+}
+
+/* Menu aktif: lebih bold + underline neon (mengalahkan !important bawaan main.css). */
+body.theme-neon .header .navmenu a.active,
+body.theme-neon .header .navmenu .active:focus {
+  color: var(--neon-green) !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.01em;
+  text-shadow: 0 0 14px rgba(200, 255, 46, 0.28);
+}
+
+body.theme-neon .navmenu a.active::after,
+body.theme-neon .navmenu a.active:focus::after,
+body.theme-neon .navmenu .active::after {
+  background: var(--neon-green) !important;
+  height: 3px !important;
+}
+
+body.theme-neon .header .dropdown ul {
+  background: #0a1020;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.45);
+}
+
+body.theme-neon .header .dropdown ul a {
+  color: #eef2fb;
+}
+
+body.theme-neon .header .dropdown ul a:hover {
+  background: #141f33;
+  color: var(--neon-green);
+}
+
+body.theme-neon .header .btn-getstarted {
+  background: linear-gradient(100deg, var(--neon-green), var(--neon-blue-soft));
+  border-color: transparent;
+  color: #05070c;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(200, 255, 46, 0.18);
+}
+
+body.theme-neon .header .btn-getstarted:hover {
+  background: linear-gradient(100deg, #ddff75, #9dbcff);
+  color: #05070c;
+}
+
+body.theme-neon .mobile-nav-active .header .navmenu {
+  background: #080d18;
+}
+
+/* ---------------------------------------------------------------
+   HALAMAN DALAM (PageHero / breadcrumb)
+   --------------------------------------------------------------- */
+body.theme-neon .page-hero-gradient {
+  background:
+    radial-gradient(ellipse at top left, rgba(200, 255, 46, 0.14), transparent 55%),
+    radial-gradient(ellipse at bottom right, rgba(61, 123, 255, 0.22), transparent 58%),
+    linear-gradient(180deg, #081225 0%, #05070c 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.theme-neon .page-hero h1 {
+  color: #ffffff;
+}
+
+body.theme-neon .page-hero-tagline {
+  color: var(--neon-green);
+}
+
+body.theme-neon .product-breadcrumb a,
+body.theme-neon .product-breadcrumb li {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+body.theme-neon .product-breadcrumb a:hover,
+body.theme-neon .product-breadcrumb [aria-current="page"] {
+  color: var(--neon-green);
+}
+
+body.theme-neon .btn-hero-primary {
+  background: linear-gradient(100deg, var(--neon-green), var(--neon-blue-soft));
+  color: #05070c;
+  box-shadow: 0 10px 28px rgba(200, 255, 46, 0.18);
+}
+
+body.theme-neon .btn-hero-outline {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+body.theme-neon .btn-hero-outline:hover {
+  border-color: var(--neon-green);
+  color: var(--neon-green);
+}
+
+/* ---------------------------------------------------------------
+   BOOTSTRAP SURFACES & FORM
+   --------------------------------------------------------------- */
+body.theme-neon .card {
+  --bs-card-bg: #0e1524;
+  --bs-card-border-color: rgba(255, 255, 255, 0.09);
+  --bs-card-color: #cbd5e1;
+  background-color: #0e1524;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  color: #cbd5e1;
+}
+
+body.theme-neon .form-control,
+body.theme-neon .form-select {
+  background-color: #0b1220;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #eef2fb;
+}
+
+body.theme-neon .form-control::placeholder {
+  color: #7f8ca6;
+}
+
+body.theme-neon .form-control:focus,
+body.theme-neon .form-select:focus {
+  background-color: #0b1220;
+  border-color: var(--neon-green);
+  color: #ffffff;
+  box-shadow: 0 0 0 0.25rem rgba(200, 255, 46, 0.16);
+}
+
+body.theme-neon .input-group-text {
+  background-color: #111a2c;
+  border-color: rgba(255, 255, 255, 0.16);
+  color: var(--neon-green);
+}
+
+body.theme-neon .form-label {
+  color: #eef2fb;
+}
+
+body.theme-neon .list-group-item {
+  background-color: #0e1524;
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+}
+
+body.theme-neon .list-group-flush > .list-group-item {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+body.theme-neon .badge.text-bg-light {
+  background-color: rgba(200, 255, 46, 0.12) !important;
+  border-color: rgba(200, 255, 46, 0.3) !important;
+  color: var(--neon-green) !important;
+}
+
+/* ---------------------------------------------------------------
+   BUTTONS
+   --------------------------------------------------------------- */
+body.theme-neon .btn-primary {
+  --bs-btn-color: #05070c;
+  --bs-btn-bg: #c8ff2e;
+  --bs-btn-border-color: #c8ff2e;
+  --bs-btn-hover-color: #05070c;
+  --bs-btn-hover-bg: #ddff75;
+  --bs-btn-hover-border-color: #ddff75;
+  --bs-btn-focus-shadow-rgb: 200, 255, 46;
+  --bs-btn-active-color: #05070c;
+  --bs-btn-active-bg: #b8f01f;
+  --bs-btn-active-border-color: #b8f01f;
+}
+
+body.theme-neon .btn-success {
+  --bs-btn-color: #05070c;
+  --bs-btn-bg: #c8ff2e;
+  --bs-btn-border-color: #c8ff2e;
+  --bs-btn-hover-color: #05070c;
+  --bs-btn-hover-bg: #ddff75;
+  --bs-btn-hover-border-color: #ddff75;
+  --bs-btn-focus-shadow-rgb: 200, 255, 46;
+  --bs-btn-active-color: #05070c;
+  --bs-btn-active-bg: #b8f01f;
+  --bs-btn-active-border-color: #b8f01f;
+}
+
+body.theme-neon .btn-outline-secondary {
+  --bs-btn-color: #cbd5e1;
+  --bs-btn-border-color: rgba(255, 255, 255, 0.22);
+  --bs-btn-hover-color: #c8ff2e;
+  --bs-btn-hover-bg: rgba(200, 255, 46, 0.1);
+  --bs-btn-hover-border-color: #c8ff2e;
+  --bs-btn-focus-shadow-rgb: 200, 255, 46;
+  --bs-btn-active-color: #05070c;
+  --bs-btn-active-bg: #c8ff2e;
+  --bs-btn-active-border-color: #c8ff2e;
+}
+
+/* Tombol filter di wizard: versi non-aktif ikut tema gelap. */
+body.theme-neon .order-filter-btn.btn-outline-secondary {
+  color: #cbd5e1;
+  border-color: rgba(255, 255, 255, 0.22);
+  background-color: #0b1220;
+}
+
+/* ---------------------------------------------------------------
+   ALERT / NOTIFIKASI
+   --------------------------------------------------------------- */
+body.theme-neon .alert {
+  border-color: rgba(200, 255, 46, 0.24);
+  background-color: rgba(200, 255, 46, 0.07);
+  color: #d7e2f4;
+}
+
+body.theme-neon .alert-light,
+body.theme-neon .alert-info {
+  border-color: rgba(61, 123, 255, 0.3);
+  background-color: rgba(61, 123, 255, 0.08);
+  color: #cbd8f5;
+}
+
+body.theme-neon .alert-success {
+  border-color: rgba(200, 255, 46, 0.32);
+  background-color: rgba(200, 255, 46, 0.1);
+  color: #e6ffb0;
+}
+
+body.theme-neon .alert a {
+  color: var(--neon-green);
+}
+
+/* ---------------------------------------------------------------
+   ACCORDION / FAQ
+   --------------------------------------------------------------- */
+body.theme-neon .accordion-item {
+  background-color: #0e1524;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.theme-neon .accordion-button {
+  background-color: #0e1524;
+  color: #ffffff;
+}
+
+body.theme-neon .accordion-button:not(.collapsed) {
+  background-color: rgba(200, 255, 46, 0.08);
+  color: var(--neon-green);
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.08);
+}
+
+body.theme-neon .accordion-button::after {
+  filter: brightness(0) invert(1);
+  opacity: 0.75;
+}
+
+body.theme-neon .accordion-button:not(.collapsed)::after {
+  filter: none;
+}
+
+body.theme-neon .accordion-body {
+  background-color: #0b1220;
+  color: #cbd5e1;
+}
+
+/* ---------------------------------------------------------------
+   CARD KHUSUS PRODUK / HARGA / ORDER
+   --------------------------------------------------------------- */
+body.theme-neon .price-discussion-card {
+  background:
+    radial-gradient(circle at 88% 14%, rgba(200, 255, 46, 0.12), transparent 45%),
+    linear-gradient(135deg, #111a2b 0%, #080d18 100%);
+  border-color: rgba(200, 255, 46, 0.26) !important;
+}
+
+body.theme-neon .product-order-card {
+  background:
+    radial-gradient(circle at 12% 88%, rgba(61, 123, 255, 0.2), transparent 48%),
+    linear-gradient(135deg, #102247 0%, #080d18 100%);
+  border-color: rgba(126, 166, 255, 0.3) !important;
+}
+
+body.theme-neon .product-order-card-icon {
+  background: rgba(61, 123, 255, 0.16);
+  color: #9dbcff;
+}
+
+/* ---------------------------------------------------------------
+   FOOTER & SCROLL TOP
+   --------------------------------------------------------------- */
+body.theme-neon #footer.footer {
+  background: #05070c;
+  color: #94a3b8;
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+body.theme-neon #footer .footer-newsletter {
+  background: #080d18;
+}
+
+body.theme-neon #footer h3,
+body.theme-neon #footer .footer-newsletter h3 {
+  color: var(--neon-green);
+}
+
+body.theme-neon #footer .footer-links ul i {
+  color: var(--neon-green);
+}
+
+body.theme-neon #footer .footer-links ul a,
+body.theme-neon #footer .footer-about .sitename,
+body.theme-neon #footer a {
+  color: #eef2fb;
+}
+
+body.theme-neon #footer .footer-links ul a:hover {
+  color: var(--neon-green);
+}
+
+body.theme-neon #footer .newsletter-form input[type="email"] {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+}
+
+body.theme-neon #footer .newsletter-form input[type="submit"] {
+  background: linear-gradient(100deg, var(--neon-blue), var(--neon-blue-soft));
+  color: #ffffff;
+  font-weight: 700;
+}
+
+body.theme-neon #footer .social-links a {
+  border-color: rgba(255, 255, 255, 0.18);
+  color: #eef2fb;
+}
+
+body.theme-neon #footer .social-links a:hover {
+  background: var(--neon-green);
+  border-color: var(--neon-green);
+  color: #05070c;
+}
+
+body.theme-neon #footer .copyright {
+  border-top-color: rgba(255, 255, 255, 0.09);
+}
+
+body.theme-neon .scroll-top {
+  background: var(--neon-green);
+  color: #05070c;
+}
+
+body.theme-neon .scroll-top:hover {
+  background: #ffffff;
+  color: #05070c;
+}
+
+/* Preloader juga ikut gelap. */
+body.theme-neon #preloader {
+  background: #05070c;
+}
+
+body.theme-neon #preloader::before {
+  border-color: rgba(200, 255, 46, 0.25);
+  border-top-color: var(--neon-green);
+}
+
+/* ---------------------------------------------------------------
+   ORDER WIZARD — detail tambahan supaya konsisten dengan beranda
+   --------------------------------------------------------------- */
+body.theme-neon .order-wizard,
+body.theme-neon .consult-wizard {
+  background:
+    radial-gradient(circle at 92% 4%, rgba(200, 255, 46, 0.06), transparent 38%),
+    #0e1524;
+  border: 1px solid rgba(255, 255, 255, 0.09) !important;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35) !important;
+}
+
+body.theme-neon .wizard-step-dot {
+  background: rgba(255, 255, 255, 0.06);
+  color: #94a3b8;
+}
+
+body.theme-neon .wizard-step.is-active .wizard-step-dot {
+  background: var(--neon-green);
+  color: #05070c;
+  box-shadow: 0 0 0 4px rgba(200, 255, 46, 0.14);
+}
+
+body.theme-neon .wizard-step.is-done .wizard-step-dot {
+  background: rgba(200, 255, 46, 0.16);
+  color: var(--neon-green);
+}
+
+body.theme-neon .wizard-option {
+  background: #0b1220;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.theme-neon .wizard-option.selected {
+  border-color: var(--neon-green);
+  background: rgba(200, 255, 46, 0.06);
+}
+
+/* Ikon wizard: satu tone neon, hover berubah solid, klik memantul + glow putih. */
+body.theme-neon .order-option-icon,
+body.theme-neon .order-feature-icon {
+  border: 1px solid rgba(200, 255, 46, 0.28);
+  background: rgba(200, 255, 46, 0.1);
+  color: var(--neon-green);
+}
+
+body.theme-neon .order-option-icon i,
+body.theme-neon .order-feature-icon i {
+  color: inherit;
+}
+
+body.theme-neon .wizard-pane-title i,
+body.theme-neon .input-group-text i {
+  color: var(--neon-green);
+}
+
+body.theme-neon .wizard-option:hover .order-option-icon,
+body.theme-neon .wizard-option:hover .order-feature-icon {
+  background: var(--neon-green) !important;
+  border-color: var(--neon-green) !important;
+  color: #05070c !important;
+  box-shadow: 0 0 0 4px rgba(200, 255, 46, 0.12), 0 0 22px rgba(200, 255, 46, 0.32);
+}
+
+body.theme-neon .wizard-option.selected .order-option-icon,
+body.theme-neon .wizard-option.selected .order-feature-icon {
+  background: var(--neon-green) !important;
+  border-color: var(--neon-green) !important;
+  color: #05070c !important;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.16), 0 0 28px rgba(255, 255, 255, 0.55);
+  animation: wizard-icon-pop 0.52s cubic-bezier(0.22, 1.4, 0.36, 1) both;
+}
+
+body.theme-neon .wizard-option:active .order-option-icon,
+body.theme-neon .wizard-option:active .order-feature-icon {
+  transform: scale(0.88);
+}
+
+@keyframes wizard-icon-pop {
+  0% { transform: scale(0.86); background: var(--neon-green); color: #05070c; box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.55); }
+  45% { transform: scale(1.16); background: var(--neon-green); color: #05070c; box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.16), 0 0 34px rgba(255, 255, 255, 0.7); }
+  70% { transform: scale(0.96); background: var(--neon-green); color: #05070c; }
+  100% { transform: scale(1); background: var(--neon-green); color: #05070c; box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.16), 0 0 28px rgba(255, 255, 255, 0.5); }
+}
+
+body.theme-neon .order-summary .list-group-item {
+  background: transparent;
+}
+
+/* ---------------------------------------------------------------
+   FORM PESAN / NOTIFIKASI / SKIP LINK
+   --------------------------------------------------------------- */
+body.theme-neon .php-email-form .error-message {
+  background: rgba(220, 53, 69, 0.16);
+  color: #ffc9cd;
+  border: 1px solid rgba(220, 53, 69, 0.4);
+}
+
+body.theme-neon .php-email-form .sent-message {
+  background: rgba(200, 255, 46, 0.12);
+  color: #e6ffb0;
+  border: 1px solid rgba(200, 255, 46, 0.32);
+}
+
+body.theme-neon .php-email-form .loading {
+  background: rgba(255, 255, 255, 0.04);
+  color: #cbd5e1;
+}
+
+body.theme-neon .php-email-form .loading:before {
+  border-top-color: #0e1524;
+}
+
+body.theme-neon .skip-link {
+  background: var(--neon-green);
+  color: #05070c;
+}
+
+body.theme-neon .swal2-popup {
+  background: #0e1524;
+  color: #eef2fb;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+body.theme-neon .swal2-title,
+body.theme-neon .swal2-html-container {
+  color: #ffffff;
+}
+
+body.theme-neon .swal2-confirm {
+  color: #05070c !important;
+  font-weight: 700;
+}
+
+body.theme-neon .swal2-cancel {
+  background: #1b2740 !important;
+  color: #eef2fb !important;
+}
+
+/* ---------------------------------------------------------------
+   AKSESIBILITAS
+   --------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  body.theme-neon *,
+  body.theme-neon *::before,
+  body.theme-neon *::after {
+    scroll-behavior: auto !important;
+  }
+}

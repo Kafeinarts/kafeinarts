@@ -1,5 +1,5 @@
 <template>
-  <!-- dark-background: samakan palet dengan navbar (#00205D + teks putih) -->
+  <!-- dark-background: palet neon green + black + blue + white (tema global) -->
   <footer id="footer" class="footer dark-background">
     <!-- Newsletter Section -->
     <div class="footer-newsletter">
@@ -142,51 +142,70 @@ export default {
 </script>
 
 <style scoped>
-/* Footer mengikuti warna navbar: biru dongker #00205D dengan teks putih.
-   `dark-background` (main.css) sudah mengganti variabel warna; aturan di
-   bawah hanya menyesuaikan elemen yang memakai --accent-color agar tetap
-   terlihat di atas background gelap. */
+/* Footer mengikuti tema global: neon green + black + blue + white. */
 .footer {
-  background-color: #00205d;
-  color: #fff;
+  background-color: #05070c;
+  color: #94a3b8;
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
 }
 
 .footer .footer-newsletter {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: #080d18;
+}
+
+.footer h3,
+.footer .footer-newsletter h3 {
+  color: #c8ff2e;
 }
 
 .footer .footer-newsletter .newsletter-form,
 .footer .footer-newsletter .newsletter-form input[type="email"] {
-  background-color: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.35);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.16);
   color: #fff;
 }
 
 .footer .footer-newsletter .newsletter-form input[type="email"]::placeholder {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .footer .footer-newsletter .newsletter-form input[type="submit"] {
-  background: #fff;
-  color: #00205d;
+  background: linear-gradient(100deg, #3d7bff, #7ea6ff);
+  color: #fff;
+  font-weight: 700;
 }
 
 .footer .footer-newsletter .newsletter-form input[type="submit"]:hover {
-  background: rgba(255, 255, 255, 0.85);
-  color: #00205d;
+  background: linear-gradient(100deg, #568fff, #9dc0ff);
+  color: #05070c;
 }
 
-.footer .footer-links ul i,
-.footer .footer-links ul a:hover,
-.footer .social-links a:hover {
-  color: #fff;
+.footer .footer-links ul i {
+  color: #c8ff2e;
+}
+
+.footer .footer-links ul a,
+.footer .footer-about .sitename,
+.footer a {
+  color: #eef2fb;
+}
+
+.footer .footer-links ul a:hover {
+  color: #c8ff2e;
+}
+
+.footer .social-links a {
+  border-color: rgba(255, 255, 255, 0.18);
+  color: #eef2fb;
 }
 
 .footer .social-links a:hover {
-  border-color: #fff;
+  background: #c8ff2e;
+  border-color: #c8ff2e;
+  color: #05070c;
 }
 
 .footer .copyright {
-  border-top-color: rgba(255, 255, 255, 0.2);
+  border-top-color: rgba(255, 255, 255, 0.09);
 }
 </style>

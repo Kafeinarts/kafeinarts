@@ -4,7 +4,11 @@
 
   <SiteHeader />
 
-  <router-view />
+  <router-view v-slot="{ Component }">
+    <transition name="page">
+      <component :is="Component" :key="$route.fullPath" />
+    </transition>
+  </router-view>
 
   <SiteFooter />
 
@@ -35,7 +39,8 @@ export default {
   },
   mounted() {
     // Kelas halaman dipakai CSS: .index-page .header (navbar transparan)
-    // dan .index-page.scrolled .header (navbar solid #00205D)
+    // dan .index-page.scrolled .header (navbar solid). Tema `theme-neon`
+    // sudah ditaruh di <body> lewat index.html sehingga aktif sebelum mount.
     document.body.classList.add("index-page")
 
     // Structured data (JSON-LD) + sinkronisasi <title>/canonical
@@ -59,9 +64,19 @@ export default {
       this.aosTimer = setTimeout(() => refreshAosSafely(), 500)
     })
 
-    // SPA: refresh posisi animasi AOS setiap pindah halaman
+    // SPA: refresh posisi animasi AOS setiap pindah halaman.
+    // Bersihkan sisa kunci scroll dari modal Bootstrap yang belum selesai
+    // transisinya saat user berpindah halaman (bisa membuat body stuck).
     this.$router.afterEach(() => {
-      this.$nextTick(() => refreshAosSafely())
+      this.$nextTick(() => {
+        refreshAosSafely()
+        window.setTimeout(() => {
+          document.querySelectorAll(".modal-backdrop").forEach((el) => el.remove())
+          document.body.classList.remove("modal-open", "mobile-nav-active")
+          document.body.style.removeProperty("overflow")
+          document.body.style.removeProperty("padding-right")
+        }, 450)
+      })
     })
   },
   beforeUnmount() {
@@ -71,3 +86,28 @@ export default {
   },
 }
 </script>
+
+<style>
+/* Transisi halaman yang halus dan murah (hanya opacity + transform). */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.page-enter-from {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-enter-active,
+  .page-leave-active {
+    transition: none;
+  }
+}
+</style>

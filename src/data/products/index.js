@@ -96,7 +96,7 @@ export function mapProduct(json) {
     shortName: meta.shortName || slug,
     category: meta.category || "system",
     icon: meta.icon || "bi-box",
-    color: meta.color || "#00205D",
+    color: meta.color || "#3d7bff",
     tagline: (json.hero && json.hero.tagline) || "",
     desc: (json.hero && json.hero.description) || "",
     priceFrom: priceFrom(json.pricing),

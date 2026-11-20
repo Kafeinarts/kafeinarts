@@ -58,7 +58,7 @@ export default {
 }
 
 .lang-btn.active {
-  background: #fff;
-  color: #00205d;
+  background: #c8ff2e;
+  color: #05070c;
 }
 </style>
