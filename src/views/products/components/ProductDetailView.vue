@@ -1274,6 +1274,54 @@ export default {
 }
 
 /* ============================================================
+   Layar desktop 1280x800 / 1366x768
+   Target: konten terasa lega tanpa perlu zoom out ke 90%.
+   ============================================================ */
+@media (min-width: 1200px) {
+  /* Bootstrap .container default 1140px terasa sempit di 1280+.
+     Diperlebar + padding tetap milik Bootstrap. */
+  .main :deep(.container) {
+    max-width: 1320px;
+  }
+
+  /* Hero lebih pendek supaya konten pertama lebih cepat terlihat. */
+  .product-page-hero {
+    padding: 112px 0 52px;
+  }
+
+  .main :deep(.section) {
+    padding: 64px 0;
+  }
+
+  .product-page-hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .product-desc {
+    line-height: 1.65;
+  }
+
+  .product-feature-card,
+  .workflow-step,
+  .usecase-card {
+    padding: 22px 20px;
+  }
+
+  .product-overview-panel {
+    padding: 22px;
+  }
+
+  .price-discussion-card,
+  .product-order-card {
+    padding: 28px 32px;
+  }
+
+  .product-bottom-cta {
+    padding: 36px;
+  }
+}
+
+/* ============================================================
    Responsif
    ============================================================ */
 @media (max-width: 767px) {
