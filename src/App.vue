@@ -9,6 +9,7 @@
   <SiteFooter />
 
   <ScrollTop />
+  <FloatingWhatsApp />
 
   <!-- Preloader -->
   <div id="preloader" v-if="loading"></div>
@@ -18,6 +19,7 @@
 import SiteHeader from "@/components/layout/SiteHeader.vue"
 import SiteFooter from "@/components/layout/SiteFooter.vue"
 import ScrollTop from "@/components/layout/ScrollTop.vue"
+import FloatingWhatsApp from "@/components/layout/FloatingWhatsApp.vue"
 import { initAOS, refreshAosSafely } from "@/utils/aos"
 import { initSeo } from "@/utils/seo"
 
@@ -27,6 +29,7 @@ export default {
     SiteHeader,
     SiteFooter,
     ScrollTop,
+    FloatingWhatsApp,
   },
   data() {
     return {
