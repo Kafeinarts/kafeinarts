@@ -39,7 +39,7 @@ const makeLandingSeo = ({ slug, city }) => ({
   description: `Butuh jasa pembuatan website di ${city}? Kafeinarts membuat website company profile, landing page, toko online, dan sistem web custom dengan Laravel, Vue.js, React & Next.js. Konsultasi gratis, onsite & remote.`,
   keywords: `jasa pembuatan website ${slug}, jasa pembuatan website ${city}, jasa bikin web ${slug}, jasa web ${city}, pembuatan website ${city}, web developer ${city}, jasa website ${city}, company profile ${city}, landing page ${city}`,
   path: `/jasa-pembuatan-website-${slug}`,
-  image: "assets/img/og-image.png",
+  image: "assets/img/og-image-v2.png",
   imageAlt: `Jasa Pembuatan Website di ${city} — Kafeinarts`,
 });
 

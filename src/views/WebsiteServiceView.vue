@@ -116,7 +116,7 @@ const SEO = {
   keywords:
     "jasa pembuatan website depok, jasa pembuatan website, jasa bikin web, jasa web depok, pembuatan website depok, web developer depok, jasa website depok, company profile depok, landing page depok, pembuatan website bogor, pembuatan website bekasi",
   path: "/jasa-pembuatan-website-depok",
-  image: "assets/img/og-image.png",
+  image: "assets/img/og-image-v2.png",
   imageAlt: "Jasa Pembuatan Website di Depok — Kafeinarts",
 }
 
