@@ -1,0 +1,24 @@
+/**
+ * Penyeimbang kecil antara reset Quasar dan stylesheet Bootstrap lama.
+ * Hanya aktif di halaman publik (body.index-page); admin memakai Quasar murni.
+ */
+body.index-page {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+body.index-page h1,
+body.index-page h2,
+body.index-page h3,
+body.index-page h4,
+body.index-page h5,
+body.index-page h6 {
+  font-family: "Jost", sans-serif;
+}
+
+/* Admin: pastikan tidak ada garis bawah tautan bawaan Bootstrap */
+body.admin-page {
+  overflow-x: hidden;
+}
+body.admin-page a {
+  text-decoration: none;
+}

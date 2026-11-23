@@ -190,7 +190,7 @@ import { notifyWarning } from "@/utils/notify"
 /**
  * ConsultationWizard — wizard multi-step konsultasi/penawaran.
  * Alur: Niat -> Profil -> Skala & Waktu -> Jadwal Meeting -> Ringkasan.
- * Kirim: pesan tersusun otomatis ke WhatsApp utama Kafeinarts (0858-1704-8266).
+ * Kirim: pesan tersusun otomatis ke WhatsApp utama Kafeinarts (0812-1555-3731).
  */
 export default {
   name: "ConsultationWizard",

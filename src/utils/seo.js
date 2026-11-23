@@ -45,8 +45,7 @@ export function buildJsonLd() {
   const imageUrl = absoluteUrl(seo.image)
   const logoUrl = absoluteUrl(seo.logo)
   const waTargets = getWhatsAppTargets()
-  const waIT = (waTargets.find((t) => t.key === "staffIT") || waTargets[0]).wa
-  const waCS = (waTargets.find((t) => t.key === "staffCS") || waTargets[0]).wa
+  const waPrimary = waTargets.length ? `+${waTargets[0].wa}` : contact.info.phone
 
   const address = {
     "@type": "PostalAddress",
@@ -74,14 +73,7 @@ export function buildJsonLd() {
       {
         "@type": "ContactPoint",
         contactType: "customer service",
-        telephone: `+${waCS}`,
-        areaServed: seo.areaServed,
-        availableLanguage: ["id", "en"],
-      },
-      {
-        "@type": "ContactPoint",
-        contactType: "technical support",
-        telephone: `+${waIT}`,
+        telephone: waPrimary,
         areaServed: seo.areaServed,
         availableLanguage: ["id", "en"],
       },

@@ -10,7 +10,7 @@
       "icon": "bi-book"
     },
     "ctaSecondary": {
-      "label": "Hubungi Kami",
+      "label": "Konsultasikan Sekarang",
       "to": {
         "name": "contact"
       },
@@ -319,7 +319,7 @@
       },
       {
         "q": "Bagaimana langkah pertama untuk memulai kerja sama?",
-        "a": "Sangat mudah! Anda cukup menghubungi kami melalui form kontak atau tombol konsultasi. Kita akan menjadwalkan diskusi santai untuk memahami kendala, target, dan kebutuhan bisnis Anda. Setelah itu, kami akan menyusun draf proposal yang mencakup solusi teknis serta estimasi investasi yang dibutuhkan.",
+        "a": "Sangat mudah! Anda cukup mengKonsultasikan Sekarang melalui form kontak atau tombol konsultasi. Kita akan menjadwalkan diskusi santai untuk memahami kendala, target, dan kebutuhan bisnis Anda. Setelah itu, kami akan menyusun draf proposal yang mencakup solusi teknis serta estimasi investasi yang dibutuhkan.",
         "icon": "bi-people",
         "categoryKey": "start",
         "active": false,
@@ -379,9 +379,9 @@
       },
       {
         "name": "Arif Permana Putrasuryana",
-        "role": "Supervisor System Developer",
+        "role": "Supervisor Programmer",
         "img": "assets/img/teams/2.png",
-        "alt": "Arif Permana Putrasuryana - Supervisor System Developer",
+        "alt": "Arif Permana Putrasuryana - Supervisor Programmer",
         "bio": "Mengawal arsitektur sistem & kualitas kode untuk performa aplikasi yang skalabel.",
         "delay": 150
       },

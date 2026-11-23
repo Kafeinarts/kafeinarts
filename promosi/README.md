@@ -6,7 +6,7 @@ Tujuan: membuat orang yang ingin **membuat website atau aplikasi** mudah menemuk
 - **Website:** https://kafeinarts.web.id
 - **Landing SEO Depok:** https://kafeinarts.web.id/jasa-pembuatan-website-depok
 - **WhatsApp konsultasi (pesan otomatis):**
-  https://wa.me/6285817048266?text=Halo%20Kafeinarts%2C%20saya%20ingin%20konsultasi%20jasa%20pembuatan%20website%2Faplikasi.%20Bisa%20bantu%20singgung%20kebutuhan%20saya%3F
+  https://wa.me/6281215553731?text=Halo%20Kafeinarts%2C%20saya%20ingin%20konsultasi%20jasa%20pembuatan%20website%2Faplikasi.%20Bisa%20bantu%20singgung%20kebutuhan%20saya%3F
 - **Thumbnail share (1200×630, URL baru agar cache sosial terhapus):** https://kafeinarts.web.id/assets/img/og-image-v2.png
 - **Thumbnail persegi (1080×1080, Threads/IG):** https://kafeinarts.web.id/assets/img/og-image-square.png
 
@@ -31,7 +31,7 @@ Stack: Laravel, PHP, Vue.js, Quasar, React, Next.js, MySQL, PostgreSQL.
 Onsite di Depok/Jabodetabek & remote untuk seluruh Indonesia.
 
 Konsultasi & penawaran gratis — chat WhatsApp di sini:
-https://wa.me/6285817048266?text=Halo%20Kafeinarts%2C%20saya%20ingin%20konsultasi%20jasa%20pembuatan%20website%2Faplikasi.%20Bisa%20bantu%20singgung%20kebutuhan%20saya%3F
+https://wa.me/6281215553731?text=Halo%20Kafeinarts%2C%20saya%20ingin%20konsultasi%20jasa%20pembuatan%20website%2Faplikasi.%20Bisa%20bantu%20singgung%20kebutuhan%20saya%3F
 
 #JasaPembuatanWebsite #WebDeveloper #Laravel #VueJS #Depok #UMKM #SoftwareHouse
 ```
@@ -49,7 +49,7 @@ Kafeinarts bantu dari nol sampai tayang:
 
 Konsultasi gratis, estimasi jelas, revisi transparan.
 Klik link di bio atau chat WhatsApp sekarang 👇
-https://wa.me/6285817048266
+https://wa.me/6281215553731
 
 #jasabikinweb #jasapembuatanwebsitedepok #webdeveloper #laravel #vuejs #depok #umkm #kafeinarts
 ```
@@ -71,7 +71,7 @@ Halo! Saya Arif dari Kafeinarts. Kami sedang open konsultasi jasa pembuatan webs
 ```text
 Arif Permana Putrasuryana — Web Developer & Software Engineer
 Kafeinarts Interactive | Depok, Jawa Barat
-Web: https://kafeinarts.web.id | WA: 0858-1704-8266
+Web: https://kafeinarts.web.id | WA: 0812-1555-3731
 ```
 
 ---

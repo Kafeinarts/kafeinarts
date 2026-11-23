@@ -47,7 +47,7 @@
             <i class="bi bi-box-seam me-2"></i>Lihat Produk &amp; Order
           </router-link>
           <router-link :to="{ name: 'contact' }" class="btn-hero-outline text-decoration-none">
-            <i class="bi bi-whatsapp me-2"></i>Hubungi Kami
+            <i class="bi bi-whatsapp me-2"></i>Konsultasikan Sekarang
           </router-link>
         </CtaBanner>
       </div>

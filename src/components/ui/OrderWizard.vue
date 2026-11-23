@@ -270,7 +270,7 @@ import { notifyWarning } from "@/utils/notify"
  *
  * Bila dipanggil dari halaman detail produk (prop product-slug / initial-product),
  * langkah "Pilih Produk" dilewati dan produk langsung terkunci — pengguna mulai
- * dari centang fitur. Pesan dikirim ke WhatsApp 0858-1704-8266.
+ * dari centang fitur. Pesan dikirim ke WhatsApp 0812-1555-3731.
  *
  * Seluruh label UI memakai $t() dari src/i18n (ID/EN).
  */

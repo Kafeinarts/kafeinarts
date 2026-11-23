@@ -3,9 +3,11 @@ node_modules
 /dist
 
 
-# local env files
+# local env files (rahasia: PAT GitHub & kredensial admin)
+.env
 .env.local
-.env.*.local
+.env.*
+!.env.example
 
 # Log files
 npm-debug.log*

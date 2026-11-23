@@ -72,9 +72,9 @@ bisnis.
 > *"Kami percaya arsitektur sistem yang baik harus dibarengi dengan antarmuka yang brilian."*
 
 - **Lokasi:** Depok, Jawa Barat, Indonesia
-- **Telepon:** +62 858-1704-8266
-- **Email:** halo@kafeinarts.com
-- **WhatsApp:** Staff IT `0858-1704-8200` • Staff Customer Service `0895-3318-47715`
+- **Telepon:** +62 812-1555-3731
+- **Email:** kafeinartsstudio@gmail.com
+- **WhatsApp:** `0812-1555-3731`
 
 ---
 
@@ -142,7 +142,7 @@ Kafeinarts/
 │   ├── index.html                 # Head: SEO meta, fonts, vendor CSS & JS
 │   └── assets/                    # Aset statis (di-copy apa adanya ke /dist)
 │       ├── css/main.css           # Style global ±4000 baris (hero 100vh, team, lightbox)
-│       ├── img/                   # teams/1-5.png, hero-img.png, why-us.png, bg/, blog/, dll.
+│       ├── img/                   # teams/1-5.png, hero-img.png, why-us.png, bg/, dll.
 │       └── vendor/                # bootstrap, bootstrap-icons, aos, swiper
 │
 ├── src/
@@ -253,7 +253,7 @@ public/data/products/erp.json  →  seluruh konten /products/erp
 ├── hero       : tagline, headline, deskripsi, highlights
 ├── overview   : paragraf "sekilas tentang" + poin keunggulan
 ├── features   : daftar fitur (ikon, judul, deskripsi)
-├── pricing    : PAKET HARGA (angka Rp atau label "Hubungi Kami") + fitur per paket
+├── pricing    : PAKET HARGA (angka Rp atau label "Konsultasikan Sekarang") + fitur per paket
 ├── workflow   : alur kerja implementasi (langkah 1..n)
 ├── useCases   : "cocok untuk" siapa
 ├── faqs       : pertanyaan umum produk
@@ -261,7 +261,7 @@ public/data/products/erp.json  →  seluruh konten /products/erp
 ```
 
 - Harga ditulis angka (`"price": 3500000`) → otomatis diformat `Rp 3.500.000` oleh
-  `formatPrice()`; atau pakai `"priceLabel": "Hubungi Kami"`.
+  `formatPrice()`; atau pakai `"priceLabel": "Konsultasikan Sekarang"`.
 - Halaman Vue-nya tipis: `src/views/products/<slug>/index.vue` hanya membaca store
   (`getProductBySlug`) lalu merender `ProductDetailView.vue` (layout bersama).
 - Katalog `/products` & menu navbar otomatis mengikuti (`priceFrom` = paket termurah).
@@ -597,8 +597,8 @@ Kafeinarts. Konten profil (About, Why Us, Services, Team) © 2026 Kafeinarts.
 
 ## 📬 Kontak
 
-- **Email:** halo@kafeinarts.com
-- **Telepon:** +62 858-1704-8266
+- **Email:** kafeinartsstudio@gmail.com
+- **Telepon:** +62 812-1555-3731
 - **Alamat:** Depok, Jawa Barat, Indonesia
 - **Maps:** `https://maps.google.com/maps?q=Depok,+West+Java,+Indonesia`
 

@@ -1,18 +1,20 @@
 <template>
-  <!-- Skip link: aksesibilitas & SEO (lewati navigasi header) -->
-  <a href="#main-content" class="skip-link">{{ $t('common.skipToContent') }}</a>
+  <div :class="isPublic ? 'public-app' : 'admin-app'">
+    <!-- Skip link: aksesibilitas & SEO (khusus halaman publik) -->
+    <a v-if="isPublic" href="#main-content" class="skip-link">{{ $t("common.skipToContent") }}</a>
 
-  <SiteHeader />
+    <template v-if="isPublic">
+      <SiteHeader />
+      <router-view />
+      <SiteFooter />
+      <ScrollTop />
+      <FloatingWhatsApp />
+      <div id="preloader" v-if="loading"></div>
+    </template>
 
-  <router-view />
-
-  <SiteFooter />
-
-  <ScrollTop />
-  <FloatingWhatsApp />
-
-  <!-- Preloader -->
-  <div id="preloader" v-if="loading"></div>
+    <!-- /admin memakai layout Quasar murni (tanpa chrome website) -->
+    <router-view v-else />
+  </div>
 </template>
 
 <script>
@@ -36,41 +38,66 @@ export default {
       loading: true,
     }
   },
+  computed: {
+    isPublic() {
+      return this.$route.meta.layout !== "admin"
+    },
+  },
+  watch: {
+    isPublic: {
+      immediate: true,
+      handler() {
+        this.$nextTick(this.syncBodyClass)
+      },
+    },
+  },
+  methods: {
+    syncBodyClass() {
+      const body = document.body
+      body.classList.toggle("index-page", this.isPublic)
+      body.classList.toggle("admin-page", !this.isPublic)
+      if (!this.isPublic) {
+        body.classList.remove("scrolled", "mobile-nav-active")
+      }
+    },
+  },
   mounted() {
-    // Kelas halaman dipakai CSS: .index-page .header (navbar transparan)
-    // dan .index-page.scrolled .header (navbar solid #00205D)
     document.body.classList.add("index-page")
 
-    // Structured data (JSON-LD) + sinkronisasi <title>/canonical
-    initSeo()
+    if (this.isPublic) {
+      initSeo()
+      const hidePreloader = () => {
+        this.loading = false
+      }
+      if (document.readyState === "complete") {
+        hidePreloader()
+      } else {
+        window.addEventListener("load", hidePreloader, { once: true })
+      }
+      this.preloaderTimer = setTimeout(hidePreloader, 2500)
 
-    // Preloader dihapus setelah halaman selesai dimuat
-    const hidePreloader = () => {
+      this.$nextTick(() => {
+        initAOS()
+        this.aosTimer = setTimeout(() => refreshAosSafely(), 500)
+      })
+    } else {
       this.loading = false
     }
-    if (document.readyState === "complete") {
-      hidePreloader()
-    } else {
-      window.addEventListener("load", hidePreloader, { once: true })
-    }
-    // Fallback agar preloader tidak menyangkut
-    this.preloaderTimer = setTimeout(hidePreloader, 2500)
 
-    // Seluruh section sudah dirender oleh child components sebelum mounted() ini
-    this.$nextTick(() => {
-      initAOS()
-      this.aosTimer = setTimeout(() => refreshAosSafely(), 500)
+    // SPA: refresh posisi animasi AOS setiap pindah halaman (publik saja).
+    this.unregisterAfterEach = this.$router.afterEach(() => {
+      this.$nextTick(() => {
+        this.syncBodyClass()
+        if (this.isPublic) refreshAosSafely()
+      })
     })
-
-    // SPA: refresh posisi animasi AOS setiap pindah halaman
-    this.$router.afterEach(() => {
-      this.$nextTick(() => refreshAosSafely())
-    })
+    this.syncBodyClass()
   },
   beforeUnmount() {
-    document.body.classList.remove("index-page", "scrolled", "mobile-nav-active")
+    document.body.classList.remove("index-page", "admin-page", "scrolled", "mobile-nav-active")
     if (this.preloaderTimer) clearTimeout(this.preloaderTimer)
     if (this.aosTimer) clearTimeout(this.aosTimer)
+    if (this.unregisterAfterEach) this.unregisterAfterEach()
   },
 }
 </script>

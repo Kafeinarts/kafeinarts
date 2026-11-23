@@ -29,7 +29,7 @@ Laravel · Vue.js · React · Next.js · MySQL
 **Slide 3 (CTA):**
 ```text
 Chat sekarang, cerita kebutuhan Anda:
-https://wa.me/6285817048266
+https://wa.me/6281215553731
 atau kunjungi kafeinarts.web.id
 ```
 
@@ -58,7 +58,7 @@ Kami bantu UMKM & bisnis bikin website/aplikasi:
 • Integrasi API & keamanan
 
 Konsultasi & penawaran gratis, silakan chat:
-https://wa.me/6285817048266
+https://wa.me/6281215553731
 
 Mohon izin admin kalau tidak boleh promosi, akan saya hapus 🙏
 ```
@@ -91,13 +91,13 @@ Isi dengan deskripsi ini:
 Kafeinarts Interactive menyediakan jasa pembuatan website dan aplikasi di Depok & Jabodetabek: company profile, landing page, toko online, ERP, SIMRS, LMS, dan sistem web custom. Konsultasi dan penawaran gratis. Onsite & remote.
 ```
 
-Lalu upload foto `og-image-square.png` (1080×1080), jam operasional, nomor WA 0858-1704-8266, dan link website.
+Lalu upload foto `og-image-square.png` (1080×1080), jam operasional, nomor WA 0812-1555-3731, dan link website.
 
 ## Prioritas 7 — Lead magnet "Audit Gratis"
 Tawarkan di semua caption:
 
 ```text
-Gratis cek website Anda: kecepatan, SEO, dan saran perbaikan. Cukup kirim link websitenya ke WhatsApp 0858-1704-8266 — kami balas dalam 1×24 jam.
+Gratis cek website Anda: kecepatan, SEO, dan saran perbaikan. Cukup kirim link websitenya ke WhatsApp 0812-1555-3731 — kami balas dalam 1×24 jam.
 ```
 
 Ini paling mudah mengubah orang diam menjadi chat.

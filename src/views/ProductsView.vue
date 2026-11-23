@@ -12,7 +12,7 @@
         <i class="bi bi-lightning-charge me-2"></i>Order Sistem
       </router-link>
       <router-link :to="{ name: 'contact' }" class="btn-hero-outline text-decoration-none">
-        <i class="bi bi-whatsapp me-2"></i>Hubungi Kami
+        <i class="bi bi-whatsapp me-2"></i>Konsultasikan Sekarang
       </router-link>
     </PageHero>
 

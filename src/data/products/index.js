@@ -1,22 +1,16 @@
 /**
  * Kafeinarts - Runtime Product Store
  * ------------------------------------------------------------------
- * Seluruh konten halaman produk hidup sebagai file JSON statis di:
+ * Sumber produk: public/data/products.json (array, hasil edit admin CMS).
+ * File lama public/data/products/<slug>.json tetap dipertahankan sebagai
+ * arsip/fallback, tetapi tidak lagi di-fetch satu per satu.
  *
- *   public/data/products/<slug>.json
- *
- * File itu di-FETCH saat runtime (bukan di-bundle), sehingga:
- *   - Mengubah isi website produk = edit JSON-nya saja (tanpa build ulang),
- *   - Setiap JSON terlihat di DevTools → tab Network (request terpisah),
- *   - Menambah produk baru = cukup tambah 1 file JSON + 1 entri di
- *     `PRODUCT_SLUGS` di bawah + 1 folder views/products/<slug>/.
- *
- * Konsumen data (komponen/router) membaca lewat store reaktif di sini,
- * bukan import langsung, agar status loading/error tertata di satu tempat.
+ * Semua konsumen membaca lewat store reaktif di sini, bukan import langsung.
  */
 import { reactive } from "vue"
+import { fetchProducts } from "@/services/contentService"
 
-/** Daftar slug produk — urutan = urutan tampil di katalog & menu. */
+/** Daftar slug bawaan (urutan katalog lama). Produk baru otomatis ditambahkan dari JSON. */
 export const PRODUCT_SLUGS = [
   "erp",
   "simrs",
@@ -31,27 +25,21 @@ export const PRODUCT_SLUGS = [
   "undangan-digital",
 ]
 
-/**
- * State internal store (reaktif). Array `items` diisi IN-PLACE saat fetch
- * selesai — identitasnya tetap sehingga referensi lama (mis. siteData.products)
- * otomatis ikut ter-update di semua komponen.
- */
+/** State internal (reaktif). Array `items` diisi IN-PLACE agar referensi lama tetap valid. */
 const state = reactive({
-  items: [], // objek produk hasil mapProduct()
-  loaded: false, // true setelah fetch pertama selesai
+  items: [],
+  loaded: false,
   loading: false,
-  error: null, // pesan error bila fetch gagal
+  error: null,
 })
 
-/** Export reaktif untuk konsumen Vue. */
 export const productsState = state
 
-/** URL JSON satu produk (relatif → ikut base URL saat deploy di subfolder). */
+/** URL lama masih dipakai sebagian komponen/konfigurasi. */
 export function productJsonUrl(slug) {
   return `${process.env.BASE_URL}data/products/${slug}.json`
 }
 
-/** Format harga ke Rupiah (mis. 3500000 → "Rp 3.500.000"). */
 export function formatPrice(value, currency = "IDR") {
   if (typeof value !== "number" || Number.isNaN(value)) return ""
   return currency === "IDR"
@@ -59,18 +47,13 @@ export function formatPrice(value, currency = "IDR") {
     : `${currency} ${new Intl.NumberFormat("id-ID").format(value)}`
 }
 
-/**
- * Label harga siap tampil dari satu paket.
- * Prioritas: priceLabel (teks) → price (angka, diformat) → "Hubungi Kami".
- */
 export function priceLabel(plan) {
   if (!plan) return ""
   if (plan.priceLabel) return plan.priceLabel
   if (plan.price != null) return formatPrice(plan.price, plan.currency)
-  return "Hubungi Kami"
+  return "Konsultasikan Sekarang"
 }
 
-/** Ringkasan harga termurah untuk kartu katalog ("Mulai Rp …"). */
 export function priceFrom(pricing) {
   const plans = (pricing && pricing.plans) || []
   const numeric = plans.filter((p) => typeof p.price === "number")
@@ -83,10 +66,7 @@ export function priceFrom(pricing) {
   }
 }
 
-/**
- * Petakan JSON mentah menjadi objek produk siap pakai.
- * Semua komponen membaca bentuk objek ini (bentuk konsisten satu tempat).
- */
+/** Petakan JSON mentah menjadi objek produk siap pakai. */
 export function mapProduct(json) {
   const meta = json.meta || {}
   const slug = meta.slug || ""
@@ -100,44 +80,33 @@ export function mapProduct(json) {
     tagline: (json.hero && json.hero.tagline) || "",
     desc: (json.hero && json.hero.description) || "",
     priceFrom: priceFrom(json.pricing),
-    // Sisanya diteruskan apa adanya (hero, features, pricing, dst.)
     ...json,
   }
 }
 
-/** Cache promise agar fetch hanya dilakukan sekali untuk semua konsumen. */
+/** Isi store dari array JSON mentah (dipakai CMS saat refresh). */
+export function applyProducts(rawItems) {
+  const items = (Array.isArray(rawItems) ? rawItems : []).map(mapProduct)
+  state.items.splice(0, state.items.length, ...items)
+  state.loaded = true
+  state.loading = false
+  state.error = null
+  return items
+}
+
 let loadPromise = null
 
-/**
- * Fetch seluruh JSON produk sekali, simpan di state reaktif.
- * Dipanggil dari main.js sebelum app di-mount (router & navbar butuh datanya).
- */
+/** Fetch products.json sekali, simpan di store reaktif. */
 export function loadProducts() {
-  if (loadPromise) return loadPromise
+  if (state.loaded && loadPromise) return loadPromise
   state.loading = true
 
-  loadPromise = Promise.all(
-    PRODUCT_SLUGS.map((slug) =>
-      fetch(productJsonUrl(slug))
-        .then((res) => {
-          if (!res.ok) throw new Error(`HTTP ${res.status} saat memuat ${slug}.json`)
-          return res.json()
-        })
-        .then((json) => mapProduct(json))
-    )
-  )
-    .then((items) => {
-      // Isi array in-place agar referensi lama tetap valid & reaktif.
-      state.items.splice(0, state.items.length, ...items)
-      state.loaded = true
-      state.loading = false
-      state.error = null
-      return items
-    })
+  loadPromise = fetchProducts([])
+    .then((raw) => applyProducts(raw))
     .catch((err) => {
       state.loading = false
       state.error = (err && err.message) || "Gagal memuat data produk"
-      loadPromise = null // boleh dicoba lagi
+      loadPromise = null
       console.error("[products] gagal memuat data produk:", err)
       throw err
     })
@@ -145,17 +114,20 @@ export function loadProducts() {
   return loadPromise
 }
 
-/** Semua produk (array reaktif; aman dibaca kapan pun). */
+/** Semua produk (array reaktif). */
 export function getProducts() {
   return state.items
 }
 
-/** Cari produk berdasarkan slug (mis. "erp"). Null bila belum ter-load. */
+/** Slug produk aktif — dipakai router untuk mendaftarkan route secara dinamis. */
+export function getProductSlugs() {
+  return state.items.map((p) => p.slug).filter(Boolean)
+}
+
 export function getProductBySlug(slug) {
   return state.items.find((p) => p.slug === slug) || null
 }
 
-/** Produk lain untuk section "Produk Terkait". */
 export function getOtherProducts(slug, limit = 3) {
   return state.items.filter((p) => p.slug !== slug).slice(0, limit)
 }
@@ -164,7 +136,9 @@ export default {
   productsState,
   PRODUCT_SLUGS,
   loadProducts,
+  applyProducts,
   getProducts,
+  getProductSlugs,
   getProductBySlug,
   getOtherProducts,
   mapProduct,

@@ -1,4 +1,11 @@
 const { defineConfig } = require('@vue/cli-service')
+const path = require('path')
+const dotenv = require('dotenv')
+
+// Pastikan variabel VUE_APP_* dari .env.local selalu tersedia untuk
+// DefinePlugin, berapa pun cwd proses yang menjalankan vue-cli-service.
+dotenv.config({ path: path.resolve(__dirname, '.env.local') })
+
 module.exports = defineConfig({
   transpileDependencies: true,
 

@@ -1,9 +1,9 @@
 /**
  * Kafeinarts WhatsApp utils
  * ------------------------------------------------------------------
- * Nomor utama perusahaan: 0858-1704-8266 (6285817048266) — dipakai
- * wizard konsultasi & tombol order. Form kontak dapat memilih tujuan
- * lain (Staff IT / Staff CS) dari src/data/contact.json.
+ * Nomor utama perusahaan: 0812-1555-3731 (6281215553731) — dipakai
+ * wizard konsultasi, tombol order, dan seluruh kanal kontak dari
+ * src/data/contact.json.
  */
 import { siteData } from "@/data/siteData"
 

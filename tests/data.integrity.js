@@ -139,6 +139,26 @@ if (fs.existsSync(siteDataPath)) {
   }
 }
 
+// 7. File CMS baru (content.json, products.json)
+const cmsFiles = [
+  ["public/data/content.json", "object"],
+  ["public/data/products.json", "array"],
+]
+for (const [rel, kind] of cmsFiles) {
+  const abs = path.join(ROOT, rel)
+  if (!fs.existsSync(abs)) {
+    fail(`${rel} tidak ditemukan — CMS tidak bisa memuat konten`)
+    continue
+  }
+  try {
+    const value = JSON.parse(fs.readFileSync(abs, "utf8"))
+    if (kind === "array" && !Array.isArray(value)) fail(`${rel}: harus berupa array`)
+    if (kind === "object" && (!value || Array.isArray(value))) fail(`${rel}: harus berupa objek`)
+  } catch (e) {
+    fail(`${rel}: JSON tidak valid — ${e.message}`)
+  }
+}
+
 // Hasil
 if (errors.length) {
   console.log("=== DATA INTEGRITY TEST: GAGAL ===")

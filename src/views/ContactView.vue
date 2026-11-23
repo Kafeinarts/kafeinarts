@@ -1,7 +1,7 @@
 <template>
   <main id="main-content" class="main" tabindex="-1">
     <PageHero
-      title="Hubungi Kami"
+      title="Konsultasikan Sekarang"
       tagline="Kami siap membantu proyek Anda"
       desc="Pilih saluran yang paling nyaman — WhatsApp, email, atau form. Respon cepat di jam kerja."
       icon="bi-headset"
@@ -65,14 +65,6 @@
                     <input id="subject-field" v-model.trim="form.subject" type="text" class="form-control" required />
                   </div>
                   <div class="col-md-12">
-                    <label for="wa-target" class="pb-2">Tujuan WhatsApp</label>
-                    <select id="wa-target" v-model="form.target" class="form-select" required>
-                      <option v-for="t in targets" :key="t.key" :value="t.key">
-                        {{ t.label }} — {{ t.display }}
-                      </option>
-                    </select>
-                  </div>
-                  <div class="col-md-12">
                     <label for="message-field" class="pb-2">Pesan</label>
                     <textarea id="message-field" v-model.trim="form.message" class="form-control" rows="6" required></textarea>
                   </div>
@@ -95,7 +87,7 @@
 import PageHero from "@/components/ui/PageHero.vue"
 import { usePageSeo } from "@/composables/usePageSeo"
 import { siteData } from "@/data/siteData"
-import { buildWhatsAppUrl, getPrimaryWhatsApp, getWhatsAppTargets } from "@/utils/whatsapp"
+import { buildWhatsAppUrl, getPrimaryWhatsApp } from "@/utils/whatsapp"
 
 export default {
   name: "ContactView",
@@ -110,21 +102,19 @@ export default {
   data() {
     return {
       contact: siteData.contact,
-      targets: getWhatsAppTargets(),
       primaryWa: getPrimaryWhatsApp(),
       form: {
         name: "",
         email: "",
         subject: "",
         message: "",
-        target: siteData.contact.whatsapp.defaultTarget,
       },
     }
   },
   methods: {
     submit() {
-      const { name, email, subject, message, target } = this.form
-      const { url } = buildWhatsAppUrl({ name, email, subject, message, targetKey: target })
+      const { name, email, subject, message } = this.form
+      const { url } = buildWhatsAppUrl({ name, email, subject, message })
       window.open(url, "_blank")
     },
   },

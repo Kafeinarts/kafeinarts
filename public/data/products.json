@@ -1,0 +1,2366 @@
+[
+  {
+    "is_demo": false,
+    "url_demo": "",
+    "meta": {
+      "slug": "cms",
+      "name": "Kafeinarts CMS",
+      "shortName": "CMS",
+      "category": "system",
+      "icon": "bi-layout-text-window-reverse",
+      "color": "#ea580c",
+      "route": "/products/cms"
+    },
+    "hero": {
+      "name": "Kafeinarts CMS",
+      "tagline": "Kelola konten website tanpa perlu menyentuh kode.",
+      "headline": "Content Management System yang ringan dan aman",
+      "description": "Content Management System yang ringan dan aman untuk mengelola artikel, halaman, galeri, hingga landing page promosi. Dilengkapi editor visual dan manajemen media yang mudah dipahami siapa pun.",
+      "icon": "bi-layout-text-window-reverse",
+      "highlights": [
+        "Editor visual WYSIWYG",
+        "Pustaka media rapi",
+        "SEO friendly"
+      ]
+    },
+    "overview": {
+      "heading": "Sekilas Tentang CMS",
+      "paragraphs": [
+        "Banyak pemilik website bergantung pada developer untuk ganti teks atau unggah artikel sederhana — lambat dan berbiaya.",
+        "CMS kami memberi kendali penuh ke tim Anda: tulis artikel, susun halaman, unggah galeri, semua lewat editor visual yang intuitif tanpa takut merusak tampilan website."
+      ],
+      "points": [
+        "Editor WYSIWYG dengan pratinjau langsung",
+        "Pustaka media dengan crop & optimasi",
+        "Draft, review, dan jadwal terbit",
+        "Struktur URL dan meta ramah SEO"
+      ]
+    },
+    "features": {
+      "heading": "Fitur Utama",
+      "subheading": "Semua yang dibutuhkan tim konten modern.",
+      "items": [
+        {
+          "icon": "bi-pencil-square",
+          "title": "Editor Visual",
+          "desc": "Tulis dan susun konten dengan editor WYSIWYG yang intuitif."
+        },
+        {
+          "icon": "bi-images",
+          "title": "Manajemen Media",
+          "desc": "Upload, crop, dan organisasi gambar/file dalam satu pustaka."
+        },
+        {
+          "icon": "bi-search",
+          "title": "SEO Friendly",
+          "desc": "Meta, sitemap, dan struktur URL yang ramah mesin pencari."
+        },
+        {
+          "icon": "bi-person-lock",
+          "title": "Peran & Hak Akses",
+          "desc": "Admin, editor, penulis — atur wewenang masing-masing."
+        },
+        {
+          "icon": "bi-clock-history",
+          "title": "Jadwal Terbit",
+          "desc": "Tulis hari ini, terbitkan otomatis di tanggal/jam yang ditentukan."
+        },
+        {
+          "icon": "bi-shield-check",
+          "title": "Keamanan & Backup",
+          "desc": "Login aman, rate limit, dan backup konten otomatis."
+        }
+      ]
+    },
+    "pricing": {
+      "heading": "Pilihan Harga",
+      "subheading": "Mulai dari website personal hingga portal konten besar.",
+      "note": "Semua paket termasuk instalasi, konfigurasi awal, dan training singkat untuk tim konten Anda.",
+      "plans": [
+        {
+          "name": "Personal",
+          "tagline": "Untuk blog & website personal",
+          "price": 1500000,
+          "currency": "IDR",
+          "period": "proyek",
+          "description": "Satu website dengan fitur konten esensial.",
+          "features": [
+            "1 website",
+            "Artikel & halaman statis",
+            "Pustaka media 5 GB",
+            "Editor visual",
+            "Update keamanan 1 tahun"
+          ],
+          "featured": false,
+          "cta": {
+            "label": "Konsultasikan Harga",
+            "intent": "price"
+          }
+        },
+        {
+          "name": "Business",
+          "tagline": "Paling populer untuk website perusahaan",
+          "price": 4500000,
+          "currency": "IDR",
+          "period": "proyek",
+          "description": "Multi-penulis, kategori konten, dan optimasi SEO lanjutan.",
+          "features": [
+            "Hingga 10 pengguna",
+            "Kategori & tag konten",
+            "Jadwal terbit otomatis",
+            "SEO on-page lanjutan",
+            "Form leads terintegrasi",
+            "Dukungan prioritas"
+          ],
+          "featured": true,
+          "cta": {
+            "label": "Order Paket Ini",
+            "intent": "order"
+          }
+        },
+        {
+          "name": "Portal",
+          "tagline": "Untuk portal berita & konten berskala besar",
+          "priceLabel": "Konsultasikan Sekarang",
+          "description": "Skala besar: multi-site, cache tingkat lanjut, dan API headless.",
+          "features": [
+            "Pengguna tak terbatas",
+            "Multi-site/channel",
+            "Headless API",
+            "Cache & CDN",
+            "SLA enterprise"
+          ],
+          "featured": false,
+          "cta": {
+            "label": "Diskusikan Kebutuhan",
+            "intent": "price"
+          }
+        }
+      ]
+    },
+    "workflow": {
+      "heading": "Alur Kerja Implementasi",
+      "subheading": "Website konten Anda siap dalam waktu singkat.",
+      "steps": [
+        {
+          "title": "Analisis Kebutuhan",
+          "desc": "Kami petakan jenis konten dan alur kerja tim Anda."
+        },
+        {
+          "title": "Setup & Desain",
+          "desc": "Struktur konten dan tampilan halaman disiapkan sesuai brand."
+        },
+        {
+          "title": "Migrasi Konten",
+          "desc": "Artikel dan media lama dipindahkan dan dirapikan."
+        },
+        {
+          "title": "Training & Go-Live",
+          "desc": "Tim konten dilatih, lalu website langsung aktif."
+        }
+      ]
+    },
+    "useCases": {
+      "heading": "Cocok Untuk",
+      "subheading": "Berbagai kebutuhan pengelolaan konten.",
+      "items": [
+        {
+          "icon": "bi-newspaper",
+          "title": "Portal Berita",
+          "desc": "Multi-penulis dengan jadwal terbit dan arsip rapi."
+        },
+        {
+          "icon": "bi-building",
+          "title": "Website Perusahaan",
+          "desc": "Halaman profil, artikel, dan galeri yang dikelola sendiri."
+        },
+        {
+          "icon": "bi-journal-richtext",
+          "title": "Blog & Media Niche",
+          "desc": "Fokus SEO dengan struktur konten yang bersih."
+        },
+        {
+          "icon": "bi-calendar-week",
+          "title": "Website Event",
+          "desc": "Halaman promosi acara dengan konten yang mudah diperbarui."
+        }
+      ]
+    },
+    "faqs": {
+      "heading": "Pertanyaan Umum",
+      "subheading": "Hal yang paling sering ditanyakan pengelola konten.",
+      "items": [
+        {
+          "q": "Apakah perlu keahlian coding?",
+          "a": "Tidak. Editor visual memungkinkan Anda menulis, memformat, dan menyisipkan gambar seperti di pengolah kata biasa."
+        },
+        {
+          "q": "Apakah bisa lebih dari satu penulis?",
+          "a": "Bisa. Tersedia peran Admin, Editor, dan Penulis dengan hak akses berbeda — misal penulis hanya bisa mengajukan draft."
+        },
+        {
+          "q": "Bagaimana dengan performa website?",
+          "a": "CMS dilengkapi cache halaman, optimasi gambar otomatis, dan struktur HTML bersih sehingga muat tetap cepat."
+        },
+        {
+          "q": "Apakah konten lama bisa dipindahkan?",
+          "a": "Bisa. Artikel, gambar, dan struktur kategori dari WordPress/sistem lama dapat dimigrasikan oleh tim kami."
+        }
+      ]
+    },
+    "cta": {
+      "heading": "Tertarik dengan Kafeinarts CMS?",
+      "description": "Lihat demo langsung bagaimana tim Anda mengelola website tanpa perlu developer."
+    }
+  },
+  {
+    "is_demo": false,
+    "url_demo": "",
+    "meta": {
+      "slug": "company-profile",
+      "name": "Website Company Profile",
+      "shortName": "Company Profile",
+      "category": "website",
+      "icon": "bi-buildings",
+      "color": "#0f766e",
+      "route": "/products/company-profile"
+    },
+    "hero": {
+      "name": "Website Company Profile",
+      "tagline": "Wajah profesional perusahaan Anda di dunia digital.",
+      "headline": "Company profile elegan yang membangun kredibilitas",
+      "description": "Website company profile elegan untuk membangun kredibilitas bisnis: profil, visi-misi, layanan, portofolio, hingga halaman kontak yang terhubung WhatsApp — lengkap dengan CMS agar mudah dikelola sendiri.",
+      "icon": "bi-buildings",
+      "highlights": [
+        "Selesai 2–3 minggu",
+        "Termasuk CMS",
+        "Terhubung WhatsApp"
+      ]
+    },
+    "overview": {
+      "heading": "Sekilas Tentang Website Company Profile",
+      "paragraphs": [
+        "Calon klien dan mitra bisnis hampir selalu mencari perusahaan Anda di Google sebelum bekerja sama. Tidak menemukan website yang meyakinkan bisa berarti kehilangan kepercayaan di menit pertama.",
+        "Website company profile kami menyusun identitas, layanan, dan bukti kerja Anda secara profesional — dirancang meyakinkan di desktop maupun HP, dan mudah diperbarui lewat CMS."
+      ],
+      "points": [
+        "Desain premium sesuai identitas brand",
+        "Halaman Profil, Layanan, Portofolio, Kontak",
+        "Tombol WhatsApp & form terintegrasi",
+        "Dasar SEO on-page yang benar"
+      ]
+    },
+    "features": {
+      "heading": "Fitur Utama",
+      "subheading": "Semua yang dibutuhkan untuk tampil kredibel di mata klien.",
+      "items": [
+        {
+          "icon": "bi-person-badge",
+          "title": "Profil & Visi Misi",
+          "desc": "Sampaikan identitas, sejarah, dan nilai perusahaan dengan elegan."
+        },
+        {
+          "icon": "bi-briefcase",
+          "title": "Layanan & Portofolio",
+          "desc": "Pajangan layanan dan portofolio proyek yang menarik calon klien."
+        },
+        {
+          "icon": "bi-chat-dots",
+          "title": "Terhubung WhatsApp",
+          "desc": "Tombol kontak langsung ke WhatsApp dan form yang terintegrasi."
+        },
+        {
+          "icon": "bi-search",
+          "title": "SEO Dasar",
+          "desc": "Struktur semantic, meta tag, dan kecepatan muat yang optimal."
+        },
+        {
+          "icon": "bi-pencil-square",
+          "title": "CMS Mandiri",
+          "desc": "Perbarui konten, portofolio, dan artikel tanpa bantuan developer."
+        },
+        {
+          "icon": "bi-translate",
+          "title": "Multi-bahasa (opsional)",
+          "desc": "Dukungan dua bahasa untuk menjangkau klien internasional."
+        }
+      ]
+    },
+    "pricing": {
+      "heading": "Pilihan Harga",
+      "subheading": "Paket transparan sesuai kebutuhan tampilan dan fitur.",
+      "note": "Semua paket termasuk domain .com 1 tahun, hosting 1 tahun, dan libre maintenance awal.",
+      "plans": [
+        {
+          "name": "Essential",
+          "tagline": "Untuk usaha yang baru membangun kehadiran online",
+          "price": 2500000,
+          "currency": "IDR",
+          "period": "proyek",
+          "description": "Website 5 halaman dengan desain profesional.",
+          "features": [
+            "5 halaman (Beranda, Profil, dst.)",
+            "Desain template premium",
+            "Slider portofolio",
+            "Form & tombol WhatsApp",
+            "SEO dasar"
+          ],
+          "featured": false,
+          "cta": {
+            "label": "Konsultasikan Harga",
+            "intent": "price"
+          }
+        },
+        {
+          "name": "Professional",
+          "tagline": "Paling populer untuk perusahaan yang serius branding",
+          "price": 5500000,
+          "currency": "IDR",
+          "period": "proyek",
+          "description": "Desain kustom + CMS agar konten dapat dikelola sendiri.",
+          "features": [
+            "Halaman tak terbatas",
+            "Desain kustom sesuai brand",
+            "CMS kelola sendiri",
+            "Blog/artikel",
+            "Galeri & video profil",
+            "Google Analytics terpasang"
+          ],
+          "featured": true,
+          "cta": {
+            "label": "Order Paket Ini",
+            "intent": "order"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "tagline": "Untuk korporasi & grup usaha",
+          "priceLabel": "Konsultasikan Sekarang",
+          "description": "Multi-bahasa, integrasi sistem internal, dan kebutuhan khusus lainnya.",
+          "features": [
+            "Multi-bahasa",
+            "Integrasi API internal",
+            "Career/job portal",
+            "Optimasi performa lanjutan",
+            "SLA & maintenance tahunan"
+          ],
+          "featured": false,
+          "cta": {
+            "label": "Diskusikan Kebutuhan",
+            "intent": "price"
+          }
+        }
+      ]
+    },
+    "workflow": {
+      "heading": "Alur Kerja Pengerjaan",
+      "subheading": "Website Anda live dalam 2–3 minggu.",
+      "steps": [
+        {
+          "title": "Brief & Materi",
+          "desc": "Pengumpulan materi profil, layanan, portofolio, dan foto."
+        },
+        {
+          "title": "Desain Konsep",
+          "desc": "Mockup tampilan disiapkan dan disepakati bersama."
+        },
+        {
+          "title": "Pembangunan",
+          "desc": "Website dibangun, diisi konten, dan diuji di berbagai perangkat."
+        },
+        {
+          "title": "Review & Go-Live",
+          "desc": "Revisi akhir, lalu website tayang di domain Anda."
+        }
+      ]
+    },
+    "useCases": {
+      "heading": "Cocok Untuk",
+      "subheading": "Berbagai jenis bisnis dan institusi.",
+      "items": [
+        {
+          "icon": "bi-building",
+          "title": "Kontraktor & Manufaktur",
+          "desc": "Tunjukkan katalog proyek dan kapabilitas perusahaan."
+        },
+        {
+          "icon": "bi-briefcase",
+          "title": "Konsultan & Biro Jasa",
+          "desc": "Bangun kepercayaan dengan profil dan kredensial yang rapi."
+        },
+        {
+          "icon": "bi-shop",
+          "title": "Distributor & Supplier",
+          "desc": "Pajang katalog produk dengan tombol permintaan penawaran."
+        },
+        {
+          "icon": "bi-heart-pulse",
+          "title": "Klinik & Yayasan",
+          "desc": "Informasi layanan, jadwal, dan profil lembaga yang jelas."
+        }
+      ]
+    },
+    "faqs": {
+      "heading": "Pertanyaan Umum",
+      "subheading": "Hal yang paling sering ditanyakan sebelum order.",
+      "items": [
+        {
+          "q": "Berapa lama pengerjaannya?",
+          "a": "Umumnya 2–3 minggu sejak materi lengkap. Desain kustom skala besar bisa lebih lama dan disepakati di awal."
+        },
+        {
+          "q": "Apakah saya bisa update konten sendiri?",
+          "a": "Ya, pada paket Professional ke atas. CMS disertakan sehingga Anda bisa mengubah teks, gambar, dan portofolio sendiri."
+        },
+        {
+          "q": "Apakah domain dan hosting disediakan?",
+          "a": "Ya, domain .com dan hosting 1 tahun sudah termasuk di semua paket; perpanjangan tahun berikutnya dapat melanjutkan milik Anda."
+        },
+        {
+          "q": "Bagaimana kalau sudah punya website lama?",
+          "a": "Kami bisa membangun ulang sekaligus memigrasikan konten penting dan memasang redirect agar peringkat SEO tidak hilang."
+        }
+      ]
+    },
+    "cta": {
+      "heading": "Tertarik dengan Website Company Profile?",
+      "description": "Kirimkan profil bisnis Anda dan tim kami siap menyusun konsep desainnya."
+    }
+  },
+  {
+    "is_demo": false,
+    "url_demo": "",
+    "meta": {
+      "slug": "e-commerce",
+      "name": "Website E-Commerce",
+      "shortName": "E-Commerce",
+      "category": "website",
+      "icon": "bi-cart3",
+      "color": "#be123c",
+      "route": "/products/e-commerce"
+    },
+    "hero": {
+      "name": "Website E-Commerce",
+      "tagline": "Toko online lengkap dengan pembayaran & pengiriman.",
+      "headline": "Toko online milik sendiri, bebas aturan marketplace",
+      "description": "Platform toko online dengan katalog produk, keranjang, checkout, integrasi payment gateway (VA, QRIS, e-wallet), ongkir otomatis, dan dashboard admin untuk mengelola pesanan serta stok harian.",
+      "icon": "bi-cart3",
+      "highlights": [
+        "Payment gateway penuh",
+        "Ongkir otomatis",
+        "Dashboard admin lengkap"
+      ]
+    },
+    "overview": {
+      "heading": "Sekilas Tentang Website E-Commerce",
+      "paragraphs": [
+        "Menjual hanya di marketplace berarti tunduk pada kenaikan biaya admin, aturan perubahan algoritma, dan data pelanggan yang tidak bisa diakses.",
+        "Toko online milik sendiri memutus ketergantungan itu: transaksi langsung ke rekening Anda, data pelanggan adalah aset Anda, dan tampilan toko sepenuhnya sesuai brand."
+      ],
+      "points": [
+        "Katalog produk dengan variasi & galeri",
+        "Checkout aman: VA, QRIS, e-wallet",
+        "Ongkir otomatis dari berbagai kurir",
+        "Dashboard admin untuk pesanan & stok"
+      ]
+    },
+    "features": {
+      "heading": "Fitur Utama",
+      "subheading": "Fitur penjualan online lengkap dari katalog hingga resi.",
+      "items": [
+        {
+          "icon": "bi-grid",
+          "title": "Katalog & Variasi",
+          "desc": "Produk dengan variasi ukuran, warna, dan foto galeri."
+        },
+        {
+          "icon": "bi-credit-card",
+          "title": "Payment Gateway",
+          "desc": "Terima VA bank, QRIS, dan e-wallet secara otomatis."
+        },
+        {
+          "icon": "bi-truck",
+          "title": "Ongkir Otomatis",
+          "desc": "Integrasi kurir dengan cek resi dan biaya kirim real-time."
+        },
+        {
+          "icon": "bi-speedometer2",
+          "title": "Dashboard Admin",
+          "desc": "Kelola pesanan, stok, dan laporan penjualan dari satu tempat."
+        },
+        {
+          "icon": "bi-ticket-percent",
+          "title": "Promo & Kupon",
+          "desc": "Diskon, voucher, dan flash sale yang diatur dari dasbor."
+        },
+        {
+          "icon": "bi-bell",
+          "title": "Notifikasi Pesanan",
+          "desc": "Pesanan baru masuk ke email/WA admin beserta detailnya."
+        }
+      ]
+    },
+    "pricing": {
+      "heading": "Pilihan Harga",
+      "subheading": "Sesuaikan dengan skala katalog dan volume transaksi Anda.",
+      "note": "Biaya transaksi payment gateway mengikuti tarif penyedia (±0,7% QRIS dsb.) dan langsung masuk rekening Anda.",
+      "plans": [
+        {
+          "name": "Starter Store",
+          "tagline": "Untuk UMKM yang mulai jualan online",
+          "price": 6500000,
+          "currency": "IDR",
+          "period": "proyek",
+          "description": "Toko online ramping dengan fitur jualan esensial.",
+          "features": [
+            "Hingga 100 produk",
+            "Keranjang & checkout",
+            "Payment gateway (QRIS/VA)",
+            "Ongkir flat/regional",
+            "Dashboard pesanan"
+          ],
+          "featured": false,
+          "cta": {
+            "label": "Konsultasikan Harga",
+            "intent": "price"
+          }
+        },
+        {
+          "name": "Growth Store",
+          "tagline": "Paling populer untuk brand yang bertumbuh",
+          "price": 15000000,
+          "currency": "IDR",
+          "period": "proyek",
+          "description": "Katalog besar, promo, dan ongkir otomatis penuh.",
+          "features": [
+            "Produk tak terbatas",
+            "Variasi & galeri produk",
+            "Kupon & flash sale",
+            "Ongkir otomatis multi-kurir",
+            "Laporan penjualan & stok",
+            "Integrasi ekspedisi penuh"
+          ],
+          "featured": true,
+          "cta": {
+            "label": "Order Paket Ini",
+            "intent": "order"
+          }
+        },
+        {
+          "name": "Commerce Suite",
+          "tagline": "Untuk operasional omnichannel",
+          "priceLabel": "Konsultasikan Sekarang",
+          "description": "Multi-gudang, marketplace sync, dan integrasi ERP.",
+          "features": [
+            "Multi-gudang/outlet",
+            "Sinkron marketplace",
+            "Integrasi ERP/POS",
+            "Loyalty & membership",
+            "SLA enterprise"
+          ],
+          "featured": false,
+          "cta": {
+            "label": "Diskusikan Kebutuhan",
+            "intent": "price"
+          }
+        }
+      ]
+    },
+    "workflow": {
+      "heading": "Alur Kerja Pengerjaan",
+      "subheading": "Toko online Anda siap menerima pesanan dalam 6–8 minggu.",
+      "steps": [
+        {
+          "title": "Analisis Produk",
+          "desc": "Kami petakan kategori, variasi, dan alur pengiriman Anda."
+        },
+        {
+          "title": "Desain Toko",
+          "desc": "Tampilan katalog, halaman produk, dan checkout dirancang."
+        },
+        {
+          "title": "Integrasi & Uji",
+          "desc": "Payment, kurir, dan notifikasi diuji end-to-end."
+        },
+        {
+          "title": "Training & Launching",
+          "desc": "Tim dilatih mengelola pesanan, lalu toko resmi dibuka."
+        }
+      ]
+    },
+    "useCases": {
+      "heading": "Cocok Untuk",
+      "subheading": "Berbagai model bisnis jual-beli online.",
+      "items": [
+        {
+          "icon": "bi-bag-check",
+          "title": "Brand Fashion",
+          "desc": "Variasi ukuran/warna dan foto galeri per produk."
+        },
+        {
+          "icon": "bi-basket",
+          "title": "FMCG & Grocery",
+          "desc": "Katalog besar dengan pencarian dan filter cepat."
+        },
+        {
+          "icon": "bi-cpu",
+          "title": "Gadget & Elektronik",
+          "desc": "Spesifikasi detail, garansi, dan bundling produk."
+        },
+        {
+          "icon": "bi-flower2",
+          "title": "Herbal & Kosmetik",
+          "desc": "Membership, langganan, dan konten edukasi produk."
+        }
+      ]
+    },
+    "faqs": {
+      "heading": "Pertanyaan Umum",
+      "subheading": "Hal yang paling sering ditanyakan pemilik brand.",
+      "items": [
+        {
+          "q": "Uang penjualan masuk ke mana?",
+          "a": "Langsung ke rekening/merchant Anda via payment gateway. Kami tidak memegang dana maupun memotong per transaksi."
+        },
+        {
+          "q": "Apakah bisa sinkron dengan marketplace?",
+          "a": "Bisa, pada paket Commerce Suite: stok dan pesanan marketplace tersinkron agar tidak oversell."
+        },
+        {
+          "q": "Bagaimana pengelolaan stok?",
+          "a": "Stok berkurang otomatis saat pesanan masuk; ada peringatan stok minimum dan riwayat pergerakan stok."
+        },
+        {
+          "q": "Apakah pembeli perlu daftar akun?",
+          "a": "Tersedia checkout sebagai guest. Namun akun pelanggan memberi kemudahan lacak pesanan dan riwayat belanja."
+        }
+      ]
+    },
+    "cta": {
+      "heading": "Tertarik dengan Website E-Commerce?",
+      "description": "Ceritakan produk dan target pasar Anda — kami bantu pilih skema toko yang tepat."
+    }
+  },
+  {
+    "is_demo": true,
+    "url_demo": "https://layananku.vercel.app/#/",
+    "meta": {
+      "slug": "erp",
+      "name": "Kafeinarts ERP",
+      "shortName": "ERP",
+      "category": "system",
+      "icon": "bi-diagram-3",
+      "color": "#2563eb",
+      "route": "/products/erp"
+    },
+    "hero": {
+      "name": "Kafeinarts ERP",
+      "tagline": "Kelola seluruh operasional bisnis dalam satu platform terpadu.",
+      "headline": "Enterprise Resource Planning untuk bisnis yang bertumbuh",
+      "description": "Sistem Enterprise Resource Planning yang menyatukan keuangan, inventori, pembelian, penjualan, dan SDM dalam satu dasbor terpusat sehingga keputusan bisnis diambil berdasarkan data yang akurat dan real-time.",
+      "icon": "bi-diagram-3",
+      "highlights": [
+        "10+ modul terintegrasi",
+        "Laporan real-time",
+        "Multi-cabang & multi-gudang"
+      ]
+    },
+    "overview": {
+      "heading": "Sekilas Tentang ERP",
+      "paragraphs": [
+        "Kafeinarts ERP dirancang untuk perusahaan yang mulai terbengkalai oleh spreadsheet: data keuangan, stok, dan penjualan tersebar di banyak file sehingga laporan selalu terlambat dan rawan salah.",
+        "Dengan satu database terpusat, setiap transaksi dari cabang mana pun langsung tercatat dan tersinkron. Manajemen dapat memantau performa bisnis dari dasbor kapan saja, tanpa menunggu rekap manual akhir bulan."
+      ],
+      "points": [
+        "Satu sumber data untuk semua departemen",
+        "Role & hak akses per pengguna",
+        "Audit trail setiap perubahan data",
+        "Siap dikembangkan dengan modul tambahan"
+      ]
+    },
+    "features": {
+      "heading": "Fitur Utama",
+      "subheading": "Semua yang Anda butuhkan untuk menjalankan operasional perusahaan secara efektif.",
+      "items": [
+        {
+          "icon": "bi-cash-stack",
+          "title": "Modul Keuangan",
+          "desc": "Pembukuan, jurnal otomatis, dan laporan keuangan sesuai standar."
+        },
+        {
+          "icon": "bi-box-seam",
+          "title": "Manajemen Inventori",
+          "desc": "Stok multi-gudang dengan peringatan stok minimum secara real-time."
+        },
+        {
+          "icon": "bi-cart-check",
+          "title": "Sales & Purchasing",
+          "desc": "Alur order, PO, dan faktur yang terintegrasi dari hulu ke hilir."
+        },
+        {
+          "icon": "bi-people",
+          "title": "HR & Payroll",
+          "desc": "Data karyawan, absensi, dan penggajian otomatis dalam satu modul."
+        },
+        {
+          "icon": "bi-graph-up",
+          "title": "Dasbor Eksekutif",
+          "desc": "Grafik penjualan, margin, dan arus kas untuk pengambilan keputusan cepat."
+        },
+        {
+          "icon": "bi-shield-lock",
+          "title": "Keamanan & Audit",
+          "desc": "Backup otomatis, aktivitas pengguna tercatat, dan kontrol akses granular."
+        }
+      ]
+    },
+    "pricing": {
+      "heading": "Pilihan Harga",
+      "subheading": "Mulai dari skala kecil hingga enterprise — pilih paket sesuai tahap pertumbuhan bisnis Anda.",
+      "note": "Harga di atas adalah titik awal dan dapat menyesuaikan jumlah pengguna, cabang, serta kebutuhan kustomisasi.",
+      "plans": [
+        {
+          "name": "Starter",
+          "tagline": "Untuk UKM yang baru rapi-kan pembukuan",
+          "price": 3500000,
+          "currency": "IDR",
+          "period": "proyek",
+          "description": "Modul inti siap pakai: keuangan, inventori, dan penjualan.",
+          "features": [
+            "Modul Keuangan & Inventori",
+            "Hingga 5 pengguna",
+            "1 lokasi/gudang",
+            "Laporan standar",
+            "Training onboarding 1 sesi"
+          ],
+          "featured": false,
+          "cta": {
+            "label": "Konsultasikan Harga",
+            "intent": "price"
+          }
+        },
+        {
+          "name": "Business",
+          "tagline": "Paling populer untuk bisnis multi-departemen",
+          "price": 12500000,
+          "currency": "IDR",
+          "period": "proyek",
+          "description": "Modul lengkap + kustomisasi alur kerja sesuai proses bisnis Anda.",
+          "features": [
+            "Semua modul Starter",
+            "Sales & Purchasing + HR Payroll",
+            "Hingga 25 pengguna",
+            "Multi-gudang (maks. 3)",
+            "Kustomisasi laporan & alur kerja",
+            "Prioritas dukungan 3 bulan"
+          ],
+          "featured": true,
+          "cta": {
+            "label": "Order Paket Ini",
+            "intent": "order"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "tagline": "Untuk perusahaan multi-cabang berskala besar",
+          "priceLabel": "Konsultasikan Sekarang",
+          "description": "Skema kerja sama khusus: deployment on-premise/cloud, integrasi sistem lama, dan SLA.",
+          "features": [
+            "Pengguna & cabang tak terbatas",
+            "Deployment on-premise/cloud",
+            "Integrasi API pihak ketiga",
+            "SLA & dedikasi tim support",
+            "Training tim berkelanjutan"
+          ],
+          "featured": false,
+          "cta": {
+            "label": "Diskusikan Kebutuhan",
+            "intent": "price"
+          }
+        }
+      ]
+    },
+    "workflow": {
+      "heading": "Alur Kerja Implementasi",
+      "subheading": "Dari analisis hingga go-live, kami mendampingi setiap tahap.",
+      "steps": [
+        {
+          "title": "Analisis Proses Bisnis",
+          "desc": "Kami petakan alur kerja keuangan, stok, dan penjualan Anda saat ini."
+        },
+        {
+          "title": "Desain & Konfigurasi",
+          "desc": "Struktur data, hak akses, dan template dokumen disesuaikan dengan proses Anda."
+        },
+        {
+          "title": "Migrasi Data",
+          "desc": "Data master dan saldo awal dipindahkan dan diverifikasi bersama tim Anda."
+        },
+        {
+          "title": "Training Pengguna",
+          "desc": "Sesi pelatihan untuk admin dan operator, lengkap dengan panduan tertulis."
+        },
+        {
+          "title": "Go-Live & Pendampingan",
+          "desc": "Sistem aktif dengan pendampingan ketat selama masa transisi awal."
+        }
+      ]
+    },
+    "useCases": {
+      "heading": "Cocok Untuk",
+      "subheading": "Berbagai model bisnis yang butuh data terpusat.",
+      "items": [
+        {
+          "icon": "bi-buildings",
+          "title": "Distributor & Wholesale",
+          "desc": "Kelola stok multi-gudang dan harga per pelanggan secara rapi."
+        },
+        {
+          "icon": "bi-shop",
+          "title": "Retail Multi-outlet",
+          "desc": "Pantau penjualan setiap outlet dan rekap otomatis ke pusat."
+        },
+        {
+          "icon": "bi-gear-wide-connected",
+          "title": "Manufaktur Ringan",
+          "desc": "Hitung kebutuhan bahan baku dan biaya produksi per pesanan."
+        },
+        {
+          "icon": "bi-truck",
+          "title": "Logistik & Jasa",
+          "desc": "Pantau aset, armada, dan penagihan proyek dalam satu sistem."
+        }
+      ]
+    },
+    "faqs": {
+      "heading": "Pertanyaan Umum",
+      "subheading": "Hal yang paling sering ditanyakan calon pengguna ERP.",
+      "items": [
+        {
+          "q": "Apakah bisa diakses dari beberapa cabang?",
+          "a": "Bisa. ERP berbasis web sehingga setiap cabang cukup membuka browser dengan akun masing-masing; data langsung tersinkron ke pusat."
+        },
+        {
+          "q": "Apakah data kami bisa di-migrate dari Excel?",
+          "a": "Ya. Tim kami membantu migrasi data master dan saldo awal dari Excel atau software lama, lengkap dengan verifikasi bersama."
+        },
+        {
+          "q": "Apakah ada biaya bulanan?",
+          "a": "Paket Starter dan Business adalah pembelian sekali proyek. Biaya tahunan hanya untuk hosting, maintenance, dan update — dihitung transparan di awal."
+        },
+        {
+          "q": "Bagaimana dengan keamanan data?",
+          "a": "Data dienkripsi saat transit, backup otomatis harian, dan setiap aktivitas pengguna tercatat pada audit trail yang tidak bisa dihapus."
+        }
+      ]
+    },
+    "cta": {
+      "heading": "Tertarik dengan Kafeinarts ERP?",
+      "description": "Tim kami siap mendemokan langsung bagaimana ERP dapat menyesuaikan diri dengan alur kerja bisnis Anda."
+    }
+  },
+  {
+    "is_demo": false,
+    "url_demo": "",
+    "meta": {
+      "slug": "event-management",
+      "name": "Kafeinarts EMS",
+      "shortName": "Event Management",
+      "category": "system",
+      "icon": "bi-calendar2-event",
+      "color": "#db2777",
+      "route": "/products/event-management"
+    },
+    "hero": {
+      "name": "Kafeinarts EMS",
+      "tagline": "Atur event dari pendaftaran hingga sertifikat peserta.",
+      "headline": "Platform manajemen acara menyeluruh",
+      "description": "Platform manajemen acara menyeluruh: pendaftaran peserta, pembayaran tiket, QR check-in, absensi sesi, hingga laporan kehadiran. Dirancang untuk seminar, konferensi, dan event korporat berskala besar.",
+      "icon": "bi-calendar2-event",
+      "highlights": [
+        "QR check-in 3 detik",
+        "Payment gateway QRIS",
+        "Sertifikat peserta otomatis"
+      ]
+    },
+    "overview": {
+      "heading": "Sekilas Tentang Event Management System",
+      "paragraphs": [
+        "Mengelola ratusan hingga ribuan peserta lewat spreadsheet dan form manual membuat panitia kewalahan: data ganda, pembayaran sulit direkonsiliasi, dan check-in antre panjang.",
+        "EMS kami mengotomatiskan seluruh siklus event — dari pendaftaran, pembayaran, hingga laporan akhir — sehingga panitia bisa fokus memastikan acara berjalan sukses."
+      ],
+      "points": [
+        "Pendaftaran online dengan konfirmasi otomatis",
+        "Pembayaran QRIS/VA yang terekonsiliasi sendiri",
+        "Check-in QR di bawah 3 detik per peserta",
+        "Laporan kehadiran & demografi siap unduh"
+      ]
+    },
+    "features": {
+      "heading": "Fitur Utama",
+      "subheading": "Semua yang dibutuhkan panitia dari H-30 hingga H+1.",
+      "items": [
+        {
+          "icon": "bi-ticket-perforated",
+          "title": "Tiket & Pendaftaran",
+          "desc": "Jenis tiket, kuota, early bird, dan konfirmasi otomatis."
+        },
+        {
+          "icon": "bi-qr-code-scan",
+          "title": "QR Check-in",
+          "desc": "Scan QR fisik perangkat apa pun dengan sinkronisasi real-time."
+        },
+        {
+          "icon": "bi-credit-card-2-front",
+          "title": "Pembayaran",
+          "desc": "Integrasi payment gateway VA, QRIS, dan e-wallet."
+        },
+        {
+          "icon": "bi-bar-chart-line",
+          "title": "Laporan Event",
+          "desc": "Rekap kehadiran, demografi peserta, dan export data."
+        },
+        {
+          "icon": "bi-person-lines-fill",
+          "title": "Absensi Sesi",
+          "desc": "Rekam kehadiran per sesi/ruangan untuk event multi-sesi."
+        },
+        {
+          "icon": "bi-patch-check",
+          "title": "Sertifikat Peserta",
+          "desc": "Sertifikat diterbitkan otomatis sesuai kehadiran minimal."
+        }
+      ]
+    },
+    "pricing": {
+      "heading": "Pilihan Harga",
+      "subheading": "Sesuaikan dengan skala dan frekuensi event yang Anda selenggarakan.",
+      "note": "Harga mengikuti jumlah peserta per event dan jumlah event per tahun. Skema sewa per-event tersedia.",
+      "plans": [
+        {
+          "name": "Seminar",
+          "tagline": "Untuk seminar/workshop satu hari",
+          "price": 3000000,
+          "currency": "IDR",
+          "period": "event",
+          "description": "Pendaftaran, tiket, dan check-in untuk satu acara.",
+          "features": [
+            "Hingga 500 peserta",
+            "Pendaftaran & tiket",
+            "QR check-in",
+            "Sertifikat kehadiran",
+            "Laporan dasar"
+          ],
+          "featured": false,
+          "cta": {
+            "label": "Konsultasikan Harga",
+            "intent": "price"
+          }
+        },
+        {
+          "name": "Konferensi",
+          "tagline": "Paling populer untuk konferensi multi-sesi",
+          "price": 9000000,
+          "currency": "IDR",
+          "period": "event",
+          "description": "Multi-sesi, pembayaran online, dan laporan lengkap.",
+          "features": [
+            "Hingga 2.000 peserta",
+            "Multi-sesi & ruangan",
+            "Payment gateway penuh",
+            "Absensi per sesi",
+            "Dashboard panitia real-time",
+            "Tim support on-site opsional"
+          ],
+          "featured": true,
+          "cta": {
+            "label": "Order Paket Ini",
+            "intent": "order"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "tagline": "Untuk event besar & penyelenggara rutin",
+          "priceLabel": "Konsultasikan Sekarang",
+          "description": "Kontrak tahunan multi-event dengan kustomisasi dan SLA.",
+          "features": [
+            "Peserta & event tak terbatas",
+            "Multi-event satu kontrak",
+            "Kustomisasi alur registrasi",
+            "Integrasi CRM/tiket lama",
+            "SLA & support on-site"
+          ],
+          "featured": false,
+          "cta": {
+            "label": "Diskusikan Kebutuhan",
+            "intent": "price"
+          }
+        }
+      ]
+    },
+    "workflow": {
+      "heading": "Alur Kerja Implementasi",
+      "subheading": "Sistem siap dipakai jauh sebelum hari-H.",
+      "steps": [
+        {
+          "title": "Brief Event",
+          "desc": "Kami petakan jenis tiket, sesi, dan kebutuhan panitia."
+        },
+        {
+          "title": "Setup Event",
+          "desc": "Halaman pendaftaran, kelas tiket, dan template sertifikat disiapkan."
+        },
+        {
+          "title": "Uji Coba",
+          "desc": "Simulasi pendaftaran-pembayaran-check-in bersama panitia inti."
+        },
+        {
+          "title": "Hari-H & Laporan",
+          "desc": "Tim kami standby saat check-in, lalu serahkan laporan lengkap."
+        }
+      ]
+    },
+    "useCases": {
+      "heading": "Cocok Untuk",
+      "subheading": "Berbagai jenis acara dan penyelenggara.",
+      "items": [
+        {
+          "icon": "bi-mic",
+          "title": "Seminar & Workshop",
+          "desc": "Kuota tiket, early bird, dan sertifikat otomatis."
+        },
+        {
+          "icon": "bi-bank",
+          "title": "Konferensi Korporat",
+          "desc": "Multi-sesi, undangan VIP, dan laporan kehadiran resmi."
+        },
+        {
+          "icon": "bi-mortarboard-fill",
+          "title": "Event Kampus",
+          "desc": "ODMBM, malam gala, dan pendaftaran mahasiswa massal."
+        },
+        {
+          "icon": "bi-trophy",
+          "title": "Kompetisi & Liga",
+          "desc": "Pendaftaran tim, jadwal, dan rekap hasil pertandingan."
+        }
+      ]
+    },
+    "faqs": {
+      "heading": "Pertanyaan Umum",
+      "subheading": "Hal yang paling sering ditanyakan penyelenggara event.",
+      "items": [
+        {
+          "q": "Apakah peserta harus install aplikasi?",
+          "a": "Tidak. Pendaftaran dan e-tiket berbasis web; QR check-in cukup di-scan dari kamera HP panitia via browser."
+        },
+        {
+          "q": "Bagaimana uang tiket masuk ke mana?",
+          "a": "Pembayaran masuk langsung ke rekening/merchant Anda via payment gateway — kami tidak memegang dana Anda."
+        },
+        {
+          "q": "Apakah bisa untuk event multi-hari?",
+          "a": "Bisa. Jadwal sesi per hari dan per ruangan dapat diatur, termasuk kuota dan absensi per sesi."
+        },
+        {
+          "q": "Bagaimana bila peserta transfer tetapi belum konfirmasi?",
+          "a": "Status pembayaran diperbarui otomatis oleh webhook gateway; panitia juga bisa memverifikasi manual dari dasbor bila diperlukan."
+        }
+      ]
+    },
+    "cta": {
+      "heading": "Tertarik dengan Kafeinarts EMS?",
+      "description": "Diskusikan skala event Anda dan biar tim kami siapkan simulasi pendaftarannya."
+    }
+  },
+  {
+    "is_demo": false,
+    "url_demo": "",
+    "meta": {
+      "slug": "landing-page",
+      "name": "Landing Page",
+      "shortName": "Landing Page",
+      "category": "website",
+      "icon": "bi-rocket-takeoff",
+      "color": "#d97706",
+      "route": "/products/landing-page"
+    },
+    "hero": {
+      "name": "Landing Page",
+      "tagline": "Satu halaman yang fokus pada konversi penjualan.",
+      "headline": "Landing page cepat yang mengubah klik jadi leads",
+      "description": "Landing page high-conversion untuk kampanye iklan, peluncuran produk, atau promo: hero meyakinkan, social proof, penjelasan manfaat, FAQ, dan CTA yang mengarah langsung ke WhatsApp atau form pendaftaran.",
+      "icon": "bi-rocket-takeoff",
+      "highlights": [
+        "Live 1–2 minggu",
+        "Mobile first",
+        "Siap pixel iklan"
+      ]
+    },
+    "overview": {
+      "heading": "Sekilas Tentang Landing Page",
+      "paragraphs": [
+        "Mengarahkan iklan ke beranda website membuat pengunjung bingung dan iklan terbuang: tidak ada satu ajakan yang jelas, dan beban halaman besar membuat biaya klik jadi sia-sia.",
+        "Landing page kami dirancang dengan satu tujuan: mengubah pengunjung menjadi leads. Struktur copywriting, social proof, dan CTA disusun mengikuti praktik terbaik kampanye digital."
+      ],
+      "points": [
+        "Struktur copywriting teruji (AIDA)",
+        "Form leads & tombol WhatsApp",
+        "Terpasang pixel Meta/Google Ads",
+        "Skor Core Web Vitals hijau"
+      ]
+    },
+    "features": {
+      "heading": "Fitur Utama",
+      "subheading": "Semua elemen penunjang konversi sudah termasuk.",
+      "items": [
+        {
+          "icon": "bi-bullseye",
+          "title": "Fokus Konversi",
+          "desc": "Struktur copywriting dan CTA yang dirancang menghasilkan leads."
+        },
+        {
+          "icon": "bi-lightning-charge",
+          "title": "Super Cepat",
+          "desc": "Optimasi Core Web Vitals untuk skor iklan dan SEO yang lebih baik."
+        },
+        {
+          "icon": "bi-megaphone",
+          "title": "Siap Kampanye",
+          "desc": "Integrasi pixel tracking (Meta, Google) dan form leads."
+        },
+        {
+          "icon": "bi-phone",
+          "title": "Mobile First",
+          "desc": "Tampilan sempurna di smartphone tempat mayoritas traffic berada."
+        },
+        {
+          "icon": "bi-chat-quote",
+          "title": "Social Proof",
+          "desc": "Testimoni, logo klien, dan penghitung statistik untuk membangun trust."
+        },
+        {
+          "icon": "bi-question-circle",
+          "title": "FAQ Objection Handling",
+          "desc": "Jawaban atas keraguan umum yang sering menghambat keputusan."
+        }
+      ]
+    },
+    "pricing": {
+      "heading": "Pilihan Harga",
+      "subheading": "Investasi kecil dibanding biaya iklan yang Anda hemat.",
+      "note": "Semua paket termasuk domain/hosting selama kampanye, pemasangan pixel, dan 1x revisi besar.",
+      "plans": [
+        {
+          "name": "Basic",
+          "tagline": "Untuk promo & kampanye tunggal",
+          "price": 1500000,
+          "currency": "IDR",
+          "period": "halaman",
+          "description": "Satu halaman konversi dengan copywriting dasar.",
+          "features": [
+            "1 halaman",
+            "Copywriting dasar",
+            "Form leads + WhatsApp",
+            "Pixel Meta/Google",
+            "Mobile responsive"
+          ],
+          "featured": false,
+          "cta": {
+            "label": "Konsultasikan Harga",
+            "intent": "price"
+          }
+        },
+        {
+          "name": "Conversion",
+          "tagline": "Paling populer untuk peluncuran produk",
+          "price": 3500000,
+          "currency": "IDR",
+          "period": "halaman",
+          "description": "Copywriting penuh, social proof, dan optimasi kecepatan.",
+          "features": [
+            "Copywriting penjualan penuh",
+            "Testimoni & social proof",
+            "FAQ objection handling",
+            "Optimasi Core Web Vitals",
+            "Notifikasi leads via WA/email",
+            "A/B siap 2 varian"
+          ],
+          "featured": true,
+          "cta": {
+            "label": "Order Paket Ini",
+            "intent": "order"
+          }
+        },
+        {
+          "name": "Campaign Suite",
+          "tagline": "Untuk kampanye multi-audiens",
+          "priceLabel": "Konsultasikan Sekarang",
+          "description": "Beberapa variasi halaman untuk pengujian audiens dan penawaran.",
+          "features": [
+            "3+ varian halaman",
+            "A/B testing terpandu",
+            "Integrasi CRM/Sheet",
+            "Dashboard leads",
+            "Optimasi lanjutan bersama media buyer"
+          ],
+          "featured": false,
+          "cta": {
+            "label": "Diskusikan Kebutuhan",
+            "intent": "price"
+          }
+        }
+      ]
+    },
+    "workflow": {
+      "heading": "Alur Kerja Pengerjaan",
+      "subheading": "Halaman siap tayang dalam 1–2 minggu.",
+      "steps": [
+        {
+          "title": "Riset & Copywriting",
+          "desc": "Kami riset audiens dan susun pesan penjualan utama."
+        },
+        {
+          "title": "Desain Halaman",
+          "desc": "Visual disusun mengikuti alur baca yang mendorong aksi."
+        },
+        {
+          "title": "Bangun & Integrasi",
+          "desc": "Halaman dibangun, pixel dipasang, form diuji kirim."
+        },
+        {
+          "title": "Tayang & Monitor",
+          "desc": "Go-live, lalu kami bantu baca data kunjungan awal."
+        }
+      ]
+    },
+    "useCases": {
+      "heading": "Cocok Untuk",
+      "subheading": "Berbagai kebutuhan kampanye digital.",
+      "items": [
+        {
+          "icon": "bi-megaphone",
+          "title": "Iklan Meta & Google",
+          "desc": "Tujuan iklan yang relevan demi skor kualitas lebih baik."
+        },
+        {
+          "icon": "bi-box-seam",
+          "title": "Peluncuran Produk",
+          "desc": "Pre-order dan launching dengan CTA pendaftaran."
+        },
+        {
+          "icon": "bi-tags",
+          "title": "Promo & Diskon",
+          "desc": "Halaman penawaran terbatas dengan hitung mundur."
+        },
+        {
+          "icon": "bi-calendar-event",
+          "title": "Pendaftaran Webinar",
+          "desc": "Form registrasi dengan pengingat via WhatsApp."
+        }
+      ]
+    },
+    "faqs": {
+      "heading": "Pertanyaan Umum",
+      "subheading": "Hal yang paling sering ditanyakan pengiklan.",
+      "items": [
+        {
+          "q": "Apa bedanya dengan website biasa?",
+          "a": "Website punya banyak tujuan; landing page punya satu tujuan konversi. Struktur dan copywriting-nya fokus mengarahkan pengunjung pada satu aksi."
+        },
+        {
+          "q": "Apakah copywriting disediakan?",
+          "a": "Ya, pada paket Conversion ke atas copywriting penjualan disusun dari riset produk dan audiens Anda — tinggal direview."
+        },
+        {
+          "q": "Leads masuk ke mana?",
+          "a": "Notifikasi langsung ke WhatsApp/email tim Anda; data leads juga tersimpan dan bisa diekspor ke Excel/CRM."
+        },
+        {
+          "q": "Apakah bisa dipakai untuk A/B test iklan?",
+          "a": "Bisa, terutama paket Campaign Suite: beberapa varian halaman untuk menguji pesan dan penawaran berbeda."
+        }
+      ]
+    },
+    "cta": {
+      "heading": "Tertarik dengan Landing Page?",
+      "description": "Ceritakan produk dan target audiens Anda — kami susun struktur halaman konversinya."
+    }
+  },
+  {
+    "is_demo": false,
+    "url_demo": "",
+    "meta": {
+      "slug": "lms",
+      "name": "Kafeinarts LMS",
+      "shortName": "LMS",
+      "category": "system",
+      "icon": "bi-mortarboard",
+      "color": "#7c3aed",
+      "route": "/products/lms"
+    },
+    "hero": {
+      "name": "Kafeinarts LMS",
+      "tagline": "Platform pembelajaran online untuk sekolah dan korporat.",
+      "headline": "Learning Management System yang mudah dipakai semua kalangan",
+      "description": "Learning Management System untuk mengelola kelas virtual, materi, kuis, sertifikasi, hingga pelaporan progres belajar — cocok untuk institusi pendidikan maupun pelatihan internal perusahaan.",
+      "icon": "bi-mortarboard",
+      "highlights": [
+        "Kelas virtual & live class",
+        "Kuis dengan penilaian otomatis",
+        "Sertifikat terbit otomatis"
+      ]
+    },
+    "overview": {
+      "heading": "Sekilas Tentang LMS",
+      "paragraphs": [
+        "Mengelola pembelajaran lewat grup chat dan file Drive membuat materi tercecer, tugas sulit dilacak, dan progres siswa tidak terpantau menyeluruh.",
+        "LMS kami menyatukan kurikulum, materi, kuis, dan penilaian dalam satu platform. Pengajar fokus mengajar, peserta belajar terstruktur, dan administrator melihat progres secara real-time."
+      ],
+      "points": [
+        "Struktur kelas sesuai kurikulum Anda",
+        "Materi teks, video, dan live class",
+        "Kuis & ujian dengan penilaian otomatis",
+        "Sertifikat otomatis saat peserta lulus"
+      ]
+    },
+    "features": {
+      "heading": "Fitur Utama",
+      "subheading": "Semua kebutuhan belajar-mengajar dalam satu platform.",
+      "items": [
+        {
+          "icon": "bi-easel",
+          "title": "Kelas Virtual",
+          "desc": "Materi teks, video, dan live class dengan integrasi meeting."
+        },
+        {
+          "icon": "bi-ui-checks",
+          "title": "Kuis & Ujian",
+          "desc": "Bank soal, penilaian otomatis, dan anti-cheating sederhana."
+        },
+        {
+          "icon": "bi-award",
+          "title": "Sertifikat Otomatis",
+          "desc": "Sertifikat diterbitkan otomatis saat peserta lulus kursus."
+        },
+        {
+          "icon": "bi-graph-up-arrow",
+          "title": "Analitik Belajar",
+          "desc": "Pantau progres siswa/tim dengan dashboard visual per kelas."
+        },
+        {
+          "icon": "bi-chat-square-text",
+          "title": "Diskusi & Tanya Jawab",
+          "desc": "Forum per kelas untuk diskusi materi dan klarifikasi tugas."
+        },
+        {
+          "icon": "bi-envelope-check",
+          "title": "Notifikasi Otomatis",
+          "desc": "Pengingat jadwal, deadline tugas, dan pengumuman via email/WA."
+        }
+      ]
+    },
+    "pricing": {
+      "heading": "Pilihan Harga",
+      "subheading": "Sesuaikan dengan jumlah peserta dan skala program pembelajaran Anda.",
+      "note": "Harga paket adalah biaya implementasi sekali bayar; langganan tahunan untuk hosting & dukungan dihitung terpisah dan transparan.",
+      "plans": [
+        {
+          "name": "Kelas",
+          "tagline": "Untuk guru/lembaga yang baru mulai daring",
+          "price": 2500000,
+          "currency": "IDR",
+          "period": "proyek",
+          "description": "Satu institusi dengan kelas terbatas, siap pakai dalam hitungan hari.",
+          "features": [
+            "Hingga 100 peserta",
+            "10 kelas",
+            "Materi & kuis dasar",
+            "Sertifikat otomatis",
+            "Panduan penggunaan"
+          ],
+          "featured": false,
+          "cta": {
+            "label": "Konsultasikan Harga",
+            "intent": "price"
+          }
+        },
+        {
+          "name": "Institusi",
+          "tagline": "Paling populer untuk sekolah & pelatihan",
+          "price": 7500000,
+          "currency": "IDR",
+          "period": "proyek",
+          "description": "Multi-kelas, multi-peran, dan pelaporan lengkap untuk institusi.",
+          "features": [
+            "Hingga 1.000 peserta",
+            "Kelas tak terbatas",
+            "Live class terintegrasi",
+            "Analitik per kelas",
+            "Branding institusi",
+            "Dukungan prioritas"
+          ],
+          "featured": true,
+          "cta": {
+            "label": "Order Paket Ini",
+            "intent": "order"
+          }
+        },
+        {
+          "name": "Korporat",
+          "tagline": "Untuk akademi pelatihan internal perusahaan",
+          "priceLabel": "Konsultasikan Sekarang",
+          "description": "Integrasi HRIS, SSO perusahaan, dan pelaporan kompetensi karyawan.",
+          "features": [
+            "Peserta tak terbatas",
+            "Integrasi HRIS/SSO",
+            "Learning path karyawan",
+            "Multi-bahasa",
+            "SLA & on-premise opsional"
+          ],
+          "featured": false,
+          "cta": {
+            "label": "Diskusikan Kebutuhan",
+            "intent": "price"
+          }
+        }
+      ]
+    },
+    "workflow": {
+      "heading": "Alur Kerja Implementasi",
+      "subheading": "Kelas online Anda aktif dalam empat langkah.",
+      "steps": [
+        {
+          "title": "Pemetaan Kurikulum",
+          "desc": "Kami bantu susun struktur kelas, materi, dan sistem penilaian."
+        },
+        {
+          "title": "Setup Platform",
+          "desc": "Kelas, peran pengguna, dan template sertifikat dikonfigurasi."
+        },
+        {
+          "title": "Impor Data",
+          "desc": "Data peserta dan pengajar diimpor dari Excel/sistem sekolah."
+        },
+        {
+          "title": "Training & Go-Live",
+          "desc": "Pelatihan pengajar, lalu kelas langsung bisa digunakan."
+        }
+      ]
+    },
+    "useCases": {
+      "heading": "Cocok Untuk",
+      "subheading": "Berbagai bentuk institusi pembelajaran.",
+      "items": [
+        {
+          "icon": "bi-school",
+          "title": "Sekolah & Madrasah",
+          "desc": "Pembelajaran blended: tatap muka + tugas dan kuis online."
+        },
+        {
+          "icon": "bi-briefcase",
+          "title": "Pelatihan Korporat",
+          "desc": "Onboarding karyawan dan pelatihan bersertifikat internal."
+        },
+        {
+          "icon": "bi-easel2",
+          "title": "Bimbel & Kursus",
+          "desc": "Kelas reguler, tryout, dan laporan progres ke orang tua."
+        },
+        {
+          "icon": "bi-globe2",
+          "title": "Akademi Online",
+          "desc": "Jual kursus daring dengan materi video dan kuis."
+        }
+      ]
+    },
+    "faqs": {
+      "heading": "Pertanyaan Umum",
+      "subheading": "Hal yang paling sering ditanyakan lembaga pendidikan.",
+      "items": [
+        {
+          "q": "Apakah peserta perlu install aplikasi?",
+          "a": "Tidak. LMS berbasis web dan responsif, sehingga bisa dipakai dari browser HP maupun laptop tanpa instalasi."
+        },
+        {
+          "q": "Apakah mendukung materi video dari YouTube?",
+          "a": "Mendukung. Video dapat diunggah langsung atau disematkan dari YouTube/Vimeo dengan kontrol akses per kelas."
+        },
+        {
+          "q": "Bagaimana mencegah kecurangan saat ujian?",
+          "a": "Tersedia acak urutan soal, timer per soal, pembatasan tab, dan rekap log aktivitas peserta selama ujian."
+        },
+        {
+          "q": "Apakah sertifikat bisa memakai logo kami?",
+          "a": "Bisa. Template sertifikat memakai logo, tanda tangan, dan nomor seri sesuai identitas institusi Anda."
+        }
+      ]
+    },
+    "cta": {
+      "heading": "Tertarik dengan Kafeinarts LMS?",
+      "description": "Coba demonya bersama tim kami dan rasakan betapa mudahnya mengelola kelas digital."
+    }
+  },
+  {
+    "is_demo": true,
+    "url_demo": "https://cashy-pied.vercel.app/",
+    "meta": {
+      "slug": "point-of-sale",
+      "name": "Point of Sales",
+      "shortName": "POS",
+      "category": "system",
+      "icon": "bi-shop",
+      "color": "#0f766e",
+      "route": "/products/point-of-sale"
+    },
+    "hero": {
+      "name": "Point of Sales",
+      "tagline": "Kasir cepat untuk retail, F&B, dan multi-outlet.",
+      "headline": "Point of sale ringan yang tetap jalan saat internet mati",
+      "description": "Sistem kasir dengan mode offline-first: transaksi cepat, cetak struk thermal, manajemen stok real-time, hak akses per kasir, dan laporan penjualan harian — dari satu outlet sampai banyak cabang.",
+      "icon": "bi-shop",
+      "highlights": [
+        "Mode offline-first",
+        "Struk thermal",
+        "Laporan real-time"
+      ]
+    },
+    "overview": {
+      "heading": "Sekilas Tentang Point of Sales",
+      "paragraphs": [
+        "Pembukuan manual dan proses kasir yang lambat membuat antrean menumpuk, stok meleset, dan untung-rugi toko sulit dipastikan di akhir hari.",
+        "Point of Sales kami menyatukan transaksi, stok, dan laporan dalam satu sistem yang cepat dioperasikan kasir dan mudah dipantau pemilik — bahkan saat koneksi internet terputus."
+      ],
+      "points": [
+        "Transaksi di bawah 5 detik",
+        "Stok berkurang otomatis tiap penjualan",
+        "Laporan harian siap cetak",
+        "Multi-kasir dengan hak akses"
+      ]
+    },
+    "features": {
+      "heading": "Fitur Utama",
+      "subheading": "Kebutuhan kasir harian sampai laporan pemilik.",
+      "items": [
+        {
+          "icon": "bi-cart",
+          "title": "Kasir Cepat",
+          "desc": "Cari item lewat nama atau barcode, terapkan diskon & pajak, selesaikan transaksi dalam hitungan detik."
+        },
+        {
+          "icon": "bi-box-seam",
+          "title": "Manajemen Stok",
+          "desc": "Stok berkurang otomatis saat penjualan, lengkap dengan stok opname dan peringatan stok menipis."
+        },
+        {
+          "icon": "bi-printer",
+          "title": "Cetak Struk Thermal",
+          "desc": "Terhubung printer struk 58/80mm dengan tata letak rapi dan QR pembayaran opsional."
+        },
+        {
+          "icon": "bi-upc-scan",
+          "title": "Scan Barcode",
+          "desc": "Gunakan scanner USB atau kamera HP untuk memindai barcode produk tanpa input manual."
+        },
+        {
+          "icon": "bi-graph-up",
+          "title": "Laporan Penjualan",
+          "desc": "Rekap harian dan bulanan, produk terlaris, margin per item, serta performa tiap kasir."
+        },
+        {
+          "icon": "bi-shield-check",
+          "title": "Hak Akses Kasir",
+          "desc": "Akun per kasir dengan shift, rekam jejak transaksi, dan laporan selisih kas."
+        }
+      ]
+    },
+    "pricing": {
+      "heading": "Pilihan Harga",
+      "subheading": "Investasi sekali bayar untuk operasional yang tertata.",
+      "note": "Harga lisensi per outlet; pelatihan, update, dan dukungan teknis mengikuti paket yang dipilih.",
+      "plans": [
+        {
+          "name": "Starter",
+          "tagline": "Untuk toko & kafe tunggal",
+          "price": 3500000,
+          "currency": "IDR",
+          "period": "lisensi",
+          "description": "Satu outlet dengan kasir, stok, dan laporan dasar.",
+          "features": [
+            "1 outlet, 2 akun kasir",
+            "Transaksi & struk thermal",
+            "Manajemen stok + opname",
+            "Laporan penjualan harian",
+            "Pelatihan awal (daring)"
+          ],
+          "featured": false,
+          "cta": {
+            "label": "Konsultasikan Harga",
+            "intent": "price"
+          }
+        },
+        {
+          "name": "Business",
+          "tagline": "Paling populer untuk yang berkembang",
+          "price": 7500000,
+          "currency": "IDR",
+          "period": "lisensi",
+          "description": "Multi-kasir, barcode, dan laporan lanjutan untuk toko ramai.",
+          "features": [
+            "Semua fitur Starter",
+            "Akun kasir tanpa batas",
+            "Barcode & label produk",
+            "Diskon, membership, dan piutang",
+            "Laporan lanjutan & margin",
+            "Backup otomatis harian",
+            "Support 1 tahun"
+          ],
+          "featured": true,
+          "cta": {
+            "label": "Order Paket Ini",
+            "intent": "order"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "tagline": "Untuk banyak cabang & integrasi",
+          "priceLabel": "Konsultasikan Sekarang",
+          "description": "Multi-outlet terpusat dengan integrasi ke sistem lain.",
+          "features": [
+            "Multi-cabang terpusat",
+            "Sinkronisasi stok antar cabang",
+            "Integrasi akuntansi & e-commerce",
+            "API khusus",
+            "On-site training & SLA"
+          ],
+          "featured": false,
+          "cta": {
+            "label": "Diskusikan Kebutuhan",
+            "intent": "price"
+          }
+        }
+      ]
+    },
+    "workflow": {
+      "heading": "Alur Kerja Pengerjaan",
+      "subheading": "Dari pemetaan alur kasir hingga operasional harian.",
+      "steps": [
+        {
+          "title": "Pemetaan Alur Kasir",
+          "desc": "Kami pelajari jenis usaha, item jual, dan alur pembayaran Anda."
+        },
+        {
+          "title": "Konfigurasi Sistem",
+          "desc": "Item, harga, stok awal, printer, dan hak akses disiapkan sesuai toko."
+        },
+        {
+          "title": "Pelatihan Tim",
+          "desc": "Kasir dilatih memakai sistem dengan skenario transaksi nyata."
+        },
+        {
+          "title": "Go-Live & Pendampingan",
+          "desc": "Sistem dijalankan, kami dampingi di hari-hari pertama operasional."
+        }
+      ]
+    },
+    "useCases": {
+      "heading": "Cocok Untuk",
+      "subheading": "Berbagai jenis usaha dengan kebutuhan kasir berbeda.",
+      "items": [
+        {
+          "icon": "bi-shop",
+          "title": "Retail & Minimarket",
+          "desc": "Rak, barcode, dan stok terkelola sampai satuan terkecil."
+        },
+        {
+          "icon": "bi-cup-hot",
+          "title": "Kafe & Restoran",
+          "desc": "Order cepat untuk dine-in atau kemasan beserta rekap shift harian."
+        },
+        {
+          "icon": "bi-truck",
+          "title": "Grosir & Distributor",
+          "desc": "Transaksi banyak item dengan harga grosir bertingkat."
+        },
+        {
+          "icon": "bi-building",
+          "title": "Multi-Outlet",
+          "desc": "Penjualan tiap cabang dipantau dari satu dashboard terpusat."
+        }
+      ]
+    },
+    "faqs": {
+      "heading": "Pertanyaan Umum",
+      "subheading": "Hal yang paling sering ditanyakan calon pengguna.",
+      "items": [
+        {
+          "q": "Apakah bisa dipakai tanpa internet?",
+          "a": "Bisa. Mode offline menyimpan transaksi secara lokal di perangkat dan menyinkronkannya otomatis begitu koneksi kembali tersedia."
+        },
+        {
+          "q": "Printer struk apa yang didukung?",
+          "a": "Printer thermal 58mm/80mm melalui USB maupun Bluetooth (ESC/POS). Kami bantu menguji kompatibilitasnya sebelum Anda membeli printer."
+        },
+        {
+          "q": "Ke mana data penjualan disimpan?",
+          "a": "Tersimpan di perangkat Anda dan di-backup harian ke cloud pada paket Business. Pemilik selalu memiliki akses penuh ke seluruh datanya."
+        },
+        {
+          "q": "Berapa lama sistem siap dipakai?",
+          "a": "Konfigurasi awal 1–2 hari untuk satu outlet; pelatihan kasir umumnya selesai dalam satu hari dan sistem bisa langsung digunakan."
+        }
+      ]
+    },
+    "cta": {
+      "heading": "Tertarik dengan Point of Sales?",
+      "description": "Ceritakan jenis usaha dan jumlah kasirnya — kami usulkan paket serta alur implementasinya."
+    }
+  },
+  {
+    "is_demo": false,
+    "url_demo": "",
+    "meta": {
+      "slug": "simrs",
+      "name": "Kafeinarts SIMRS",
+      "shortName": "SIMRS",
+      "category": "system",
+      "icon": "bi-hospital",
+      "color": "#0d9488",
+      "route": "/products/simrs"
+    },
+    "hero": {
+      "name": "Kafeinarts SIMRS",
+      "tagline": "Sistem Informasi Manajemen Rumah Sakit yang tepat guna.",
+      "headline": "SIMRS berstandar SATUSEHAT untuk rumah sakit modern",
+      "description": "SIMRS berstandar SATUSEHAT yang menghubungkan pendaftaran, rawat jalan, rawat inap, farmasi, laboratorium, hingga klaim BPJS dalam satu alur kerja yang mulus untuk seluruh unit rumah sakit.",
+      "icon": "bi-hospital",
+      "highlights": [
+        "Standar SATUSEHAT",
+        "Bridging BPJS VClaim",
+        "RME terintegrasi"
+      ]
+    },
+    "overview": {
+      "heading": "Sekilas Tentang SIMRS",
+      "paragraphs": [
+        "Rumah sakit menghadapi tantangan ganda: pelayanan harus cepat, sementara pelaporan ke Kemenkes dan BPJS menuntut data yang akurat. Sistem yang terpisah-pisah membuat petugas menginput ulang data yang sama berkali-kali.",
+        "SIMRS kami menyatukan seluruh alur pelayanan — dari pendaftaran hingga kasir — dengan satu rekam medis elektronik yang mengalir otomatis ke setiap unit pelayanan."
+      ],
+      "points": [
+        "Satu RME untuk rawat jalan, inap, dan IGD",
+        "Bridging SATUSEHAT & BPJS (VClaim)",
+        "Antrean online terintegrasi (Mobile JKN)",
+        "Laporan mutu dan statistik bulanan otomatis"
+      ]
+    },
+    "features": {
+      "heading": "Fitur Utama",
+      "subheading": "Modul lengkap untuk seluruh unit pelayanan rumah sakit.",
+      "items": [
+        {
+          "icon": "bi-clipboard2-pulse",
+          "title": "Rawat Jalan & Inap",
+          "desc": "Pendaftaran, antrean, rekam medis elektronik (RME), dan CPPT."
+        },
+        {
+          "icon": "bi-capsule",
+          "title": "Farmasi & Gudang",
+          "desc": "Resep digital, stok obat, dan pharmacovigilance terintegrasi."
+        },
+        {
+          "icon": "bi-shield-check",
+          "title": "Klaim BPJS",
+          "desc": "Verifikasi eligibilitas VClaim dan bridging SEP secara otomatis."
+        },
+        {
+          "icon": "bi-hdd-network",
+          "title": "Integrasi SATUSEHAT",
+          "desc": "Pertukaran data FHIR sesuai regulasi Kemenkes."
+        },
+        {
+          "icon": "bi-clipboard2-data",
+          "title": "Laboratorium & Radiologi",
+          "desc": "Order pemeriksaan, hasil terintegrasi ke RME pasien."
+        },
+        {
+          "icon": "bi-cash-coin",
+          "title": "Kasir & Klaim",
+          "desc": "Tagihan gabungan umum/BPJS, rekap klaim, dan laporan pendapatan."
+        }
+      ]
+    },
+    "pricing": {
+      "heading": "Pilihan Harga",
+      "subheading": "Penawaran disusun sesuai kelas rumah sakit dan jumlah unit pelayanan.",
+      "note": "Nilai investasi final mengikuti kelas RS, jumlah tempat tidur, dan modul yang diaktifkan. Konsultasi awal gratis.",
+      "plans": [
+        {
+          "name": "Klinik & RS Kelas D",
+          "tagline": "Untuk fasilitas kesehatan primer",
+          "price": 45000000,
+          "currency": "IDR",
+          "period": "proyek",
+          "description": "Modul inti pelayanan dengan integrasi SATUSEHAT.",
+          "features": [
+            "Pendaftaran & RME",
+            "Rawat jalan + farmasi",
+            "Integrasi SATUSEHAT",
+            "Laporan SIRS online",
+            "Training petugas"
+          ],
+          "featured": false,
+          "cta": {
+            "label": "Konsultasikan Harga",
+            "intent": "price"
+          }
+        },
+        {
+          "name": "RS Kelas B/C",
+          "tagline": "Paling populer untuk RS umum",
+          "priceLabel": "Penawaran Khusus",
+          "description": "Modul lengkap rawat jalan, inap, IGD, hingga bridging BPJS penuh.",
+          "features": [
+            "Semua modul pelayanan",
+            "Rawat inap & IGD",
+            "Bridging BPJS VClaim",
+            "Antrean online",
+            "Pendampingan akreditasi"
+          ],
+          "featured": true,
+          "cta": {
+            "label": "Order Paket Ini",
+            "intent": "order"
+          }
+        },
+        {
+          "name": "RS Kelas A / Jaringan",
+          "tagline": "Untuk RS rujukan & grup rumah sakit",
+          "priceLabel": "Konsultasikan Sekarang",
+          "description": "Skema khusus multi-rumah sakit dengan data warehouse dan BI.",
+          "features": [
+            "Multi-RS satu platform",
+            "Data warehouse & BI",
+            "Integrasi alat laboratorium",
+            "SLA khusus 24/7",
+            "Tim implementasi dedikasi"
+          ],
+          "featured": false,
+          "cta": {
+            "label": "Diskusikan Kebutuhan",
+            "intent": "price"
+          }
+        }
+      ]
+    },
+    "workflow": {
+      "heading": "Alur Kerja Implementasi",
+      "subheading": "Implementasi RS kami jalankan bertahap agar pelayanan tidak terganggu.",
+      "steps": [
+        {
+          "title": "Survei & Analisis",
+          "desc": "Survei unit pelayanan, alur pasien, dan kebutuhan pelaporan."
+        },
+        {
+          "title": "Perencanaan & Konfigurasi",
+          "desc": "Master data, form CPPT, dan aturan tarif disusun bersama tim RS."
+        },
+        {
+          "title": "Bridging & Integrasi",
+          "desc": "Koneksi SATUSEHAT, BPJS, dan alat medis yang mendukung."
+        },
+        {
+          "title": "Training Petugas",
+          "desc": "Pelatihan per unit: pendaftaran, perawat, dokter, farmasi, kasir."
+        },
+        {
+          "title": "Go-Live Bertahap",
+          "desc": "Aktivasi per unit dengan pendampingan hingga seluruh RS berjalan penuh."
+        }
+      ]
+    },
+    "useCases": {
+      "heading": "Cocok Untuk",
+      "subheading": "Berbagai fasilitas pelayanan kesehatan.",
+      "items": [
+        {
+          "icon": "bi-hospital",
+          "title": "RS Umum",
+          "desc": "Seluruh alur rawat jalan hingga rawat inap dalam satu sistem."
+        },
+        {
+          "icon": "bi-heart-pulse",
+          "title": "Klinik Primer",
+          "desc": "Pelayanan poliklinik, MCU, dan farmasi yang ringkas."
+        },
+        {
+          "icon": "bi-bandaid",
+          "title": "RS Ibu & Anak",
+          "desc": "Modul kebidanan, NICU, dan imunisasi terintegrasi."
+        },
+        {
+          "icon": "bi-people",
+          "title": "Grup RS",
+          "desc": "Beberapa rumah sakit dikelola dari satu platform pusat."
+        }
+      ]
+    },
+    "faqs": {
+      "heading": "Pertanyaan Umum",
+      "subheading": "Hal yang paling sering ditanyakan manajemen rumah sakit.",
+      "items": [
+        {
+          "q": "Apakah sudah sesuai standar SATUSEHAT?",
+          "a": "Ya. SIMRS kami mengikuti standar interoperabilitas SATUSEHAT (FHIR) dan terus menyesuaikan setiap ada pembaruan regulasi Kemenkes."
+        },
+        {
+          "q": "Apakah bisa bridging dengan BPJS?",
+          "a": "Bisa. Tersedia bridging VClaim untuk verifikasi eligibilitas, SEP, dan pengajuan klaim, serta antrean online terintegrasi Mobile JKN."
+        },
+        {
+          "q": "Bagaimana bila internet mati?",
+          "a": "Tersedia mode offline untuk unit pelayanan kritis; data akan tersinkron otomatis begitu koneksi kembali normal."
+        },
+        {
+          "q": "Berapa lama implementasi sampai go-live?",
+          "a": "Umumnya 8–12 minggu tergantung jumlah unit dan kesiapan data master. Jadwal rinci disusun bersama saat kontrak."
+        }
+      ]
+    },
+    "cta": {
+      "heading": "Tertarik dengan Kafeinarts SIMRS?",
+      "description": "Jadwalkan demo bersama tim kami dan lihat langsung bagaimana alur pelayanan RS Anda berjalan di sistem."
+    }
+  },
+  {
+    "is_demo": false,
+    "url_demo": "",
+    "meta": {
+      "slug": "undangan-digital",
+      "name": "Website Undangan Digital",
+      "shortName": "Undangan Digital",
+      "category": "website",
+      "icon": "bi-envelope-heart",
+      "color": "#e11d48",
+      "route": "/products/undangan-digital"
+    },
+    "hero": {
+      "name": "Website Undangan Digital",
+      "tagline": "Undangan pernikahan & acara yang elegan dibuka dari HP.",
+      "headline": "Satu tautan undangan yang dibagikan lewat WhatsApp",
+      "description": "Website undangan digital dengan RSVP, galeri foto, musik latar, peta lokasi, countdown, dan live streaming — tampil serasi dengan tema acara, langsung dibuka dari tautan WhatsApp tanpa perlu aplikasi tambahan.",
+      "icon": "bi-envelope-heart",
+      "highlights": [
+        "Tayang 2–5 hari",
+        "RSVP & buku tamu",
+        "Musik & live streaming"
+      ]
+    },
+    "overview": {
+      "heading": "Sekilas Tentang Undangan Digital",
+      "paragraphs": [
+        "Undangan cetak mahal dan lama dikerjakan, sementara tanggal acara sering berubah — ditambah daftar tamu yang sulit direkap dari balasan chat satu per satu.",
+        "Undangan digital kami dibuka dari HP, dikirim lewat WhatsApp, dan langsung mencatat kehadiran tamu — tampil elegan, biaya ringan, tanpa ribet cetak ulang."
+      ],
+      "points": [
+        "Template elegan siap pakai",
+        "RSVP & rekap kehadiran otomatis",
+        "Musik, galeri, dan peta lokasi",
+        "Bagikan via WhatsApp & QR code"
+      ]
+    },
+    "features": {
+      "heading": "Fitur Utama",
+      "subheading": "Semua yang tamu butuhkan dalam satu undangan.",
+      "items": [
+        {
+          "icon": "bi-palette",
+          "title": "Template Elegan",
+          "desc": "Pilihan desain dengan warna dan tipografi yang disesuaikan dengan tema acara Anda."
+        },
+        {
+          "icon": "bi-calendar-check",
+          "title": "RSVP & Buku Tamu",
+          "desc": "Tamu mengonfirmasi kehadiran langsung di undangan; rekap siap diekspor ke Excel."
+        },
+        {
+          "icon": "bi-images",
+          "title": "Galeri Foto & Love Story",
+          "desc": "Galeri prewedding dan lini masa kisah cinta yang tampil rapi di layar HP."
+        },
+        {
+          "icon": "bi-music-note",
+          "title": "Musik & Live Streaming",
+          "desc": "Musik latar pilihan Anda serta embed YouTube untuk mengundang tamu yang berhalangan hadir."
+        },
+        {
+          "icon": "bi-geo-alt",
+          "title": "Peta & Navigasi",
+          "desc": "Lokasi acara terpetakan dengan tombol navigasi langsung ke Google Maps atau Waze."
+        },
+        {
+          "icon": "bi-clock",
+          "title": "Countdown & Bagikan Mudah",
+          "desc": "Hitung mundur menuju hari-H dan tombol bagik yang memudahkan tamu meneruskan undangan."
+        }
+      ]
+    },
+    "pricing": {
+      "heading": "Pilihan Harga",
+      "subheading": "Lebih hemat dari undangan cetak — tanpa biaya cetak ulang.",
+      "note": "Semua paket termasuk hosting undangan, tautan khusus, dan bantuan update konten sebelum hari-H.",
+      "plans": [
+        {
+          "name": "Basic",
+          "tagline": "Untuk undangan sederhana & elegan",
+          "price": 350000,
+          "currency": "IDR",
+          "period": "undangan",
+          "description": "Satu desain template dengan fitur inti undangan digital.",
+          "features": [
+            "1 desain template elegan",
+            "Nama, tanggal & waktu acara",
+            "Galeri foto 10 gambar",
+            "Musik latar & peta lokasi",
+            "Form RSVP sederhana",
+            "Aktif 6 bulan"
+          ],
+          "featured": false,
+          "cta": {
+            "label": "Konsultasikan Harga",
+            "intent": "price"
+          }
+        },
+        {
+          "name": "Premium",
+          "tagline": "Paling populer untuk pernikahan",
+          "price": 750000,
+          "currency": "IDR",
+          "period": "undangan",
+          "description": "Personalisasi penuh dengan RSVP lengkap dan live streaming.",
+          "features": [
+            "Semua fitur Basic",
+            "Custom warna & font",
+            "Galeri 30 foto + video",
+            "Love story timeline",
+            "Live streaming YouTube/Zoom",
+            "RSVP + ekspor daftar tamu",
+            "Countdown & buku ucapan",
+            "Aktif 12 bulan"
+          ],
+          "featured": true,
+          "cta": {
+            "label": "Order Paket Ini",
+            "intent": "order"
+          }
+        },
+        {
+          "name": "Custom",
+          "tagline": "Desain khusus sesuai konsep acara",
+          "priceLabel": "Konsultasikan Sekarang",
+          "description": "Undangan dibuat dari nol mengikuti konsep dan identitas acara Anda.",
+          "features": [
+            "Desain custom dari nol",
+            "Domain khusus undangan",
+            "QR code untuk check-in tamu",
+            "Amplop digital untuk hadiah",
+            "Revisi hingga 5 kali",
+            "Prioritas pengerjaan"
+          ],
+          "featured": false,
+          "cta": {
+            "label": "Diskusikan Kebutuhan",
+            "intent": "price"
+          }
+        }
+      ]
+    },
+    "workflow": {
+      "heading": "Alur Kerja Pengerjaan",
+      "subheading": "Dari materi acara hingga siap dibagikan.",
+      "steps": [
+        {
+          "title": "Konsultasi & Pilih Template",
+          "desc": "Ceritakan tema acara; kami bantu memilih desain yang paling cocok."
+        },
+        {
+          "title": "Personalisasi Konten",
+          "desc": "Nama, tanggal, lokasi, foto, dan musik kami isi sesuai materi dari Anda."
+        },
+        {
+          "title": "Review & Revisi",
+          "desc": "Tautan preview dikirim untuk direview sebelum undangan ditayangkan."
+        },
+        {
+          "title": "Tayang & Bagikan",
+          "desc": "Undangan siap dibagikan lewat WhatsApp, QR code, atau tautan langsung."
+        }
+      ]
+    },
+    "useCases": {
+      "heading": "Cocok Untuk",
+      "subheading": "Berbagai jenis acara yang ingin terkesan rapi.",
+      "items": [
+        {
+          "icon": "bi-heart",
+          "title": "Pernikahan",
+          "desc": "Undangan pasangan lengkap dengan love story dan galeri prewedding."
+        },
+        {
+          "icon": "bi-gift",
+          "title": "Ulang Tahun & Khitanan",
+          "desc": "Acara keluarga yang hangat dengan tema warna ceria dan foto kenangan."
+        },
+        {
+          "icon": "bi-people",
+          "title": "Syukuran & Aqiqah",
+          "desc": "Bagikan tautan ke kerabat dekat beserta doa dan ucapan terima kasih."
+        },
+        {
+          "icon": "bi-calendar-event",
+          "title": "Acara Kantor & Komunitas",
+          "desc": "Undangan gathering, seminar, atau reuni dengan RSVP terpusat."
+        }
+      ]
+    },
+    "faqs": {
+      "heading": "Pertanyaan Umum",
+      "subheading": "Hal yang paling sering ditanyakan pemesan undangan.",
+      "items": [
+        {
+          "q": "Berapa lama pengerjaannya?",
+          "a": "2–5 hari kerja setelah materi (foto, teks, tanggal) lengkap. Untuk paket Custom dengan desain khusus, perkiraan 1–2 minggu."
+        },
+        {
+          "q": "Apakah tamu wajib mengisi RSVP?",
+          "a": "Tidak wajib — namun form RSVP membuat Anda tahu jumlah kehadiran, dan semua jawaban bisa diekspor ke Excel untuk kebutuhan katering."
+        },
+        {
+          "q": "Bisa menggunakan foto dan musik sendiri?",
+          "a": "Bisa. Kirimkan file-nya dan kami masukkan; pastikan foto dan musik tersebut boleh digunakan untuk keperluan undangan."
+        },
+        {
+          "q": "Bagaimana cara membagikannya kepada tamu?",
+          "a": "Berupa tautan (link) yang bisa langsung dibagikan lewat WhatsApp, dipindai sebagai QR code pada kartu ucapan, atau dicetak di souvenir."
+        }
+      ]
+    },
+    "cta": {
+      "heading": "Tertarik dengan Undangan Digital?",
+      "description": "Kirim tanggal acara, tema, dan jumlah foto yang ingin ditampilkan — kami bantu susun undangan digitalnya."
+    }
+  },
+  {
+    "is_demo": false,
+    "url_demo": "",
+    "meta": {
+      "slug": "web-profile",
+      "name": "Web Profil Bisnis",
+      "shortName": "Web Profile",
+      "category": "website",
+      "icon": "bi-person-vcard",
+      "color": "#4f46e5",
+      "route": "/products/web-profile"
+    },
+    "hero": {
+      "name": "Web Profil Bisnis",
+      "tagline": "Situs ringkas untuk personal brand & UMKM.",
+      "headline": "Cara tercepat tampil kredibel secara online",
+      "description": "Web profil satu-dua halaman yang memperkenalkan diri, jasa, katalog, dan kontak secara singkat — solusi tercepat dan termurah untuk UMKM, konsultan, freelancer, dan profesional yang ingin tampil kredibel secara online.",
+      "icon": "bi-person-vcard",
+      "highlights": [
+        "Jadi 1 minggu",
+        "Investasi hemat",
+        "Order via WhatsApp"
+      ]
+    },
+    "overview": {
+      "heading": "Sekilas Tentang Web Profil Bisnis",
+      "paragraphs": [
+        "Belum semua usaha butuh website besar. Sering kali yang dibutuhkan hanyalah satu alamat online rapi untuk dibagikan saat calon pelanggan bertanya \"punya website tidak?\".",
+        "Web profil menjawab kebutuhan itu: satu-dua halaman ringkas yang memuat siapa Anda, apa jasa/produk Anda, katalog, dan cara menghubungi — tanpa biaya berlebihan."
+      ],
+      "points": [
+        "1–2 halaman ringkas dan fungsional",
+        "Katalog produk/jasa + tombol pesan",
+        "Link hub semua kontak penting",
+        "Hemat biaya, cepat jadi"
+      ]
+    },
+    "features": {
+      "heading": "Fitur Utama",
+      "subheading": "Yang Anda butuhkan, tanpa fitur berlebih.",
+      "items": [
+        {
+          "icon": "bi-badge-ad",
+          "title": "Personal Branding",
+          "desc": "Perkenalkan keahlian, pengalaman, dan kredensial secara menarik."
+        },
+        {
+          "icon": "bi-shop",
+          "title": "Katalog Produk/Jasa",
+          "desc": "Pajangan katalog ringkas dengan tombol pesan langsung."
+        },
+        {
+          "icon": "bi-link-45deg",
+          "title": "Link Hub",
+          "desc": "Kumpulkan semua link penting bisnis Anda dalam satu halaman."
+        },
+        {
+          "icon": "bi-whatsapp",
+          "title": "Order via WhatsApp",
+          "desc": "Pengunjung dapat memesan langsung tanpa daftar akun."
+        },
+        {
+          "icon": "bi-map",
+          "title": "Peta & Jam Operasional",
+          "desc": "Lokasi toko/office dan jam buka yang mudah ditemukan."
+        },
+        {
+          "icon": "bi-share",
+          "title": "Mudah Dibagikan",
+          "desc": "Tampil rapi saat link dibagikan ke WA dan media sosial."
+        }
+      ]
+    },
+    "pricing": {
+      "heading": "Pilihan Harga",
+      "subheading": "Harga bersahabat untuk memulai kehadiran online.",
+      "note": "Semua paket termasuk domain .com 1 tahun dan hosting 1 tahun.",
+      "plans": [
+        {
+          "name": "One Page",
+          "tagline": "Untuk personal brand & freelancer",
+          "price": 750000,
+          "currency": "IDR",
+          "period": "proyek",
+          "description": "Satu halaman profil yang memuat semuanya.",
+          "features": [
+            "1 halaman lengkap",
+            "Profil + jasa",
+            "Tombol WhatsApp",
+            "Link hub sosial media",
+            "Domain & hosting 1 tahun"
+          ],
+          "featured": false,
+          "cta": {
+            "label": "Konsultasikan Harga",
+            "intent": "price"
+          }
+        },
+        {
+          "name": "Bisnis",
+          "tagline": "Paling populer untuk UMKM & toko",
+          "price": 1500000,
+          "currency": "IDR",
+          "period": "proyek",
+          "description": "Profil + katalog produk/jasa dengan tombol pesan per item.",
+          "features": [
+            "2 halaman",
+            "Katalog hingga 20 item",
+            "Tombol pesan per produk",
+            "Peta & jam operasional",
+            "Revisi konten 1x",
+            "Domain & hosting 1 tahun"
+          ],
+          "featured": true,
+          "cta": {
+            "label": "Order Paket Ini",
+            "intent": "order"
+          }
+        },
+        {
+          "name": "Plus",
+          "tagline": "Untuk bisnis yang butuh sedikit lebih",
+          "priceLabel": "Konsultasikan Sekarang",
+          "description": "Katalog besar, galeri, atau kebutuhan khusus lainnya.",
+          "features": [
+            "Katalog tak terbatas",
+            "Galeri foto kegiatan",
+            "Form pemesanan terstruktur",
+            "Google Maps tersemat",
+            "Setup Google Business Profile"
+          ],
+          "featured": false,
+          "cta": {
+            "label": "Diskusikan Kebutuhan",
+            "intent": "price"
+          }
+        }
+      ]
+    },
+    "workflow": {
+      "heading": "Alur Kerja Pengerjaan",
+      "subheading": "Website profil Anda jadi dalam sepekan.",
+      "steps": [
+        {
+          "title": "Kirim Materi",
+          "desc": "Foto produk, daftar jasa, dan kontak dikirim via form singkat."
+        },
+        {
+          "title": "Susun Halaman",
+          "desc": "Kami susun konten dan tampilan yang rapi dan menarik."
+        },
+        {
+          "title": "Review Cepat",
+          "desc": "Anda cek hasilnya dan minta penyesuaian bila perlu."
+        },
+        {
+          "title": "Tayang",
+          "desc": "Website aktif di domain Anda, siap dibagikan ke pelanggan."
+        }
+      ]
+    },
+    "useCases": {
+      "heading": "Cocok Untuk",
+      "subheading": "Individu dan usaha kecil yang ingin tampil profesional.",
+      "items": [
+        {
+          "icon": "bi-person-workspace",
+          "title": "Freelancer",
+          "desc": "Portofolio singkat dan cara menghubungi dalam satu link."
+        },
+        {
+          "icon": "bi-store",
+          "title": "UMKM & Toko",
+          "desc": "Katalog produk dengan tombol pesan WhatsApp langsung."
+        },
+        {
+          "icon": "bi-mortarboard",
+          "title": "Konsultan & Pengajar",
+          "desc": "Kredensial, layanan, dan jadwal yang mudah dibagikan."
+        },
+        {
+          "icon": "bi-flower1",
+          "title": "Home Industry",
+          "desc": "Perkenalkan produk olahan dengan tampilan yang menarik."
+        }
+      ]
+    },
+    "faqs": {
+      "heading": "Pertanyaan Umum",
+      "subheading": "Hal yang paling sering ditanyakan sebelum order.",
+      "items": [
+        {
+          "q": "Apakah perlu bisa komputer dulu?",
+          "a": "Tidak perlu. Anda cukup kirim materi (foto, daftar produk, kontak) via WhatsApp; susun halaman kami yang kerjakan."
+        },
+        {
+          "q": "1 minggu benar-benar jadi?",
+          "a": "Ya, selama materi lengkap. Rata-rata website tayang 3–5 hari kerja setelah materi diterima."
+        },
+        {
+          "q": "Kalau nanti mau upgrade ke website besar?",
+          "a": "Sangat bisa. Struktur konten disusun agar mudah dikembangkan menjadi company profile atau toko online."
+        },
+        {
+          "q": "Apakah ada biaya bulanan?",
+          "a": "Tidak ada. Yang ada hanya perpanjangan domain & hosting tahunan (atau pindah ke milik Anda sendiri)."
+        }
+      ]
+    },
+    "cta": {
+      "heading": "Tertarik dengan Web Profil Bisnis?",
+      "description": "Kirim materi usaha Anda sekarang dan dalam sepekan website Anda sudah tayang."
+    }
+  }
+]

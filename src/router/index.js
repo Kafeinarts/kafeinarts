@@ -11,7 +11,7 @@ import ContactView from "../views/ContactView.vue";
 import OrderView from "../views/OrderView.vue";
 import WebsiteServiceView from "../views/WebsiteServiceView.vue";
 import { siteData } from "@/data/siteData";
-import { productsState } from "@/data/products/index.js";
+import { getProductSlugs, getProductBySlug } from "@/data/products/index.js";
 import { syncSeoForRoute } from "@/utils/seo";
 
 const seo = siteData.seo;
@@ -141,6 +141,20 @@ const routes = [
       path: "/order",
     },
   },
+  // ================= CMS / ADMIN (layout Quasar murni) =================
+  {
+    path: "/admin",
+    component: () => import("../layouts/AdminLayout.vue"),
+    meta: { layout: "admin" },
+    children: [
+      { path: "", name: "admin-dashboard", component: () => import("../views/admin/DashboardView.vue"), meta: { title: "Dashboard — Kafeinarts CMS" } },
+      { path: "content", name: "admin-content", component: () => import("../views/admin/ContentEditorView.vue"), meta: { title: "Editor Konten — Kafeinarts CMS" } },
+      { path: "products", name: "admin-products", component: () => import("../views/admin/ProductListView.vue"), meta: { title: "Produk — Kafeinarts CMS" } },
+      { path: "products/new", name: "admin-product-new", component: () => import("../views/admin/ProductEditorView.vue"), meta: { title: "Tambah Produk — Kafeinarts CMS" } },
+      { path: "products/:slug/edit", name: "admin-product-edit", component: () => import("../views/admin/ProductEditorView.vue"), meta: { title: "Edit Produk — Kafeinarts CMS" } },
+      { path: "media", name: "admin-media", component: () => import("../views/admin/MediaView.vue"), meta: { title: "Media — Kafeinarts CMS" } },
+    ],
+  },
   { path: "/about-company", redirect: { name: "about" } },
   { path: "/:pathMatch(.*)*", redirect: { name: "home" } },
 ];
@@ -165,15 +179,19 @@ const router = createRouter({
  * dipakai ProductCard, navbar, dan section produk terkait.
  */
 export function registerProductRoutes() {
-  productsState.items.forEach((product) => {
+  // Satu komponen generik untuk semua produk → produk baru dari admin
+  // langsung punya halaman tanpa perlu membuat folder Vue baru.
+  const detailComponent = () => import("../views/products/ProductDetailRoute.vue")
+  getProductSlugs().forEach((slug) => {
+    const product = getProductBySlug(slug)
     router.addRoute({
-      path: `/products/${product.slug}`,
-      name: `product-${product.slug}`,
-      component: () => import(`../views/products/${product.slug}/index.vue`),
+      path: `/products/${slug}`,
+      name: `product-${slug}`,
+      component: detailComponent,
       meta: {
-        title: `${product.name} — ${seo.name}`,
-        description: product.desc,
-        path: `/products/${product.slug}`,
+        title: `${product ? product.name : slug} — ${seo.name}`,
+        description: product ? product.desc : "",
+        path: `/products/${slug}`,
       },
     });
   });
@@ -181,6 +199,7 @@ export function registerProductRoutes() {
 
 // SEO: selaraskan <title> & <link rel="canonical"> setiap kali route berubah.
 router.afterEach((to) => {
+  if (to.meta.layout === "admin") return
   syncSeoForRoute({
     title: to.meta.title,
     description: to.meta.description,

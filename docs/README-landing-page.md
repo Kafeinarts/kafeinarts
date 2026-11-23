@@ -44,8 +44,8 @@ python -m http.server 8000
 Berawal dari dedikasi tinggi terhadap pengembangan *software* dan seni digital, Kafeinarts hadir sebagai **mitra teknis end-to-end** — dari infrastruktur *backend* yang tangguh hingga *frontend* interaktif yang memanjakan mata.
 
 **Lokasi:** Depok, Jawa Barat, Indonesia  
-**Telepon:** +62 858-1704-8266  
-**Email:** halo@kafeinarts.com
+**Telepon:** +62 812-1555-3731  
+**Email:** kafeinartsstudio@gmail.com
 
 ### Visi & Misi
 - **Visi:** Menjadi ekosistem digital yang mempercepat transformasi bisnis melalui teknologi yang skalabel, aman, dan estetik.
@@ -75,7 +75,7 @@ Landing page terdiri dari **9 section utama** + **header/footer**. Semua section
   - `p`: Tagline *“Mitra teknis andal … full-stack …”* (`Open Sans` 22px, `transparent 30%`)
 - **CTA Baru:**
   - **Pelajari Lebih Lanjut** (`href="#about"`, `class="btn-hero-primary"`, icon `bi-book`) 
-  - **Hubungi Kami** (`href="#contact"`, `class="btn-hero-outline"`, icon `bi-telephone`)
+  - **Konsultasikan Sekarang** (`href="#contact"`, `class="btn-hero-outline"`, icon `bi-telephone`)
   - Style: awal `color:#fff` + `background: rgba(255,255,255,0.10)` + `border:1.5px solid rgba(255,255,255,0.92)` + `backdrop-filter:blur(6px)` → terlihat di atas navy. Hover: `background:#fff`, `color:#00205D` (aksen), `glow` `box-shadow: 0 0 32px rgba(255,255,255,0.42) + 0 8px 28px rgba(255,255,255,0.35)` + `translateY(-2px)`.
 - **Kanan:** `hero-img.png` dengan animasi `up-down 2s infinite`.
 
@@ -150,8 +150,8 @@ Landing page terdiri dari **9 section utama** + **header/footer**. Semua section
 ### 10. Contact (`#contact`)
 - **Kiri (`info-wrap` border `3px solid #00205D`):**
   - `Alamat: Depok, Jawa Barat, Indonesia` (`bi-geo-alt`)
-  - `Hubungi Kami: +62 858-1704-8266` (`bi-telephone`)
-  - `Email: halo@kafeinarts.com` (`bi-envelope`)
+  - `Konsultasikan Sekarang: +62 812-1555-3731` (`bi-telephone`)
+  - `Email: kafeinartsstudio@gmail.com` (`bi-envelope`)
   - `iframe` Google Maps `Depok`.
 - **Kanan:** Form `onsubmit="sendToWhatsApp(event)"` → `name, email, subject, message` → `window.open(wa.me/...)` (validasi `required`). Tombol `Kirim Pesan via WhatsApp` (`background:var(--accent-color) #00205D`).
 
@@ -191,7 +191,7 @@ Landing page terdiri dari **9 section utama** + **header/footer**. Semua section
 - [x] **Portrait Team Card** 3:4 dari `assets/img/teams/` + popup lightbox swipe/tap/klik/keyboard.
 - [x] **Navbar Transparan → Solid** `#00205D` + underline putih aktif (teks tetap putih).
 - [x] **Hero 100vh** (`100vh/100svh/100dvh`) seamless navy, tanpa celah putih.
-- [x] **CTA Hero Baru:** `Pelajari Lebih Lanjut` & `Hubungi Kami` — teks putih awal, hover jadi putih + glow + teks aksen `#00205D`.
+- [x] **CTA Hero Baru:** `Pelajari Lebih Lanjut` & `Konsultasikan Sekarang` — teks putih awal, hover jadi putih + glow + teks aksen `#00205D`.
 - [x] **Aksen Global** `#00205D` konsisten di tombol, icon, progress, dll.
 - [x] **Responsif:** `col-xl-3` team, `flex-wrap` hero, `order` header mobile, `display:none` btn-team <480px.
 - [x] **AOS, Swiper, GLightbox, Waypoints, Isotope** via vendor.
@@ -285,8 +285,8 @@ Untuk mencegah bentrok kode (*merge conflict*) dan menjaga kerapian *history*, k
 Template awal `Arsha` oleh [BootstrapMade](https://bootstrapmade.com/) — dimodifikasi untuk Kafeinarts. Konten profil (About, Why Us, Services, Team) © 2026 Kafeinarts.
 
 ## 📬 Kontak
-- **Email:** halo@kafeinarts.com
-- **Telepon:** +62 858-1704-8266
+- **Email:** kafeinartsstudio@gmail.com
+- **Telepon:** +62 812-1555-3731
 - **Alamat:** Depok, Jawa Barat, Indonesia
 - **Maps:** `https://maps.google.com/maps?q=Depok,+West+Java,+Indonesia`
 

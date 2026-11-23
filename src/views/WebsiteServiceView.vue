@@ -89,7 +89,7 @@
           desc="Ceritakan kebutuhan Anda. Kami berikan saran teknis, estimasi biaya, dan timeline yang jelas — tanpa biaya konsultasi."
         >
           <router-link :to="{ name: 'contact' }" class="btn-hero-primary text-decoration-none">
-            <i class="bi bi-whatsapp me-2"></i>Hubungi Kami
+            <i class="bi bi-whatsapp me-2"></i>Konsultasikan Sekarang
           </router-link>
           <router-link :to="{ name: 'order' }" class="btn-hero-outline text-decoration-none">
             <i class="bi bi-cart-check me-2"></i>Order Website

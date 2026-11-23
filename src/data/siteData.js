@@ -27,9 +27,10 @@ import consultationJson from "./consultation.json";
 import orderJson from "./order.json";
 import contactJson from "./contact.json";
 import footerJson from "./footer.json";
+import { reactive } from "vue";
 
 /** Objek gabungan dengan shape mirip siteData lama (kompatibilitas). */
-export const siteData = {
+export const siteData = reactive({
   ...brandJson,
   nav: navJson.items,
   navCta: navJson.cta,
@@ -45,7 +46,34 @@ export const siteData = {
   // contact dibungkus agar aksesnya siteData.contact.info / .whatsapp
   contact: contactJson,
   footer: footerJson,
-};
+});
+
+/**
+ * Timpa konten dari public/data/content.json (hasil edit admin).
+ * Melakukan deep-merge IN-PLACE agar identitas objek (mis. siteData.hero)
+ * tetap sama — komponen lama yang mengimpor `{ hero }` ikut ter-update.
+ * Key "products" dilewati karena products memakai store runtime sendiri.
+ */
+function mergeInto(target, source) {
+  Object.keys(source || {}).forEach((key) => {
+    if (key === "products") return
+    const next = source[key]
+    const current = target[key]
+    if (Array.isArray(next)) {
+      if (Array.isArray(current)) current.splice(0, current.length, ...next)
+      else target[key] = next.slice()
+    } else if (next && typeof next === "object" && current && typeof current === "object") {
+      mergeInto(current, next)
+    } else {
+      target[key] = next
+    }
+  })
+}
+
+export function applyRemoteContent(content) {
+  if (!content || typeof content !== "object") return
+  mergeInto(siteData, content)
+}
 
 export const {
   brand,

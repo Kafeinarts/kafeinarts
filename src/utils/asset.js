@@ -9,3 +9,13 @@ export function asset(path) {
   const file = String(path).replace(/^\/+/, "")
   return `${base}/${file}`
 }
+
+/**
+ * Path gambar bisa berupa URL absolut (hasil upload GitHub) atau path
+ * relatif di public/assets. Fungsi ini menangani keduanya.
+ */
+export function assetOrUrl(path) {
+  if (!path) return ""
+  if (/^(https?:)?\/\//i.test(path) || /^data:/i.test(path)) return path
+  return asset(path)
+}
