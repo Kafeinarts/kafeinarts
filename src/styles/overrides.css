@@ -46,34 +46,34 @@ body.admin-page a {
    ============================================================ */
 
 /* --- Tipografi: reboot Bootstrap 5.3 -------------------------
-   Selektor elemen polos (spesifisitas 0,0,1): menang atas Quasar
-   karena urutan import, tapi tetap kalah atas gaya judul milik
-   komponen/main.css yang berbasis kelas. Jangan tambah prefix
-   `body.index-page` di sini — itu akan menimpa .section-title dkk. */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+   `:where(body.index-page)` menjaga spesifisitas tetap 0,0,1 sehingga
+   aturan ini menang atas Quasar (lewat urutan import) tanpa menimpa
+   gaya judul berbasis kelas milik komponen/main.css. Efeknya hanya
+   di halaman publik; heading admin Quasar tidak tersentuh. */
+:where(body.index-page) h1,
+:where(body.index-page) h2,
+:where(body.index-page) h3,
+:where(body.index-page) h4,
+:where(body.index-page) h5,
+:where(body.index-page) h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
 }
 
-h1 { font-size: calc(1.375rem + 1.5vw); }
-h2 { font-size: calc(1.325rem + 0.9vw); }
-h3 { font-size: calc(1.3rem + 0.6vw); }
-h4 { font-size: calc(1.275rem + 0.3vw); }
-h5 { font-size: 1.25rem; }
-h6 { font-size: 1rem; }
+:where(body.index-page) h1 { font-size: calc(1.375rem + 1.5vw); }
+:where(body.index-page) h2 { font-size: calc(1.325rem + 0.9vw); }
+:where(body.index-page) h3 { font-size: calc(1.3rem + 0.6vw); }
+:where(body.index-page) h4 { font-size: calc(1.275rem + 0.3vw); }
+:where(body.index-page) h5 { font-size: 1.25rem; }
+:where(body.index-page) h6 { font-size: 1rem; }
 
 @media (min-width: 1200px) {
-  h1 { font-size: 2.5rem; }
-  h2 { font-size: 2rem; }
-  h3 { font-size: 1.75rem; }
-  h4 { font-size: 1.5rem; }
+  :where(body.index-page) h1 { font-size: 2.5rem; }
+  :where(body.index-page) h2 { font-size: 2rem; }
+  :where(body.index-page) h3 { font-size: 1.75rem; }
+  :where(body.index-page) h4 { font-size: 1.5rem; }
 }
 
 /* --- Grid: lebar kolom Bootstrap di breakpoint Bootstrap -----

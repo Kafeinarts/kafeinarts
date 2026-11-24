@@ -9,9 +9,14 @@
       cover="people"
     />
 
-    <section class="section">
+    <section class="section team-section">
       <div class="container">
         <SectionHeading :title="team.title" :subtitle="team.subtitle" />
+
+        <p class="team-hint" data-aos="fade-up">
+          <i class="bi bi-hand-index-thumb"></i>Klik kartu untuk melihat profil lengkap
+        </p>
+
         <div class="row gy-4 justify-content-center">
           <div
             v-for="(member, i) in team.members"
@@ -23,6 +28,7 @@
             <!-- Kartu berfungsi sebagai tombol: klik/Enter/Spasi = buka lightbox -->
             <div
               class="team-member-card w-100"
+              :style="{ '--member-accent': memberAccent(i) }"
               role="button"
               tabindex="0"
               :aria-label="'Lihat detail ' + member.name"
@@ -38,9 +44,15 @@
                   height="504"
                   loading="lazy"
                 />
-                <span class="member-zoom" aria-hidden="true">
-                  <i class="bi bi-zoom-in"></i>
+
+                <span class="member-index" aria-hidden="true">{{ memberNumber(i) }}</span>
+                <span class="member-badge">
+                  <i class="bi" :class="roleIcon(member.role)"></i>{{ roleTrack(member.role) }}
                 </span>
+                <span class="member-zoom" aria-hidden="true">
+                  <i class="bi bi-arrows-fullscreen"></i>
+                </span>
+
                 <div class="social">
                   <a
                     v-for="s in socials"
@@ -53,10 +65,14 @@
                   </a>
                 </div>
               </div>
-              <div class="member-info p-4 text-center">
+
+              <div class="member-info">
+                <span class="member-role">{{ member.role }}</span>
                 <h4>{{ member.name }}</h4>
-                <span>{{ member.role }}</span>
-                <p class="mt-2 mb-0">{{ member.bio }}</p>
+                <p>{{ member.bio }}</p>
+                <span class="member-cta">
+                  Lihat profil <i class="bi bi-arrow-up-right"></i>
+                </span>
               </div>
             </div>
           </div>
@@ -184,6 +200,36 @@ export default {
   methods: {
     asset,
 
+    /** Aksen warna bergilir agar tiap kartu punya karakter, tetap dalam palet brand. */
+    memberAccent(i) {
+      const palette = ["#00205d", "#0e7490", "#6d28d9", "#be185d"]
+      return palette[i % palette.length]
+    },
+
+    memberNumber(i) {
+      return String(i + 1).padStart(2, "0")
+    },
+
+    /** Ikon kecil sesuai bidang kerja anggota. */
+    roleIcon(role) {
+      const r = String(role || "").toLowerCase()
+      if (r.includes("chief") || r.includes("supervisor")) return "bi-briefcase"
+      if (r.includes("market")) return "bi-megaphone"
+      if (r.includes("design")) return "bi-palette"
+      if (r.includes("programmer") || r.includes("developer") || r.includes("dev")) return "bi-code-slash"
+      return "bi-person-badge"
+    },
+
+    /** Label singkat bidang kerja untuk badge di atas foto. */
+    roleTrack(role) {
+      const r = String(role || "").toLowerCase()
+      if (r.includes("chief") || r.includes("supervisor")) return "Leadership"
+      if (r.includes("market")) return "Marketing"
+      if (r.includes("design")) return "Design"
+      if (r.includes("programmer") || r.includes("developer") || r.includes("dev")) return "Engineering"
+      return "Team"
+    },
+
     /**
      * Buka lightbox pada anggota ke-i (dipanggil dari kartu: klik/Enter/Spasi).
      * Memakai Modal Bootstrap global — sama seperti modal demo produk.
@@ -291,31 +337,103 @@ export default {
 </script>
 
 <style scoped>
+.team-section {
+  position: relative;
+  background:
+    radial-gradient(ellipse at 12% 0%, rgba(0, 32, 93, 0.06), transparent 40%),
+    radial-gradient(ellipse at 88% 10%, rgba(190, 24, 93, 0.05), transparent 36%),
+    linear-gradient(180deg, #f8fafd 0%, #ffffff 70%);
+}
+
+.team-hint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  width: fit-content;
+  margin: -6px auto 26px;
+  padding: 7px 14px;
+  border: 1px dashed rgba(0, 32, 93, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: #64748b;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.team-hint i {
+  color: #1d4ed8;
+}
+
+/* ---------- Kartu anggota ---------- */
 .team-member-card {
+  --member-accent: #00205d;
+  position: relative;
+  display: flex;
+  flex-direction: column;
   background: var(--surface-color);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
-  border-radius: 16px;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 91%);
+  border-radius: 22px;
   overflow: hidden;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  box-shadow: 0 1px 2px rgba(0, 32, 93, 0.04);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
   cursor: pointer;
 }
 
-.team-member-card:focus-visible {
-  outline: 2px solid var(--accent-color);
-  outline-offset: 3px;
+/* Garis aksen tipis di atas kartu */
+.team-member-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  z-index: 3;
+  background: linear-gradient(
+    90deg,
+    var(--member-accent),
+    color-mix(in srgb, var(--member-accent), #e8dcc6 62%)
+  );
 }
 
 .team-member-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(0, 32, 93, 0.14);
+  transform: translateY(-7px);
+  border-color: color-mix(in srgb, var(--member-accent), transparent 68%);
+  box-shadow: 0 22px 46px rgba(0, 32, 93, 0.16);
 }
 
+.team-member-card:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--member-accent), transparent 30%);
+  outline-offset: 3px;
+}
+
+/* Foto dibingkai di dalam kartu */
 .member-img {
   position: relative;
   overflow: hidden;
+  margin: 12px 12px 0;
+  border-radius: 16px;
   /* Rasio ASLI foto tim (324x504) — seluruh desain foto tampil, tanpa crop */
   aspect-ratio: 324 / 504;
-  background: color-mix(in srgb, var(--accent-color), transparent 92%);
+  background: color-mix(in srgb, var(--member-accent), transparent 92%);
+}
+
+.member-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 15, 45, 0.18) 0%,
+    transparent 28%,
+    transparent 58%,
+    rgba(0, 15, 45, 0.62) 100%
+  );
+  pointer-events: none;
 }
 
 .member-img img {
@@ -323,25 +441,74 @@ export default {
   height: 100%;
   object-fit: cover;
   object-position: center top;
-  transition: transform 0.5s ease;
+  transition: transform 0.55s ease;
+}
+
+.team-member-card:hover .member-img img {
+  transform: scale(1.045);
+}
+
+/* Nomor urut & badge bidang */
+.member-index {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  min-width: 32px;
+  padding: 4px 7px;
+  border-radius: 9px;
+  background: rgba(0, 15, 45, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: #fff;
+  font-family: "Jost", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-align: center;
+  backdrop-filter: blur(6px);
+}
+
+.member-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  max-width: calc(100% - 62px);
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--member-accent);
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(0, 15, 45, 0.12);
+}
+
+.member-badge i {
+  font-size: 0.78rem;
 }
 
 /* Petunjuk visual bahwa kartu bisa diklik (buka lightbox) */
 .member-zoom {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  right: 12px;
+  bottom: 12px;
+  z-index: 3;
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.85);
-  color: #00205d;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--member-accent);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.95rem;
+  font-size: 0.82rem;
   opacity: 0;
-  transform: scale(0.8);
+  transform: scale(0.82);
   transition: opacity 0.3s ease, transform 0.3s ease;
   pointer-events: none;
 }
@@ -352,58 +519,148 @@ export default {
   transform: scale(1);
 }
 
-.team-member-card:hover .member-img img {
-  transform: scale(1.05);
-}
-
 .member-img .social {
   position: absolute;
   inset: auto 0 0 0;
+  z-index: 2;
   display: flex;
   justify-content: center;
-  gap: 8px;
-  padding: 14px;
-  background: linear-gradient(transparent, rgba(0, 32, 93, 0.85));
+  gap: 7px;
+  padding: 16px 56px 14px;
   opacity: 0;
-  transition: opacity 0.35s ease;
+  transform: translateY(8px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
-.team-member-card:hover .member-img .social {
+.team-member-card:hover .member-img .social,
+.team-member-card:focus-visible .member-img .social {
   opacity: 1;
+  transform: none;
 }
 
 .member-img .social a {
-  width: 34px;
-  height: 34px;
+  width: 33px;
+  height: 33px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.34);
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s ease;
+  font-size: 0.82rem;
+  backdrop-filter: blur(4px);
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .member-img .social a:hover {
-  background: var(--accent-color);
+  background: var(--member-accent);
+  transform: translateY(-2px);
+}
+
+/* ---------- Info anggota ---------- */
+.member-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 17px 19px 19px;
+  text-align: left;
+}
+
+.member-role {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--member-accent);
 }
 
 .member-info h4 {
   font-weight: 700;
-  font-size: 1.05rem;
-  margin-bottom: 2px;
-}
-
-.member-info span {
-  display: block;
-  font-size: 0.82rem;
-  color: color-mix(in srgb, var(--accent-color), transparent 25%);
-  font-weight: 600;
+  font-size: 1.02rem;
+  line-height: 1.3;
+  margin-bottom: 7px;
 }
 
 .member-info p {
-  font-size: 0.85rem;
-  line-height: 1.6;
+  font-size: 0.81rem;
+  line-height: 1.58;
+  margin: 0;
+  color: color-mix(in srgb, var(--default-color), transparent 10%);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.member-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 13px;
+  border-top: 1px dashed color-mix(in srgb, var(--default-color), transparent 86%);
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--member-accent);
+}
+
+.member-cta i {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.team-member-card:hover .member-cta i {
+  transform: translate(2px, -2px);
+}
+
+@media (min-width: 768px) {
+  .member-info h4 {
+    min-height: 2.6em;
+  }
+}
+
+/* Di perangkat sentuh, kontrol sosial selalu terlihat karena hover tidak ada */
+@media (hover: none) {
+  .member-img .social,
+  .member-zoom {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .team-member-card {
+    border-radius: 18px;
+  }
+
+  .member-img {
+    margin: 10px 10px 0;
+    border-radius: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .team-member-card,
+  .member-img img,
+  .member-zoom,
+  .member-img .social,
+  .member-img .social a,
+  .member-cta i {
+    transition: none;
+  }
+
+  .team-member-card:hover {
+    transform: none;
+  }
+
+  .team-member-card:hover .member-img img {
+    transform: none;
+  }
 }
 
 /* ============================================================

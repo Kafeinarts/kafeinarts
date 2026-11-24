@@ -188,6 +188,10 @@ export function registerProductRoutes() {
       path: `/products/${slug}`,
       name: `product-${slug}`,
       component: detailComponent,
+      // Route ini statis (bukan /products/:slug), jadi slug tidak ada di
+      // $route.params. Kirim lewat props agar ProductDetailRoute bisa
+      // mengambil produk yang benar dari store.
+      props: { slug },
       meta: {
         title: `${product ? product.name : slug} — ${seo.name}`,
         description: product ? product.desc : "",
