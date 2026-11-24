@@ -1,9 +1,14 @@
 /**
  * Penyeimbang kecil antara reset Quasar dan stylesheet Bootstrap lama.
  * Hanya aktif di halaman publik (body.index-page); admin memakai Quasar murni.
+ *
+ * PENTING: file ini di-import SETELAH quasar.css di main.js. Urutan itu
+ * yang membuat aturan elemen polos di bawah menang atas reset Quasar.
  */
 body.index-page {
   font-family: "Open Sans", sans-serif !important;
+  /* Quasar memasang body 14px; desain publik mengikuti Bootstrap 1rem (16px). */
+  font-size: 1rem;
 }
 
 body.index-page h1,
@@ -21,4 +26,144 @@ body.admin-page {
 }
 body.admin-page a {
   text-decoration: none;
+}
+
+/* ============================================================
+   FIREWALL QUASAR → BOOTSTRAP (halaman publik)
+   ------------------------------------------------------------
+   quasar.css ikut ter-load global demi admin, tetapi membawa
+   aturan grid & tipografi sendiri yang bentrok dengan Bootstrap:
+
+   1. h1–h6 polos ala Material (h3 = 3rem / 48px, h4 = 2.125rem,
+      font-weight 300–400) menimpa reboot Bootstrap.
+   2. Kelas .col-md-* / .col-xl-* Quasar memakai breakpoint beda
+      (md >= 1024px, xl >= 1920px) dan selektor `.row > .col-*`
+      lebih spesifik daripada `.col-*` Bootstrap. Akibatnya di
+      layar 1024–1919px grid `col-xl-4 col-md-6` dipaksa 50%:
+      katalog 3 kolom menjadi 2 kolom dan kartu terlihat "ngezoom".
+
+   Aturan di bawah mengembalikan nilai Bootstrap, khusus publik.
+   ============================================================ */
+
+/* --- Tipografi: reboot Bootstrap 5.3 -------------------------
+   Selektor elemen polos (spesifisitas 0,0,1): menang atas Quasar
+   karena urutan import, tapi tetap kalah atas gaya judul milik
+   komponen/main.css yang berbasis kelas. Jangan tambah prefix
+   `body.index-page` di sini — itu akan menimpa .section-title dkk. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h1 { font-size: calc(1.375rem + 1.5vw); }
+h2 { font-size: calc(1.325rem + 0.9vw); }
+h3 { font-size: calc(1.3rem + 0.6vw); }
+h4 { font-size: calc(1.275rem + 0.3vw); }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+@media (min-width: 1200px) {
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.75rem; }
+  h4 { font-size: 1.5rem; }
+}
+
+/* --- Grid: lebar kolom Bootstrap di breakpoint Bootstrap -----
+   Prefix `body.index-page .row >` (spesifisitas 0,3,0) selalu
+   menang atas `.row > .col-*` Quasar (0,2,0), tanpa memengaruhi
+   halaman admin. Nilai lebar disalin persis dari Bootstrap 5.3. */
+body.index-page .row > .col-1 { width: 8.33333333%; }
+body.index-page .row > .col-2 { width: 16.66666667%; }
+body.index-page .row > .col-3 { width: 25%; }
+body.index-page .row > .col-4 { width: 33.33333333%; }
+body.index-page .row > .col-5 { width: 41.66666667%; }
+body.index-page .row > .col-6 { width: 50%; }
+body.index-page .row > .col-7 { width: 58.33333333%; }
+body.index-page .row > .col-8 { width: 66.66666667%; }
+body.index-page .row > .col-9 { width: 75%; }
+body.index-page .row > .col-10 { width: 83.33333333%; }
+body.index-page .row > .col-11 { width: 91.66666667%; }
+body.index-page .row > .col-12 { width: 100%; }
+
+@media (min-width: 576px) {
+  body.index-page .row > .col-sm-1 { width: 8.33333333%; }
+  body.index-page .row > .col-sm-2 { width: 16.66666667%; }
+  body.index-page .row > .col-sm-3 { width: 25%; }
+  body.index-page .row > .col-sm-4 { width: 33.33333333%; }
+  body.index-page .row > .col-sm-5 { width: 41.66666667%; }
+  body.index-page .row > .col-sm-6 { width: 50%; }
+  body.index-page .row > .col-sm-7 { width: 58.33333333%; }
+  body.index-page .row > .col-sm-8 { width: 66.66666667%; }
+  body.index-page .row > .col-sm-9 { width: 75%; }
+  body.index-page .row > .col-sm-10 { width: 83.33333333%; }
+  body.index-page .row > .col-sm-11 { width: 91.66666667%; }
+  body.index-page .row > .col-sm-12 { width: 100%; }
+}
+
+@media (min-width: 768px) {
+  body.index-page .row > .col-md-1 { width: 8.33333333%; }
+  body.index-page .row > .col-md-2 { width: 16.66666667%; }
+  body.index-page .row > .col-md-3 { width: 25%; }
+  body.index-page .row > .col-md-4 { width: 33.33333333%; }
+  body.index-page .row > .col-md-5 { width: 41.66666667%; }
+  body.index-page .row > .col-md-6 { width: 50%; }
+  body.index-page .row > .col-md-7 { width: 58.33333333%; }
+  body.index-page .row > .col-md-8 { width: 66.66666667%; }
+  body.index-page .row > .col-md-9 { width: 75%; }
+  body.index-page .row > .col-md-10 { width: 83.33333333%; }
+  body.index-page .row > .col-md-11 { width: 91.66666667%; }
+  body.index-page .row > .col-md-12 { width: 100%; }
+}
+
+@media (min-width: 992px) {
+  body.index-page .row > .col-lg-1 { width: 8.33333333%; }
+  body.index-page .row > .col-lg-2 { width: 16.66666667%; }
+  body.index-page .row > .col-lg-3 { width: 25%; }
+  body.index-page .row > .col-lg-4 { width: 33.33333333%; }
+  body.index-page .row > .col-lg-5 { width: 41.66666667%; }
+  body.index-page .row > .col-lg-6 { width: 50%; }
+  body.index-page .row > .col-lg-7 { width: 58.33333333%; }
+  body.index-page .row > .col-lg-8 { width: 66.66666667%; }
+  body.index-page .row > .col-lg-9 { width: 75%; }
+  body.index-page .row > .col-lg-10 { width: 83.33333333%; }
+  body.index-page .row > .col-lg-11 { width: 91.66666667%; }
+  body.index-page .row > .col-lg-12 { width: 100%; }
+}
+
+@media (min-width: 1200px) {
+  body.index-page .row > .col-xl-1 { width: 8.33333333%; }
+  body.index-page .row > .col-xl-2 { width: 16.66666667%; }
+  body.index-page .row > .col-xl-3 { width: 25%; }
+  body.index-page .row > .col-xl-4 { width: 33.33333333%; }
+  body.index-page .row > .col-xl-5 { width: 41.66666667%; }
+  body.index-page .row > .col-xl-6 { width: 50%; }
+  body.index-page .row > .col-xl-7 { width: 58.33333333%; }
+  body.index-page .row > .col-xl-8 { width: 66.66666667%; }
+  body.index-page .row > .col-xl-9 { width: 75%; }
+  body.index-page .row > .col-xl-10 { width: 83.33333333%; }
+  body.index-page .row > .col-xl-11 { width: 91.66666667%; }
+  body.index-page .row > .col-xl-12 { width: 100%; }
+}
+
+@media (min-width: 1400px) {
+  body.index-page .row > .col-xxl-1 { width: 8.33333333%; }
+  body.index-page .row > .col-xxl-2 { width: 16.66666667%; }
+  body.index-page .row > .col-xxl-3 { width: 25%; }
+  body.index-page .row > .col-xxl-4 { width: 33.33333333%; }
+  body.index-page .row > .col-xxl-5 { width: 41.66666667%; }
+  body.index-page .row > .col-xxl-6 { width: 50%; }
+  body.index-page .row > .col-xxl-7 { width: 58.33333333%; }
+  body.index-page .row > .col-xxl-8 { width: 66.66666667%; }
+  body.index-page .row > .col-xxl-9 { width: 75%; }
+  body.index-page .row > .col-xxl-10 { width: 83.33333333%; }
+  body.index-page .row > .col-xxl-11 { width: 91.66666667%; }
+  body.index-page .row > .col-xxl-12 { width: 100%; }
 }
